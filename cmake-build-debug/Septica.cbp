@@ -80,19 +80,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="C:/Users/victo/CLionProjects/Septica/carte.cpp">
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/Menu.h">
 			<Option target="Septica"/>
 		</Unit>
-		<Unit filename="C:/Users/victo/CLionProjects/Septica/carte.h">
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/carte.h">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/pachet.h">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Menu.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/carte.cpp">
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/main.cpp">
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/pachet.cpp">
-			<Option target="Septica"/>
-		</Unit>
-		<Unit filename="C:/Users/victo/CLionProjects/Septica/pachet.h">
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/CMakeLists.txt">

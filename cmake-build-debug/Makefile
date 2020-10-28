@@ -142,6 +142,33 @@ Septica/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/build
 .PHONY : Septica/fast
 
+Menu.obj: Menu.cpp.obj
+
+.PHONY : Menu.obj
+
+# target to build an object file
+Menu.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.obj
+.PHONY : Menu.cpp.obj
+
+Menu.i: Menu.cpp.i
+
+.PHONY : Menu.i
+
+# target to preprocess a source file
+Menu.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.i
+.PHONY : Menu.cpp.i
+
+Menu.s: Menu.cpp.s
+
+.PHONY : Menu.s
+
+# target to generate assembly for a file
+Menu.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.s
+.PHONY : Menu.cpp.s
+
 carte.obj: carte.cpp.obj
 
 .PHONY : carte.obj
@@ -232,6 +259,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Septica
+	@echo ... Menu.obj
+	@echo ... Menu.i
+	@echo ... Menu.s
 	@echo ... carte.obj
 	@echo ... carte.i
 	@echo ... carte.s

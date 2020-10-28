@@ -1,10 +1,9 @@
 #include <iostream>
-#include <stdlib.h>
 #include <random>
 #include <ctime>
 #include <functional>
 #include <chrono>
-#include "pachet.h"
+#include "Headers/pachet.h"
 
 pachet::pachet() = default;
 
@@ -25,7 +24,7 @@ void pachet::InitializarePachet(carte pachet[]) {
 }
 
 void pachet::AfisarePachet(carte pachet[]) {
-    for (int i = 0; i < 28; ++i)
+    for (int i = 0; i < 27; ++i)
         std::cout << pachet[i].numar << " " << pachet[i].culoare << std::endl;
 }
 
@@ -34,7 +33,7 @@ void pachet::Amestecare(carte *pachet) {
 
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::knuth_b generator(seed);
-    std::uniform_int_distribution<int> distribution(1, 28);
+    std::uniform_int_distribution<int> distribution(1, 27);
 
     for (int i = 0; i < 50; ++i) //amestecare buna?
 
