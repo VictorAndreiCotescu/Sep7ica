@@ -1,5 +1,8 @@
-//
-// Created by victo on 26-Oct-20.
-//
-
 #include "carte.h"
+
+//carte::carte() = default;
+
+carte::carte(const carte &c){
+    numar = c.numar;
+    culoare = c.culoare;
+}

@@ -1,22 +1,26 @@
-//
-// Created by victo on 26-Oct-20.
-//
-
 #ifndef SEPTICA_CARTE_H
 #define SEPTICA_CARTE_H
 
-#include <string.h>
+#include <cstring>
 #include <string>
+#include <utility>
+
 class carte {
+
+    friend class pachet;
+
 public:
+    //carte() = default;
 
-    carte(int numar, char *culoare){
+    explicit carte(int numar_ = 1, int culoare_ = 1) : numar(numar_), culoare(culoare_){}
 
-        numar = numar;
-        strcpy(culoare, culoare);
+    carte(const carte &c);
 
-    }
 
+private:
+
+    int culoare;
+    int numar;
 };
 
 
