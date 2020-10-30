@@ -8,7 +8,7 @@
 pachet::pachet() = default;
 
 void pachet::InitializarePachet(carte pachet[]) {
-    int j = 0;
+    /*int j = 0;
     for (int i = 0; i < 7; ++i) {
 
         carte Carte1(i + 1, 1);//inima rosie
@@ -20,7 +20,7 @@ void pachet::InitializarePachet(carte pachet[]) {
         pachet[j++] = Carte2;
         pachet[j++] = Carte3;
         pachet[j++] = Carte4;
-    }
+    }*/
 }
 
 void pachet::AfisarePachet(carte pachet[]) {
@@ -40,4 +40,25 @@ void pachet::Amestecare(carte *pachet) {
         std::swap(pachet[distribution(generator)], pachet[distribution(generator)]);
 
 
+}
+
+
+void pachet::InitializarePachetvec(pachet* Pachet) {
+
+    int j = 0;
+    for (int i = 0; i < 7; ++i) {
+
+        carte Carte1(i + 1, 1);//inima rosie
+        carte Carte2(i + 1, 2);//inima neagra
+        carte Carte3(i + 1, 3);//romb
+        carte Carte4(i + 1, 4);//trefla
+
+        Pachet->Pachet.push_back(Carte1);
+        Pachet->Pachet.push_back(Carte2);
+        Pachet->Pachet.push_back(Carte3);
+        Pachet->Pachet.push_back(Carte4);
+
+        std::vector<carte> p2;
+
+    }
 }

@@ -51,7 +51,18 @@ int main() {
 
     auto *carti = new carte[28];
 
-    Joc(carti);
+    pachet Pachet;
+    //Joc(carti);
+
+    pachet::InitializarePachetvec(&Pachet);
+
+    int j = 0;
+    for(auto & i : Pachet.Pachet){
+
+           // std::cout << 'k';
+            std::cout << i.numar << " " << i.culoare << std::endl;
+    }
+
 
 
     //pachet::AfisarePachet(carti);

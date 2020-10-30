@@ -17,10 +17,10 @@ public:
     carte(const carte &c);
 
 
-private:
-
     int culoare;
     int numar;
+private:
+
 };
 
 
