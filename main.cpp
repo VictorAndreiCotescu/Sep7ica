@@ -56,6 +56,7 @@ int main() {
 
     pachet::InitializarePachetvec(&Pachet);
 
+
     pachet::AmestecareVec(&Pachet);
 
     int j = 0;
