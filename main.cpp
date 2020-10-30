@@ -4,6 +4,7 @@
 #include <thread>
 #include "Headers/carte.h"
 #include "Headers/pachet.h"
+#include "Headers/jucator.h"
 
 #define KEY_UP 72       //Up arrow character
 #define KEY_DOWN 80    //Down arrow character
@@ -13,57 +14,32 @@
     PlaySound("8bit Bossa.mp3", nullptr, SND_LOOP);
 }*/
 
-void Joc(carte *carti) {
-
-    std::cout << "1. Start Joc" << std::endl;
-    std::cout << "2. Exit";
-
-e:
-        char c = getch();
-        switch (c) {
-
-            case '1':
-                pachet::InitializarePachet(carti);
-                pachet::Amestecare(carti);
-                pachet::AfisarePachet(carti);
-                goto e;
-                break;
-            case '2':
-                exit(0);
-
-            case '\r':
-                Beep(300, 200);
-
-            default:
-
-                Beep(300, 200);
-                goto e;
-
-                break;
-        }
-
-
-
-}
-
-
 int main() {
 
-    auto *carti = new carte[28];
+    //auto *carti = new carte[28];
 
     pachet Pachet;
-    //Joc(carti);
+
+    jucator Jucator1;
 
     pachet::InitializarePachetvec(&Pachet);
 
-
     pachet::AmestecareVec(&Pachet);
 
-    int j = 0;
-    for(auto & i : Pachet.Pachet){
+    pachet::AfisarePachetVec(Pachet);
 
-            std::cout << i.numar << " " << i.culoare << std::endl;
-    }
+    jucator::trageCarte(&Pachet, &Jucator1);
+
+    std::cout << "\n\n\n dupa tragere \n\n\n";
+    pachet::AfisarePachetVec(Pachet);
+
+    std::cout << "\n\n\n cartea trasa: ";
+
+    jucator::AfisareCarti(&Jucator1);
+
+
+
+
 
 
 

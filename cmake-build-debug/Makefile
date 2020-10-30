@@ -142,33 +142,6 @@ Septica/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/build
 .PHONY : Septica/fast
 
-Menu.obj: Menu.cpp.obj
-
-.PHONY : Menu.obj
-
-# target to build an object file
-Menu.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.obj
-.PHONY : Menu.cpp.obj
-
-Menu.i: Menu.cpp.i
-
-.PHONY : Menu.i
-
-# target to preprocess a source file
-Menu.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.i
-.PHONY : Menu.cpp.i
-
-Menu.s: Menu.cpp.s
-
-.PHONY : Menu.s
-
-# target to generate assembly for a file
-Menu.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Menu.cpp.s
-.PHONY : Menu.cpp.s
-
 carte.obj: carte.cpp.obj
 
 .PHONY : carte.obj
@@ -195,6 +168,33 @@ carte.s: carte.cpp.s
 carte.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/carte.cpp.s
 .PHONY : carte.cpp.s
+
+jucator.obj: jucator.cpp.obj
+
+.PHONY : jucator.obj
+
+# target to build an object file
+jucator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.obj
+.PHONY : jucator.cpp.obj
+
+jucator.i: jucator.cpp.i
+
+.PHONY : jucator.i
+
+# target to preprocess a source file
+jucator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.i
+.PHONY : jucator.cpp.i
+
+jucator.s: jucator.cpp.s
+
+.PHONY : jucator.s
+
+# target to generate assembly for a file
+jucator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.s
+.PHONY : jucator.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -259,12 +259,12 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Septica
-	@echo ... Menu.obj
-	@echo ... Menu.i
-	@echo ... Menu.s
 	@echo ... carte.obj
 	@echo ... carte.i
 	@echo ... carte.s
+	@echo ... jucator.obj
+	@echo ... jucator.i
+	@echo ... jucator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

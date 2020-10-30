@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Septica.dir/Menu.cpp.obj"
   "CMakeFiles/Septica.dir/carte.cpp.obj"
+  "CMakeFiles/Septica.dir/jucator.cpp.obj"
   "CMakeFiles/Septica.dir/main.cpp.obj"
   "CMakeFiles/Septica.dir/pachet.cpp.obj"
   "Septica.exe"

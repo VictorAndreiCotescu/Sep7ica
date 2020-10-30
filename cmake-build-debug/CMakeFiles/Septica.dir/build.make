@@ -115,25 +115,25 @@ CMakeFiles/Septica.dir/pachet.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/pachet.cpp.s"
 	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\pachet.cpp -o CMakeFiles\Septica.dir\pachet.cpp.s
 
-CMakeFiles/Septica.dir/Menu.cpp.obj: CMakeFiles/Septica.dir/flags.make
-CMakeFiles/Septica.dir/Menu.cpp.obj: ../Menu.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Septica.dir/Menu.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Menu.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Menu.cpp
+CMakeFiles/Septica.dir/jucator.cpp.obj: CMakeFiles/Septica.dir/flags.make
+CMakeFiles/Septica.dir/jucator.cpp.obj: ../jucator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Septica.dir/jucator.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\jucator.cpp.obj -c C:\Users\victo\CLionProjects\Septica\jucator.cpp
 
-CMakeFiles/Septica.dir/Menu.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Menu.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Menu.cpp > CMakeFiles\Septica.dir\Menu.cpp.i
+CMakeFiles/Septica.dir/jucator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/jucator.cpp.i"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\jucator.cpp > CMakeFiles\Septica.dir\jucator.cpp.i
 
-CMakeFiles/Septica.dir/Menu.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Menu.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Menu.cpp -o CMakeFiles\Septica.dir\Menu.cpp.s
+CMakeFiles/Septica.dir/jucator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/jucator.cpp.s"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\jucator.cpp -o CMakeFiles\Septica.dir\jucator.cpp.s
 
 # Object files for target Septica
 Septica_OBJECTS = \
 "CMakeFiles/Septica.dir/main.cpp.obj" \
 "CMakeFiles/Septica.dir/carte.cpp.obj" \
 "CMakeFiles/Septica.dir/pachet.cpp.obj" \
-"CMakeFiles/Septica.dir/Menu.cpp.obj"
+"CMakeFiles/Septica.dir/jucator.cpp.obj"
 
 # External object files for target Septica
 Septica_EXTERNAL_OBJECTS =
@@ -141,7 +141,7 @@ Septica_EXTERNAL_OBJECTS =
 Septica.exe: CMakeFiles/Septica.dir/main.cpp.obj
 Septica.exe: CMakeFiles/Septica.dir/carte.cpp.obj
 Septica.exe: CMakeFiles/Septica.dir/pachet.cpp.obj
-Septica.exe: CMakeFiles/Septica.dir/Menu.cpp.obj
+Septica.exe: CMakeFiles/Septica.dir/jucator.cpp.obj
 Septica.exe: CMakeFiles/Septica.dir/build.make
 Septica.exe: CMakeFiles/Septica.dir/linklibs.rsp
 Septica.exe: CMakeFiles/Septica.dir/objects1.rsp

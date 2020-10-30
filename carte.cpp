@@ -6,3 +6,5 @@ carte::carte(const carte &c){
     numar = c.numar;
     culoare = c.culoare;
 }
+
+carte::carte() = default;

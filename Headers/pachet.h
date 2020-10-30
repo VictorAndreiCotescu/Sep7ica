@@ -6,29 +6,37 @@
 
 class pachet {
 
+    friend class jucator;
+
 public:
     pachet();
 
-    static void InitializarePachet(carte pachet[]);
+    pachet(const pachet &p);
 
+    pachet operator= (const pachet &p);
 
+    // cu std::vector
     static void InitializarePachetvec(pachet *Pachet);
 
-
-
-    static void AfisarePachet(carte pachet[]);
-
-    static void Amestecare(carte *pachet);
+    static void AfisarePachetVec(const pachet& pachet);
 
     static void AmestecareVec(pachet *Pachet);
 
-    std::vector<carte> Pachet;
+
+    ~pachet();
+
 
 private:
 
+    std::vector<carte> Pachet;
 
+    // fara std::vector
+    static void InitializarePachet(carte pachet[]);
+    static void Amestecare(carte *pachet);
+    static void AfisarePachet(carte pachet[]);
 
 };
+
 
 
 #endif //SEPTICA_PACHET_H
