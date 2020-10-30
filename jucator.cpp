@@ -1,7 +1,3 @@
-//
-// Created by victo on 30-Oct-20.
-//
-
 #include <iostream>
 #include "Headers/jucator.h"
 
