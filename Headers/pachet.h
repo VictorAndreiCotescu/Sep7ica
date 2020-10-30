@@ -20,10 +20,11 @@ public:
 
     static void Amestecare(carte *pachet);
 
+    static void AmestecareVec(pachet *Pachet);
+
     std::vector<carte> Pachet;
 
 private:
-
 
 
 

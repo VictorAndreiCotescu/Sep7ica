@@ -1,5 +1,6 @@
 #include <iostream>
 #include <random>
+#include <algorithm>
 #include <ctime>
 #include <functional>
 #include <chrono>
@@ -39,6 +40,16 @@ void pachet::Amestecare(carte *pachet) {
 
         std::swap(pachet[distribution(generator)], pachet[distribution(generator)]);
 
+
+}
+
+void pachet::AmestecareVec(pachet *Pachet){
+
+    /*auto rdz = std::random_device {};
+    auto rng = std::default_random_engine { rdz() };
+    std::shuffle(std::begin(Pachet->Pachet), std::end(Pachet->Pachet), rng);*/
+
+    std::shuffle(Pachet->Pachet.begin(), Pachet->Pachet.end(), std::mt19937(std::random_device()()));
 
 }
 

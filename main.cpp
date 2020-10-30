@@ -56,10 +56,11 @@ int main() {
 
     pachet::InitializarePachetvec(&Pachet);
 
+    pachet::AmestecareVec(&Pachet);
+
     int j = 0;
     for(auto & i : Pachet.Pachet){
 
-           // std::cout << 'k';
             std::cout << i.numar << " " << i.culoare << std::endl;
     }
 
