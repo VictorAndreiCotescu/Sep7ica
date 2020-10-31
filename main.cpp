@@ -14,11 +14,24 @@
     PlaySound("8bit Bossa.mp3", nullptr, SND_LOOP);
 }*/
 
-int main() {
-
-    //auto *carti = new carte[28];
+void Joc(){
 
     pachet Pachet;
+    jucator Jucator1;
+    jucator Calculator;
+
+    pachet::InitializarePachetvec(&Pachet);
+    pachet::AmestecareVec(&Pachet);
+
+    jucator::CompletareMana(&Pachet, &Jucator1);
+    jucator::CompletareMana(&Pachet, &Calculator);
+
+
+}
+
+int main() {
+
+    /*pachet Pachet;
 
     jucator Jucator1;
 
@@ -31,12 +44,16 @@ int main() {
     jucator::trageCarte(&Pachet, &Jucator1);
 
     std::cout << "\n\n\n dupa tragere \n\n\n";
+
     pachet::AfisarePachetVec(Pachet);
 
     std::cout << "\n\n\n cartea trasa: ";
 
-    jucator::AfisareCarti(&Jucator1);
+    jucator::AfisareCarti(&Jucator1);*/
 
+
+
+        Joc();
 
 
 

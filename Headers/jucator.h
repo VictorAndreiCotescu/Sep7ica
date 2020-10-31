@@ -1,7 +1,3 @@
-//
-// Created by victo on 30-Oct-20.
-//
-
 #ifndef SEPTICA_JUCATOR_H
 #define SEPTICA_JUCATOR_H
 
@@ -16,18 +12,16 @@ public:
     jucator();
     static void trageCarte(pachet *Pachet, jucator *Jucator);
     static void AfisareCarti(jucator *Jucator);
-
+    static void CompletareMana(pachet *Pachet, jucator *Jucator);
 private:
 
     std::vector<carte> carti;
+    std::vector<carte> mana;
 
 };
 
-carte carte::operator=(const carte &c) {
 
-    numar = c.numar;
-    culoare = c.culoare;
-}
+
 
 
 #endif //SEPTICA_JUCATOR_H

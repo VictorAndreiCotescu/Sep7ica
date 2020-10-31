@@ -7,4 +7,10 @@ carte::carte(const carte &c){
     culoare = c.culoare;
 }
 
+carte carte::operator=(const carte &c) {
+
+    numar = c.numar;
+    culoare = c.culoare;
+}
+
 carte::carte() = default;
