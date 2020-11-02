@@ -14,7 +14,7 @@
     PlaySound("8bit Bossa.mp3", nullptr, SND_LOOP);
 }*/
 
-void Joc(){
+[[noreturn]] void Joc(){
 
     pachet Pachet;
     jucator Jucator1;
@@ -26,32 +26,26 @@ void Joc(){
     jucator::CompletareMana(&Pachet, &Jucator1);
     jucator::CompletareMana(&Pachet, &Calculator);
 
+    Jucator1.AfisareCarti(&Jucator1);
+    carte carteJucator(1,1);
+    carte carteCalculator(1,1);
+    int puncteJos = 0;
+
+    while(true){
+
+
+        carteJucator.operator=(Jucator1.AlegereCarte(&Jucator1));
+
+
+
+    }
+
+
+
 
 }
 
 int main() {
-
-    /*pachet Pachet;
-
-    jucator Jucator1;
-
-    pachet::InitializarePachetvec(&Pachet);
-
-    pachet::AmestecareVec(&Pachet);
-
-    pachet::AfisarePachetVec(Pachet);
-
-    jucator::trageCarte(&Pachet, &Jucator1);
-
-    std::cout << "\n\n\n dupa tragere \n\n\n";
-
-    pachet::AfisarePachetVec(Pachet);
-
-    std::cout << "\n\n\n cartea trasa: ";
-
-    jucator::AfisareCarti(&Jucator1);*/
-
-
 
         Joc();
 

@@ -13,10 +13,11 @@ public:
     static void trageCarte(pachet *Pachet, jucator *Jucator);
     static void AfisareCarti(jucator *Jucator);
     static void CompletareMana(pachet *Pachet, jucator *Jucator);
+    static carte AlegereCarte(jucator *Jucator);
 private:
 
-    std::vector<carte> carti;
     std::vector<carte> mana;
+    int puncte;
 
 };
 

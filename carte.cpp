@@ -11,6 +11,9 @@ carte carte::operator=(const carte &c) {
 
     numar = c.numar;
     culoare = c.culoare;
+
+    if (this != &c)
+        return *this;
 }
 
 carte::carte() = default;

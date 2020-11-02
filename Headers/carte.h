@@ -17,13 +17,14 @@ public:
 
     carte(const carte &c);
 
-    carte operator= (const carte &c);
+    carte operator = (const carte &c);
 
 
 private:
 
     int culoare;
     int numar;
+
 
 };
 

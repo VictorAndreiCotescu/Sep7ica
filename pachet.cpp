@@ -13,6 +13,8 @@ pachet::pachet(const pachet &p) {
 
 pachet pachet::operator=(const pachet &p) {
     Pachet = p.Pachet;
+    if (this != &p)
+        return *this;
 }
 
 void pachet::InitializarePachetvec(pachet *Pachet) {
@@ -54,8 +56,6 @@ void pachet::AfisarePachetVec(const pachet& pachet) {
     }
 
 }
-
-
 
 void pachet::AfisarePachet(carte pachet[]) {
     for (int i = 0; i < 27; ++i)
