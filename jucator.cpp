@@ -41,6 +41,7 @@ carte jucator::AlegereCarte(jucator *Jucator) {
         case '1':
             Jucator->mana.erase(Jucator->mana.begin() + 0);
             return Jucator->mana[0];
+            break;
 
         case '2':
             if (Jucator->mana.size() > 1) {
@@ -58,7 +59,7 @@ carte jucator::AlegereCarte(jucator *Jucator) {
 
         case '4':
             if (Jucator->mana.size() > 3) {
-                Jucator->mana.erase(Jucator->mana.begin() + 3);
+               // Jucator->mana.erase(Jucator->mana.begin() + 3);
                 return Jucator->mana[3];
             }
             break;

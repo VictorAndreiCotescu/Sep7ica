@@ -32,8 +32,6 @@ void pachet::InitializarePachetvec(pachet *Pachet) {
         Pachet->Pachet.push_back(Carte3);
         Pachet->Pachet.push_back(Carte4);
 
-        std::vector<carte> p2;
-
     }
 }
 
@@ -54,7 +52,6 @@ void pachet::AfisarePachetVec(const pachet& pachet) {
 
         std::cout << i.numar << " " << i.culoare << std::endl;
     }
-
 }
 
 void pachet::AfisarePachet(carte pachet[]) {

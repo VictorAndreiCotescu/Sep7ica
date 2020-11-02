@@ -27,15 +27,16 @@
     jucator::CompletareMana(&Pachet, &Calculator);
 
     Jucator1.AfisareCarti(&Jucator1);
-    carte carteJucator(1,1);
+    //carte carteJucator(1,1);
     carte carteCalculator(1,1);
     int puncteJos = 0;
 
     while(true){
 
 
-        carteJucator.operator=(Jucator1.AlegereCarte(&Jucator1));
-
+        carte carteJucator(jucator::AlegereCarte(&Jucator1));
+        std::cout << carteJucator.numar << " " << carteJucator.culoare << "\n\n";
+        jucator::AfisareCarti(&Jucator1);
 
 
     }
