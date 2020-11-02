@@ -35,40 +35,45 @@ void jucator::CompletareMana(pachet *Pachet, jucator *Jucator) {
 }
 
 carte jucator::AlegereCarte(jucator *Jucator) {
-
-    switch (getch()) {
+    char c = getch();
+    carte CarteAleasa(1,1);
+    switch (c) {
 
         case '1':
-            Jucator->mana.erase(Jucator->mana.begin() + 0);
-            return Jucator->mana[0];
+            if(!Jucator->mana.empty()) {
+                CarteAleasa = Jucator->mana[0];
+                Jucator->mana.erase(Jucator->mana.begin() + 0);
+            }
             break;
 
         case '2':
-            if (Jucator->mana.size() > 1) {
+            if(Jucator->mana.size() > 1) {
+                CarteAleasa = Jucator->mana[1];
                 Jucator->mana.erase(Jucator->mana.begin() + 1);
-                return Jucator->mana[1];
+                return CarteAleasa;
             }
             break;
 
         case '3':
-            if (Jucator->mana.size() > 2) {
+            if(Jucator->mana.size() > 2) {
+                CarteAleasa = Jucator->mana[2];
                 Jucator->mana.erase(Jucator->mana.begin() + 2);
-                return Jucator->mana[2];
+                return CarteAleasa;
             }
             break;
 
         case '4':
-            if (Jucator->mana.size() > 3) {
-               // Jucator->mana.erase(Jucator->mana.begin() + 3);
-                return Jucator->mana[3];
+            if(Jucator->mana.size() > 3) {
+                CarteAleasa = Jucator->mana[3];
+                Jucator->mana.erase(Jucator->mana.begin() + 3);
+                return CarteAleasa;
             }
             break;
 
         default:
-            AlegereCarte(Jucator);
+            if(!Jucator->mana.empty())
+                AlegereCarte(Jucator);
             break;
-
-
     }
 
 

@@ -6,6 +6,7 @@
 #include "carte.h"
 #include "pachet.h"
 
+
 class jucator {
 public:
 
@@ -14,7 +15,8 @@ public:
     static void AfisareCarti(jucator *Jucator);
     static void CompletareMana(pachet *Pachet, jucator *Jucator);
     static carte AlegereCarte(jucator *Jucator);
-private:
+
+protected:
 
     std::vector<carte> mana;
     int puncte;
