@@ -8,8 +8,8 @@
 class carte {
 
     friend class pachet;
-
     friend class jucator;
+    friend class Calculator;
 
 public:
     carte();
@@ -22,11 +22,10 @@ public:
 
     ~carte();
 
+
+protected:
     int culoare;
     int numar;
-
-private:
-
 
 };
 
