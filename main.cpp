@@ -5,6 +5,7 @@
 #include "Headers/carte.h"
 #include "Headers/pachet.h"
 #include "Headers/jucator.h"
+#include "Headers/Calculator.h"
 
 #define KEY_UP 72       //Up arrow character
 #define KEY_DOWN 80    //Down arrow character
@@ -14,11 +15,11 @@
     PlaySound("8bit Bossa.mp3", nullptr, SND_LOOP);
 }*/
 
-[[noreturn]] void Joc(){
+void Joc(){
 
     pachet Pachet;
     jucator Jucator1;
-    jucator Calculator;
+    Calculator Calculator;
 
     pachet::InitializarePachetvec(&Pachet);
     pachet::AmestecareVec(&Pachet);
@@ -26,29 +27,23 @@
     jucator::CompletareMana(&Pachet, &Jucator1);
     jucator::CompletareMana(&Pachet, &Calculator);
 
-    Jucator1.AfisareCarti(&Jucator1);
-    //carte carteJucator(1,1);
-    carte carteCalculator(1,1);
+    //Jucator1.AfisareCarti(&Jucator1);
     int puncteJos = 0;
 
-    while(true){
+    carte c(3,4);
 
 
-        carte carteJucator(jucator::AlegereCarte(&Jucator1));
-        std::cout << carteJucator.numar << " " << carteJucator.culoare << "\n\n";
-        jucator::AfisareCarti(&Jucator1);
+    Calculator.AlegereCarteCalculator(c);
 
-
-    }
-
-
+    Calculator.AfisareCarti(&Calculator);
 
 
 }
 
 int main() {
 
-        Joc();
+
+    Joc();
 
 
 
