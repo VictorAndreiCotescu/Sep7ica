@@ -11,19 +11,21 @@ Calculator::Calculator()  = default;
 
 carte Calculator::AlegereCarteCalculator(carte &c) {
 
+
     for (int i = 0; i < this->mana.size(); ++i)
-        if (this->mana[i].culoare == c.culoare && this->mana[i].numar == c.numar) {
+        if (this->mana[i].numar == c.numar) {
+            carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
-            std::cout << "Raspuns calculator: " << c.numar << " " << c.culoare << "\n";
-            return c;
+            std::cout << "Raspuns calculator1: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
+            return raspunsCalculator;
         }
 
     for (int i = 0; i < this->mana.size(); ++i)
         if (this->mana[i].numar != 1 || this->mana[i].numar != 10) {
-            c = this->mana[i];
+            carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
-            std::cout << "\nRaspuns calculator: " << c.numar << " " << c.culoare << "\n";
-            return c;
+            std::cout << "\nRaspuns calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
+            return raspunsCalculator;
         }
 }
 
@@ -31,14 +33,18 @@ carte Calculator::AlegereCarteCalculator() {
 
     for(int i = 0; i < this->mana.size()/2+1; ++i)
         if(std::find(this->mana.begin()+i+1, this->mana.end(), this->mana[i]) != this->mana.end()) {
-            std::cout << "\nCarte calculator: " << this->mana[i].numar << " " << this->mana[i].culoare << "\n";
-            return this->mana[i];
+            carte raspunsCalculator(this->mana[i]);
+            this->mana.erase(this->mana.begin() + i);
+            std::cout << "\nCarte calculator1: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
+            return raspunsCalculator;
         }
 
     for(int i = 0; i < this->mana.size(); ++i)
         if(this->mana[i] != carte(1,0) || this->mana[i] != carte(10,0)) {
-            std::cout << "\nCarte calculator: " << this->mana[i].numar << " " << this->mana[i].culoare << "\n";
-            return this->mana[i];
+            carte raspunsCalculator(this->mana[i]);
+            this->mana.erase(this->mana.begin() + i);
+            std::cout << "\nCarte calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
+            return raspunsCalculator;
         }
 }
 

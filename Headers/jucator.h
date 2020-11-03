@@ -13,13 +13,15 @@ public:
 
     jucator();
 
-    static void trageCarte(pachet *Pachet, jucator *Jucator);
+    void trageCarte(pachet *Pachet, jucator *Jucator);
 
-    static void AfisareCarti(jucator *Jucator);
+    void AfisareCarti(jucator *Jucator);
 
-    static void CompletareMana(pachet *Pachet, jucator *Jucator);
+    void CompletareMana(pachet *Pachet, jucator *Jucator);
 
-    static carte AlegereCarte(jucator *Jucator);
+    carte AlegereCarte(jucator *Jucator);
+
+    bool alegerePosibila(const carte &c) const;
 
     void AdaugarePuncte(int x);
 

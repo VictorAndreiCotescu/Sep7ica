@@ -33,7 +33,7 @@ bool carte::operator!=(const carte &c) const {
 
 void carte::afisare() const {
 
-    std::cout << this->numar << " " << this->culoare << "\n";
+    std::cout << this->numar << " " << this->culoare;
 
 }
 
