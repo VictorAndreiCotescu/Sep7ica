@@ -80,6 +80,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Calculator.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h">
+			<Option target="Septica"/>
+		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/carte.h">
 			<Option target="Septica"/>
 		</Unit>

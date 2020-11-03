@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Septica.dir/Calculator.cpp.obj"
   "CMakeFiles/Septica.dir/carte.cpp.obj"
   "CMakeFiles/Septica.dir/jucator.cpp.obj"
   "CMakeFiles/Septica.dir/main.cpp.obj"

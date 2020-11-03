@@ -142,6 +142,33 @@ Septica/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/build
 .PHONY : Septica/fast
 
+Calculator.obj: Calculator.cpp.obj
+
+.PHONY : Calculator.obj
+
+# target to build an object file
+Calculator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Calculator.cpp.obj
+.PHONY : Calculator.cpp.obj
+
+Calculator.i: Calculator.cpp.i
+
+.PHONY : Calculator.i
+
+# target to preprocess a source file
+Calculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Calculator.cpp.i
+.PHONY : Calculator.cpp.i
+
+Calculator.s: Calculator.cpp.s
+
+.PHONY : Calculator.s
+
+# target to generate assembly for a file
+Calculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Calculator.cpp.s
+.PHONY : Calculator.cpp.s
+
 carte.obj: carte.cpp.obj
 
 .PHONY : carte.obj
@@ -259,6 +286,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Septica
+	@echo ... Calculator.obj
+	@echo ... Calculator.i
+	@echo ... Calculator.s
 	@echo ... carte.obj
 	@echo ... carte.i
 	@echo ... carte.s

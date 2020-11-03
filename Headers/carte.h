@@ -8,7 +8,9 @@
 class carte {
 
     friend class pachet;
+
     friend class jucator;
+
     friend class Calculator;
 
 public:
@@ -19,6 +21,12 @@ public:
     carte(const carte &c);
 
     carte operator=(const carte &c);
+
+    void afisare() const;
+
+    bool operator==(const carte &c) const;
+
+    bool operator!=(const carte &c) const;
 
     ~carte();
 

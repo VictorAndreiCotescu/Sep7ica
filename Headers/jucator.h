@@ -8,13 +8,20 @@
 
 
 class jucator {
+
 public:
 
     jucator();
+
     static void trageCarte(pachet *Pachet, jucator *Jucator);
+
     static void AfisareCarti(jucator *Jucator);
+
     static void CompletareMana(pachet *Pachet, jucator *Jucator);
+
     static carte AlegereCarte(jucator *Jucator);
+
+    void AdaugarePuncte(int x);
 
 protected:
 
@@ -22,9 +29,6 @@ protected:
     int puncte;
 
 };
-
-
-
 
 
 #endif //SEPTICA_JUCATOR_H

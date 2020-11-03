@@ -3,13 +3,18 @@
 
 
 #include "jucator.h"
+#include "carte.h"
 
-class Calculator : public jucator{
+
+class Calculator : public jucator {
+
 public:
+
     Calculator();
 
     carte AlegereCarteCalculator(carte &c);
 
+    carte AlegereCarteCalculator();
     //friend std::ostream& operator<<(std::ostream& os, const carte& cl);
 
 };

@@ -45,7 +45,7 @@ void pachet::AmestecareVec(pachet *Pachet) {
 
 }
 
-void pachet::AfisarePachetVec(const pachet& pachet) {
+void pachet::AfisarePachetVec(const pachet &pachet) {
 
     int j = 0;
     for (auto &i : pachet.Pachet) {
@@ -54,10 +54,19 @@ void pachet::AfisarePachetVec(const pachet& pachet) {
     }
 }
 
+bool pachet::Gol() const {
+
+    if(this->Pachet.empty())
+        return true;
+    else
+        return false;
+}
+
 void pachet::AfisarePachet(carte pachet[]) {
     for (int i = 0; i < 27; ++i)
         std::cout << pachet[i].numar << " " << pachet[i].culoare << std::endl;
 }
+
 void pachet::Amestecare(carte *pachet) {
 
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
@@ -70,6 +79,7 @@ void pachet::Amestecare(carte *pachet) {
 
 
 }
+
 void pachet::InitializarePachet(carte pachet[]) {
     int j = 0;
     for (int i = 0; i < 7; ++i) {
@@ -85,6 +95,5 @@ void pachet::InitializarePachet(carte pachet[]) {
         pachet[j++] = Carte4;
     }
 }
-
 
 pachet::~pachet() = default;

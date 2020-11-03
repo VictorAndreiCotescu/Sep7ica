@@ -35,47 +35,62 @@ void jucator::CompletareMana(pachet *Pachet, jucator *Jucator) {
 }
 
 carte jucator::AlegereCarte(jucator *Jucator) {
+
+    std::cout << std::endl;
+    std::cout << "Alege o carte: \n";
+    jucator::AfisareCarti(Jucator);
     char c = getch();
-    carte CarteAleasa(1,1);
+    carte CarteAleasa(1, 1);
     switch (c) {
 
         case '1':
-            if(!Jucator->mana.empty()) {
+            if (!Jucator->mana.empty()) {
                 CarteAleasa = Jucator->mana[0];
                 Jucator->mana.erase(Jucator->mana.begin() + 0);
+                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
+                return CarteAleasa;
             }
             break;
 
         case '2':
-            if(Jucator->mana.size() > 1) {
+            if (Jucator->mana.size() > 1) {
                 CarteAleasa = Jucator->mana[1];
                 Jucator->mana.erase(Jucator->mana.begin() + 1);
+                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
                 return CarteAleasa;
             }
             break;
 
         case '3':
-            if(Jucator->mana.size() > 2) {
+            if (Jucator->mana.size() > 2) {
                 CarteAleasa = Jucator->mana[2];
                 Jucator->mana.erase(Jucator->mana.begin() + 2);
+                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
                 return CarteAleasa;
             }
             break;
 
         case '4':
-            if(Jucator->mana.size() > 3) {
+            if (Jucator->mana.size() > 3) {
                 CarteAleasa = Jucator->mana[3];
                 Jucator->mana.erase(Jucator->mana.begin() + 3);
+                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
                 return CarteAleasa;
             }
             break;
 
         default:
-            if(!Jucator->mana.empty())
+            if (!Jucator->mana.empty())
                 AlegereCarte(Jucator);
             break;
     }
 
+    return carte(0,0);
+}
+
+void jucator::AdaugarePuncte(int x) {
+
+   jucator::puncte += x;
 
 }
 
