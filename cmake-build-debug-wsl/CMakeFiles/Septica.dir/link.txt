@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Septica.dir/main.cpp.o CMakeFiles/Septica.dir/carte.cpp.o CMakeFiles/Septica.dir/pachet.cpp.o CMakeFiles/Septica.dir/jucator.cpp.o CMakeFiles/Septica.dir/Calculator.cpp.o -o Septica 
