@@ -1,7 +1,4 @@
 #include <iostream>
-#include <conio.h>
-#include <windows.h>
-#include <thread>
 #include "Headers/carte.h"
 #include "Headers/pachet.h"
 #include "Headers/jucator.h"
@@ -155,7 +152,6 @@ void Joc() {
             Calculator.CompletareMana(&Pachet, &Calculator);
         }
     }
-
 
 
     /* if (randulJucatorului(&Jucator1, &Calculator) && ok) {

@@ -1,7 +1,3 @@
-//
-// Created by victo on 02-Nov-20.
-//
-
 #include "Headers/Calculator.h"
 #include <algorithm>
 #include <iostream>

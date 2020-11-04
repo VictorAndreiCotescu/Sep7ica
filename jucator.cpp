@@ -1,5 +1,4 @@
 #include <iostream>
-#include <conio.h>
 #include <algorithm>
 #include "Headers/jucator.h"
 
