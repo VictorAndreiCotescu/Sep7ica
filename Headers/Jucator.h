@@ -3,32 +3,35 @@
 
 
 #include <vector>
-#include "carte.h"
-#include "pachet.h"
+#include "Carte.h"
+#include "Pachet.h"
 
 
-class jucator {
+class Jucator {
 
 public:
 
-    jucator();
+    Jucator();
 
-    void trageCarte(pachet *Pachet, jucator *Jucator);
+    static void trageCarte(Pachet *Pachet, Jucator *Jucator);
 
-    void AfisareCarti(jucator *Jucator);
+    static void afisareCarti(Jucator *Jucator);
 
-    void CompletareMana(pachet *Pachet, jucator *Jucator);
+    static void completareMana(Pachet *Pachet, Jucator *Jucator);
 
-    carte AlegereCarte(jucator *Jucator);
+    Carte alegereCarte(Jucator *Jucator);
 
-    bool alegerePosibila(const carte &c) const;
+    bool alegerePosibila(const Carte &c) const;
 
-    void AdaugarePuncte(int x);
+    void adaugarePuncte(int x);
 
 protected:
 
-    std::vector<carte> mana;
+    std::vector<Carte> mana;
     int puncte;
+
+private:
+    Carte carteAleasa(char c);
 
 };
 

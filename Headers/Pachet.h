@@ -1,44 +1,46 @@
 #ifndef SEPTICA_PACHET_H
 #define SEPTICA_PACHET_H
 
-#include "carte.h"
+#include "Carte.h"
 #include <vector>
 
-class pachet {
+class Pachet {
 
-    friend class jucator;
 
 public:
-    pachet();
+    Pachet();
 
-    pachet(const pachet &p);
+    Pachet(const Pachet &p);
 
-    pachet operator=(const pachet &p);
+    Pachet operator=(const Pachet &p);
 
-    // cu std::vector
-    static void InitializarePachetvec(pachet *Pachet);
 
-    static void AfisarePachetVec(const pachet &pachet);
+    static void initializarePachetvec(Pachet *Pachet);
 
-    static void AmestecareVec(pachet *Pachet);
+    static void afisarePachetVec(const Pachet &pachet);
+
+    static void amestecareVec(Pachet *Pachet);
 
     bool Gol() const;
 
 
-    ~pachet();
+    ~Pachet();
 
 
 protected:
 
-    std::vector<carte> Pachet;
+    std::vector<Carte> pachet;
 
 private:
+
+    friend class Jucator;
+
     // fara std::vector
-    static void InitializarePachet(carte pachet[]);
+    static void InitializarePachet(Carte pachet[]);
 
-    static void Amestecare(carte *pachet);
+    static void Amestecare(Carte *pachet);
 
-    static void AfisarePachet(carte pachet[]);
+    static void AfisarePachet(Carte pachet[]);
 
 };
 

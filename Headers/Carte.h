@@ -5,35 +5,38 @@
 #include <string>
 #include <utility>
 
-class carte {
-
-    friend class pachet;
-
-    friend class jucator;
-
-    friend class Calculator;
+class Carte {
 
 public:
-    carte();
+    Carte();
 
-    explicit carte(int numar_ = 1, int culoare_ = 1) : numar(numar_), culoare(culoare_) {}
+    explicit Carte(int numar_ = 1, int culoare_ = 1) : numar(numar_), culoare(culoare_) {}
 
-    carte(const carte &c);
+    Carte(const Carte &c);
 
-    carte operator=(const carte &c);
+    Carte operator=(const Carte &c);
 
     void afisare() const;
 
-    bool operator==(const carte &c) const;
+    bool operator==(const Carte &c) const;
 
-    bool operator!=(const carte &c) const;
+    bool operator!=(const Carte &c) const;
 
-    ~carte();
+    ~Carte();
 
 
 protected:
+
     int culoare;
     int numar;
+
+private:
+
+    friend class Pachet;
+
+    friend class Jucator;
+
+    friend class Calculator;
 
 };
 

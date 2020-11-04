@@ -2,20 +2,20 @@
 #define SEPTICA_CALCULATOR_H
 
 
-#include "jucator.h"
-#include "carte.h"
+#include "Jucator.h"
+#include "Carte.h"
 
 
-class Calculator : public jucator {
+class Calculator : public Jucator {
 
 public:
 
     Calculator();
 
-    carte AlegereCarteCalculator(carte &c);
+    Carte alegereCarteCalculator(Carte &c);
 
-    carte AlegereCarteCalculator();
-    //friend std::ostream& operator<<(std::ostream& os, const carte& cl);
+    Carte alegereCarteCalculator();
+    //friend std::ostream& operator<<(std::ostream& os, const Carte& cl);
 
 };
 

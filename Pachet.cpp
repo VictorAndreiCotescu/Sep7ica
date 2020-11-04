@@ -3,71 +3,73 @@
 #include <algorithm>
 #include <functional>
 #include <chrono>
-#include "Headers/pachet.h"
+#include "Headers/Pachet.h"
 
-pachet::pachet() = default;
+Pachet::Pachet() = default;
 
-pachet::pachet(const pachet &p) {
-    Pachet = p.Pachet;
+Pachet::Pachet(const Pachet &p) {
+    pachet = p.pachet;
 }
 
-pachet pachet::operator=(const pachet &p) {
-    Pachet = p.Pachet;
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wreturn-type"
+Pachet Pachet::operator=(const Pachet &p) {
+    pachet = p.pachet;
     if (this != &p)
         return *this;
 }
 
-void pachet::InitializarePachetvec(pachet *Pachet) {
+void Pachet::initializarePachetvec(Pachet *Pachet) {
 
     int j = 0;
     for (int i = 0; i < 7; ++i) {
 
-        carte Carte1(i + 1, 1);//inima rosie
-        carte Carte2(i + 1, 2);//inima neagra
-        carte Carte3(i + 1, 3);//romb
-        carte Carte4(i + 1, 4);//trefla
+        Carte Carte1(i + 1, 1);//inima rosie
+        Carte Carte2(i + 1, 2);//inima neagra
+        Carte Carte3(i + 1, 3);//romb
+        Carte Carte4(i + 1, 4);//trefla
 
-        Pachet->Pachet.push_back(Carte1);
-        Pachet->Pachet.push_back(Carte2);
-        Pachet->Pachet.push_back(Carte3);
-        Pachet->Pachet.push_back(Carte4);
+        Pachet->pachet.push_back(Carte1);
+        Pachet->pachet.push_back(Carte2);
+        Pachet->pachet.push_back(Carte3);
+        Pachet->pachet.push_back(Carte4);
 
     }
 }
-
-void pachet::AmestecareVec(pachet *Pachet) {
+#pragma GCC diagnostic pop
+void Pachet::amestecareVec(Pachet *Pachet) {
 
     /*auto rdz = std::random_device {};
     auto rng = std::default_random_engine { rdz() };
-    std::shuffle(std::begin(Pachet->Pachet), std::end(Pachet->Pachet), rng);*/
+    std::shuffle(std::begin(pachet->pachet), std::end(pachet->pachet), rng);*/
 
-    std::shuffle(Pachet->Pachet.begin(), Pachet->Pachet.end(), std::mt19937(std::random_device()()));
+    std::shuffle(Pachet->pachet.begin(), Pachet->pachet.end(), std::mt19937(std::random_device()()));
 
 }
 
-void pachet::AfisarePachetVec(const pachet &pachet) {
+void Pachet::afisarePachetVec(const Pachet &pachet) {
 
     int j = 0;
-    for (auto &i : pachet.Pachet) {
+    for (auto &i : pachet.pachet) {
 
         std::cout << i.numar << " " << i.culoare << std::endl;
     }
 }
 
-bool pachet::Gol() const {
+bool Pachet::Gol() const {
 
-    if(this->Pachet.empty())
+    if(this->pachet.empty())
         return true;
     else
         return false;
 }
 
-void pachet::AfisarePachet(carte pachet[]) {
+void Pachet::AfisarePachet(Carte pachet[]) {
     for (int i = 0; i < 27; ++i)
         std::cout << pachet[i].numar << " " << pachet[i].culoare << std::endl;
 }
 
-void pachet::Amestecare(carte *pachet) {
+void Pachet::Amestecare(Carte *pachet) {
 
     unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
     std::knuth_b generator(seed);
@@ -80,14 +82,14 @@ void pachet::Amestecare(carte *pachet) {
 
 }
 
-void pachet::InitializarePachet(carte pachet[]) {
+void Pachet::InitializarePachet(Carte pachet[]) {
     int j = 0;
     for (int i = 0; i < 7; ++i) {
 
-        carte Carte1(i + 1, 1);//inima rosie
-        carte Carte2(i + 1, 2);//inima neagra
-        carte Carte3(i + 1, 3);//romb
-        carte Carte4(i + 1, 4);//trefla
+        Carte Carte1(i + 1, 1);//inima rosie
+        Carte Carte2(i + 1, 2);//inima neagra
+        Carte Carte3(i + 1, 3);//romb
+        Carte Carte4(i + 1, 4);//trefla
 
         pachet[j++] = Carte1;
         pachet[j++] = Carte2;
@@ -96,4 +98,4 @@ void pachet::InitializarePachet(carte pachet[]) {
     }
 }
 
-pachet::~pachet() = default;
+Pachet::~Pachet() = default;

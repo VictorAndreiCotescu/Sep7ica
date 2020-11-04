@@ -1,59 +1,38 @@
 #include <iostream>
-#include "Headers/carte.h"
-#include "Headers/pachet.h"
-#include "Headers/jucator.h"
+#include "Headers/Carte.h"
+#include "Headers/Pachet.h"
+#include "Headers/Jucator.h"
 #include "Headers/Calculator.h"
+#include "Headers/Fereastra.h"
 
-#define KEY_UP 72       //Up arrow character
-#define KEY_DOWN 80    //Down arrow character
-#define KEY_ENTER '\r'//Enter key charatcer
 
-/*void play_music() {
-    PlaySound("8bit Bossa.mp3", nullptr, SND_LOOP);
-}*/
+bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
 
-bool randulJucatorului(jucator *Jucator1, Calculator *Calculator) {
-
-    static int inx = 1;
+    static int inx = 0;
     int puncte = 0;
 
     std::cout << "Carti Calculator: \n";
-    Calculator->AfisareCarti(Calculator);
+    Calculator::afisareCarti(Calculator);
     std::cout << std::endl;
-    static std::vector<carte> runda;
+    static std::vector<Carte> runda;
 
     while (true) {
-        carte juc(Jucator1->AlegereCarte(Jucator1));
+
+        Carte juc(Jucator1->alegereCarte(Jucator1));
         runda.push_back(juc);
 
-        carte calc(Calculator->AlegereCarteCalculator(runda[0]));
+        Carte calc(Calculator->alegereCarteCalculator(runda[0]));
         runda.push_back(calc);
 
-        std::cout << "\nIn functie: juc ";
-        juc.afisare();
-        std::cout << " calc ";
-        calc.afisare();
-        std::cout << std::endl;
+        runda[0].afisare();
 
-
-        if (juc != runda[0] || juc != carte(7, 0)) {
+        if (calc != runda[0] || calc != Carte(7, 0)) {
 
             for (int i = 0; i < inx; ++i)
-                if (runda[i] == carte(1, 0) || runda[i] == carte(10, 0))
+                if (runda[i] == Carte(1, 0) || runda[i] == Carte(10, 0))
                     ++puncte;
 
-            Calculator->AdaugarePuncte(puncte);
-            return false;
-
-        }
-
-        if (calc != runda[0] || calc != carte(7, 0)) {
-
-            for (int i = 0; i < inx; ++i)
-                if (runda[i] == carte(1, 0) || runda[i] == carte(10, 0))
-                    ++puncte;
-
-            Jucator1->AdaugarePuncte(puncte);
+            Jucator1->adaugarePuncte(puncte);
             return true;
 
         }
@@ -65,46 +44,40 @@ bool randulJucatorului(jucator *Jucator1, Calculator *Calculator) {
     }
 }
 
-bool randulCalculatorului(jucator *Jucator1, Calculator *Calculator) {
+bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
 
     int inx = 0;
     int puncte = 0;
-    static std::vector<carte> runda;
+    static std::vector<Carte> runda;
 
     std::cout << "Carti Calculator: \n";
-    Calculator->AfisareCarti(Calculator);
+    Calculator->afisareCarti(Calculator);
     std::cout << std::endl;
 
     while (true) {
-        carte calc(Calculator->AlegereCarteCalculator());
+        Carte calc(Calculator->alegereCarteCalculator());
         runda.push_back(calc);
 
-        carte juc(Jucator1->AlegereCarte(Jucator1));
+        Carte juc(Jucator1->alegereCarte(Jucator1));
         runda.push_back(juc);
 
-        std::cout << "\nIn functie: juc ";
-        juc.afisare();
-        std::cout << " calc ";
-        calc.afisare();
-        std::cout << std::endl;
-
-        if (juc != runda[0] || juc != carte(7, 0)) {
+        if (juc != runda[0] || juc != Carte(7, 0)) {
 
             for (int i = 0; i < inx; ++i)
-                if (runda[i] == carte(1, 0) || runda[i] == carte(10, 0))
+                if (runda[i] == Carte(1, 0) || runda[i] == Carte(10, 0))
                     ++puncte;
 
-            Calculator->AdaugarePuncte(puncte);
+            Calculator->adaugarePuncte(puncte);
             return true;
         }
 
-        if (calc != runda[0] || calc != carte(7, 0)) {
+        if (calc != runda[0] || calc != Carte(7, 0)) {
 
             for (int i = 0; i < inx; ++i)
-                if (runda[i] == carte(1, 0) || runda[i] == carte(10, 0))
+                if (runda[i] == Carte(1, 0) || runda[i] == Carte(10, 0))
                     ++puncte;
 
-            Jucator1->AdaugarePuncte(puncte);
+            Jucator1->adaugarePuncte(puncte);
             return false;
 
         }
@@ -118,38 +91,39 @@ bool randulCalculatorului(jucator *Jucator1, Calculator *Calculator) {
 
 void Joc() {
 
-    pachet Pachet;
-    jucator Jucator1;
+    Pachet Pachet;
+    Jucator Jucator1;
     Calculator Calculator;
 
-    pachet::InitializarePachetvec(&Pachet);
-    pachet::AmestecareVec(&Pachet);
+    Pachet::initializarePachetvec(&Pachet);
+    Pachet::amestecareVec(&Pachet);
 
-    Jucator1.CompletareMana(&Pachet, &Jucator1);
-    Calculator.CompletareMana(&Pachet, &Calculator);
+    Jucator::completareMana(&Pachet, &Jucator1);
+    Calculator::completareMana(&Pachet, &Calculator);
 
     bool okj = randulJucatorului(&Jucator1, &Calculator);
     bool okc = !okj;
-    Jucator1.CompletareMana(&Pachet, &Jucator1);
-    Calculator.CompletareMana(&Pachet, &Calculator);
+    Jucator::completareMana(&Pachet, &Jucator1);
+    Calculator::completareMana(&Pachet, &Calculator);
     while (!Pachet.Gol()) {
-        //system("cls");
+
         std::cout << "---------------\n";
 
         randulJucatorului(&Jucator1, &Calculator);
 
-        Jucator1.CompletareMana(&Pachet, &Jucator1);
-        Calculator.CompletareMana(&Pachet, &Calculator);
+        Jucator::completareMana(&Pachet, &Jucator1);
+        Calculator::completareMana(&Pachet, &Calculator);
+
         if (okj) {
             okj = randulJucatorului(&Jucator1, &Calculator);
             okc = !okj;
-            Jucator1.CompletareMana(&Pachet, &Jucator1);
-            Calculator.CompletareMana(&Pachet, &Calculator);
+            Jucator::completareMana(&Pachet, &Jucator1);
+            Calculator::completareMana(&Pachet, &Calculator);
         } else if (okc) {
             okc = randulCalculatorului(&Jucator1, &Calculator);
             okj = !okc;
-            Jucator1.CompletareMana(&Pachet, &Jucator1);
-            Calculator.CompletareMana(&Pachet, &Calculator);
+            Jucator::completareMana(&Pachet, &Jucator1);
+            Calculator::completareMana(&Pachet, &Calculator);
         }
     }
 
@@ -157,14 +131,14 @@ void Joc() {
     /* if (randulJucatorului(&Jucator1, &Calculator) && ok) {
 
 
-         jucator::CompletareMana(&Pachet, &Jucator1);
-         Calculator::CompletareMana(&Pachet, &Calculator);
+         Jucator::CompletareMana(&pachet, &Jucator1);
+         Calculator::CompletareMana(&pachet, &Calculator);
          ok = randulJucatorului(&Jucator1, &Calculator);
 
      } else if (randulCalculatorului(&Jucator1, &Calculator)) {
 
-         jucator::CompletareMana(&Pachet, &Jucator1);
-         Calculator::CompletareMana(&Pachet, &Calculator);
+         Jucator::CompletareMana(&pachet, &Jucator1);
+         Calculator::completareMana(&pachet, &Calculator);
          ok = randulCalculatorului(&Jucator1, &Calculator);
      }
  }*/
@@ -176,32 +150,38 @@ int main() {
 
 
     Joc();
-    /*pachet Pachet;
-    jucator Jucator1;
 
-    Pachet.InitializarePachetvec(&Pachet);
-    Pachet.AmestecareVec(&Pachet);
+    /*pachet pachet;
+    Jucator Jucator1;
 
-    Jucator1.CompletareMana(&Pachet, &Jucator1);
-    carte joc(Jucator1.AlegereCarte(&Jucator1));
+    pachet.initializarePachetvec(&pachet);
+    pachet.amestecareVec(&pachet);
+
+    Jucator1.CompletareMana(&pachet, &Jucator1);
+    Carte joc(Jucator1.AlegereCarte(&Jucator1));
 
     joc.afisare();
 
-    Jucator1.CompletareMana(&Pachet, &Jucator1);
+    Jucator1.completareMana(&pachet, &Jucator1);
 
-    Jucator1.AfisareCarti(&Jucator1);
+    Jucator1.afisareCarti(&Jucator1);
 
-    carte juc(Jucator1.AlegereCarte(&Jucator1));
+    Carte juc(Jucator1.alegereCarte(&Jucator1));
 
-    juc.afisare();*/
-
-
+    juc.afisare();*/ //initializare in main pentru teste
 
 
-    //pachet::AfisarePachet(carti);
+   /* Fereastra fereastra;
 
+    fereastra.initialize("SEPTICA");
 
+    while(true){
 
+        fereastra.update();
+        fereastra.render();
+
+    }
+*/
 
 
 

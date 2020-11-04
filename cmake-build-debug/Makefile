@@ -169,59 +169,113 @@ Calculator.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Calculator.cpp.s
 .PHONY : Calculator.cpp.s
 
-carte.obj: carte.cpp.obj
+Carte.obj: Carte.cpp.obj
 
-.PHONY : carte.obj
-
-# target to build an object file
-carte.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/carte.cpp.obj
-.PHONY : carte.cpp.obj
-
-carte.i: carte.cpp.i
-
-.PHONY : carte.i
-
-# target to preprocess a source file
-carte.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/carte.cpp.i
-.PHONY : carte.cpp.i
-
-carte.s: carte.cpp.s
-
-.PHONY : carte.s
-
-# target to generate assembly for a file
-carte.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/carte.cpp.s
-.PHONY : carte.cpp.s
-
-jucator.obj: jucator.cpp.obj
-
-.PHONY : jucator.obj
+.PHONY : Carte.obj
 
 # target to build an object file
-jucator.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.obj
-.PHONY : jucator.cpp.obj
+Carte.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Carte.cpp.obj
+.PHONY : Carte.cpp.obj
 
-jucator.i: jucator.cpp.i
+Carte.i: Carte.cpp.i
 
-.PHONY : jucator.i
+.PHONY : Carte.i
 
 # target to preprocess a source file
-jucator.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.i
-.PHONY : jucator.cpp.i
+Carte.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Carte.cpp.i
+.PHONY : Carte.cpp.i
 
-jucator.s: jucator.cpp.s
+Carte.s: Carte.cpp.s
 
-.PHONY : jucator.s
+.PHONY : Carte.s
 
 # target to generate assembly for a file
-jucator.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/jucator.cpp.s
-.PHONY : jucator.cpp.s
+Carte.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Carte.cpp.s
+.PHONY : Carte.cpp.s
+
+Fereastra.obj: Fereastra.cpp.obj
+
+.PHONY : Fereastra.obj
+
+# target to build an object file
+Fereastra.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Fereastra.cpp.obj
+.PHONY : Fereastra.cpp.obj
+
+Fereastra.i: Fereastra.cpp.i
+
+.PHONY : Fereastra.i
+
+# target to preprocess a source file
+Fereastra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Fereastra.cpp.i
+.PHONY : Fereastra.cpp.i
+
+Fereastra.s: Fereastra.cpp.s
+
+.PHONY : Fereastra.s
+
+# target to generate assembly for a file
+Fereastra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Fereastra.cpp.s
+.PHONY : Fereastra.cpp.s
+
+Jucator.obj: Jucator.cpp.obj
+
+.PHONY : Jucator.obj
+
+# target to build an object file
+Jucator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Jucator.cpp.obj
+.PHONY : Jucator.cpp.obj
+
+Jucator.i: Jucator.cpp.i
+
+.PHONY : Jucator.i
+
+# target to preprocess a source file
+Jucator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Jucator.cpp.i
+.PHONY : Jucator.cpp.i
+
+Jucator.s: Jucator.cpp.s
+
+.PHONY : Jucator.s
+
+# target to generate assembly for a file
+Jucator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Jucator.cpp.s
+.PHONY : Jucator.cpp.s
+
+Pachet.obj: Pachet.cpp.obj
+
+.PHONY : Pachet.obj
+
+# target to build an object file
+Pachet.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Pachet.cpp.obj
+.PHONY : Pachet.cpp.obj
+
+Pachet.i: Pachet.cpp.i
+
+.PHONY : Pachet.i
+
+# target to preprocess a source file
+Pachet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Pachet.cpp.i
+.PHONY : Pachet.cpp.i
+
+Pachet.s: Pachet.cpp.s
+
+.PHONY : Pachet.s
+
+# target to generate assembly for a file
+Pachet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Pachet.cpp.s
+.PHONY : Pachet.cpp.s
 
 main.obj: main.cpp.obj
 
@@ -250,33 +304,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-pachet.obj: pachet.cpp.obj
-
-.PHONY : pachet.obj
-
-# target to build an object file
-pachet.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/pachet.cpp.obj
-.PHONY : pachet.cpp.obj
-
-pachet.i: pachet.cpp.i
-
-.PHONY : pachet.i
-
-# target to preprocess a source file
-pachet.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/pachet.cpp.i
-.PHONY : pachet.cpp.i
-
-pachet.s: pachet.cpp.s
-
-.PHONY : pachet.s
-
-# target to generate assembly for a file
-pachet.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/pachet.cpp.s
-.PHONY : pachet.cpp.s
-
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -289,18 +316,21 @@ help:
 	@echo ... Calculator.obj
 	@echo ... Calculator.i
 	@echo ... Calculator.s
-	@echo ... carte.obj
-	@echo ... carte.i
-	@echo ... carte.s
-	@echo ... jucator.obj
-	@echo ... jucator.i
-	@echo ... jucator.s
+	@echo ... Carte.obj
+	@echo ... Carte.i
+	@echo ... Carte.s
+	@echo ... Fereastra.obj
+	@echo ... Fereastra.i
+	@echo ... Fereastra.s
+	@echo ... Jucator.obj
+	@echo ... Jucator.i
+	@echo ... Jucator.s
+	@echo ... Pachet.obj
+	@echo ... Pachet.i
+	@echo ... Pachet.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s
-	@echo ... pachet.obj
-	@echo ... pachet.i
-	@echo ... pachet.s
 .PHONY : help
 
 

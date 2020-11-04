@@ -1,37 +1,36 @@
 #include <iostream>
-#include "Headers/carte.h"
+#include "Headers/Carte.h"
 
-//carte::carte() = default;
+//Carte::Carte() = default;
 
-carte::carte(const carte &c) {
+Carte::Carte(const Carte &c) {
     numar = c.numar;
     culoare = c.culoare;
 }
 
-carte carte::operator=(const carte &c) {
+Carte Carte::operator=(const Carte &c) {
 
     numar = c.numar;
     culoare = c.culoare;
 
-    if (this != &c)
         return *this;
 }
 
-bool carte::operator==(const carte &c) const {
+bool Carte::operator==(const Carte &c) const {
     if (this->numar == c.numar)
         return true;
     else
         return false;
 }
 
-bool carte::operator!=(const carte &c) const {
+bool Carte::operator!=(const Carte &c) const {
     if (this->numar == c.numar)
         return false;
     else
         return true;
 }
 
-void carte::afisare() const {
+void Carte::afisare() const {
 
     std::cout << this->numar << " " << this->culoare;
 
@@ -39,6 +38,6 @@ void carte::afisare() const {
 
 
 
-carte::~carte() = default;
+Carte::~Carte() = default;
 
-carte::carte() = default;
+Carte::Carte() = default;

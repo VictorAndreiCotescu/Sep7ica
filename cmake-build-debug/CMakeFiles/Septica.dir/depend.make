@@ -3,25 +3,29 @@
 
 CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Calculator.cpp
 CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/Calculator.h
-CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/carte.h
-CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/jucator.h
-CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/pachet.h
+CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/Carte.h
+CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/Jucator.h
+CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/Pachet.h
 
-CMakeFiles/Septica.dir/carte.cpp.obj: ../Headers/carte.h
-CMakeFiles/Septica.dir/carte.cpp.obj: ../carte.cpp
+CMakeFiles/Septica.dir/Carte.cpp.obj: ../Carte.cpp
+CMakeFiles/Septica.dir/Carte.cpp.obj: ../Headers/Carte.h
 
-CMakeFiles/Septica.dir/jucator.cpp.obj: ../Headers/carte.h
-CMakeFiles/Septica.dir/jucator.cpp.obj: ../Headers/jucator.h
-CMakeFiles/Septica.dir/jucator.cpp.obj: ../Headers/pachet.h
-CMakeFiles/Septica.dir/jucator.cpp.obj: ../jucator.cpp
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../Fereastra.cpp
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../Headers/Fereastra.h
+
+CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Headers/Carte.h
+CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Headers/Jucator.h
+CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Headers/Pachet.h
+CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Jucator.cpp
+
+CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Headers/Carte.h
+CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Headers/Pachet.h
+CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Pachet.cpp
 
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Calculator.h
-CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/carte.h
-CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/jucator.h
-CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/pachet.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Carte.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Fereastra.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Jucator.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Pachet.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../main.cpp
-
-CMakeFiles/Septica.dir/pachet.cpp.obj: ../Headers/carte.h
-CMakeFiles/Septica.dir/pachet.cpp.obj: ../Headers/pachet.h
-CMakeFiles/Septica.dir/pachet.cpp.obj: ../pachet.cpp
 

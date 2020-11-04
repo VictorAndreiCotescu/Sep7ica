@@ -1,9 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Septica.dir/Calculator.cpp.obj"
-  "CMakeFiles/Septica.dir/carte.cpp.obj"
-  "CMakeFiles/Septica.dir/jucator.cpp.obj"
+  "CMakeFiles/Septica.dir/Carte.cpp.obj"
+  "CMakeFiles/Septica.dir/Fereastra.cpp.obj"
+  "CMakeFiles/Septica.dir/Jucator.cpp.obj"
+  "CMakeFiles/Septica.dir/Pachet.cpp.obj"
   "CMakeFiles/Septica.dir/main.cpp.obj"
-  "CMakeFiles/Septica.dir/pachet.cpp.obj"
   "Septica.exe"
   "Septica.exe.manifest"
   "Septica.pdb"

@@ -1,16 +1,18 @@
 #include <iostream>
 #include <algorithm>
-#include "Headers/jucator.h"
+#include "Headers/Jucator.h"
 
-jucator::jucator() = default;
+Jucator::Jucator() {
+    puncte = 0;
+};
 
-void jucator::trageCarte(pachet *Pachet, jucator *Jucator) {
+void Jucator::trageCarte(Pachet *Pachet, Jucator *Jucator) {
 
-    Jucator->mana.push_back(Pachet->Pachet.back());
-    Pachet->Pachet.pop_back();
+    Jucator->mana.push_back(Pachet->pachet.back());
+    Pachet->pachet.pop_back();
 }
 
-void jucator::AfisareCarti(jucator *Jucator) {
+void Jucator::afisareCarti(Jucator *Jucator) {
 
     for (auto &i : Jucator->mana) {
         std::cout << i.numar;
@@ -20,10 +22,10 @@ void jucator::AfisareCarti(jucator *Jucator) {
 
 }
 
-void jucator::CompletareMana(pachet *Pachet, jucator *Jucator) {
+void Jucator::completareMana(Pachet *Pachet, Jucator *Jucator) {
 
-    if (Pachet->Pachet.size() < 8) {
-        for (int i = 0; i < Pachet->Pachet.size() / 2; ++i)
+    if (Pachet->pachet.size() < 8) {
+        for (int i = 0; i < Pachet->pachet.size() / 2; ++i)
             if (Jucator->mana.size() == 4)
                 break;
             else
@@ -33,73 +35,67 @@ void jucator::CompletareMana(pachet *Pachet, jucator *Jucator) {
             Jucator->trageCarte(Pachet, Jucator);
 }
 
-carte jucator::AlegereCarte(jucator *Jucator) {
+Carte Jucator::carteAleasa(char c) {
+
+    if(mana.size() > (c - '0') - 1) {
+
+        Carte CarteAleasa(mana[(c - '0') - 1]);
+        mana.erase(mana.begin() + (c - '0') - 1);
+        std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
+        return CarteAleasa;
+    }
+}
+
+Carte Jucator::alegereCarte(Jucator *Jucator) {
 
     std::cout << std::endl;
-    std::cout << "Alege o carte: \n";
-    Jucator->AfisareCarti(Jucator);
+    std::cout << "Alege o Carte: \n";
+    Jucator->afisareCarti(Jucator);
     char c;
     std::cin >> c;
+    Carte carteAleasaReturn(1, 1);
+
     switch (c) {
 
         case '1':
-            if (!Jucator->mana.empty()) {
-                carte CarteAleasa(Jucator->mana[0]);
-                Jucator->mana.erase(Jucator->mana.begin() + 0);
-                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
-                return CarteAleasa;
-            }
-            break;
+            carteAleasaReturn = carteAleasa(c);
+            return carteAleasaReturn;
 
         case '2':
-            if (Jucator->mana.size() > 1) {
-                carte CarteAleasa(Jucator->mana[1]);
-                Jucator->mana.erase(Jucator->mana.begin() + 1);
-                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
-                return CarteAleasa;
-            }
-            break;
+            carteAleasaReturn = carteAleasa(c);
+            return carteAleasaReturn;
 
         case '3':
-            if (Jucator->mana.size() > 2) {
-                carte CarteAleasa(Jucator->mana[2]);
-                Jucator->mana.erase(Jucator->mana.begin() + 2);
-                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
-                return CarteAleasa;
-            }
-            break;
+            carteAleasaReturn = carteAleasa(c);
+            return carteAleasaReturn;
 
         case '4':
-            if (Jucator->mana.size() > 3) {
-                carte CarteAleasa(Jucator->mana[3]);
-                Jucator->mana.erase(Jucator->mana.begin() + 3);
-                std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
-                return CarteAleasa;
-            }
-            break;
+            carteAleasaReturn = carteAleasa(c);
+            return carteAleasaReturn;
 
         default:
             if (!Jucator->mana.empty())
-                AlegereCarte(Jucator);
+                alegereCarte(Jucator);
             break;
     }
+}
+
+void Jucator::adaugarePuncte(int x) {
+
+    Jucator::puncte += x;
 
 }
 
-void jucator::AdaugarePuncte(int x) {
-
-   jucator::puncte += x;
-
-}
-
-bool jucator::alegerePosibila(const carte &c) const{
+bool Jucator::alegerePosibila(const Carte &c) const{
 
     if ( std::find(this->mana.begin(), this->mana.end(),c)!=this->mana.end())
         return true;
-    else if ( std::find(this->mana.begin(), this->mana.end(),carte(7,0))!=this->mana.end())
+    else if (std::find(this->mana.begin(), this->mana.end(), Carte(7, 0)) != this->mana.end())
         return true;
     else
         return false;
 
 }
+
+
 

@@ -5,10 +5,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/victo/CLionProjects/Septica/Calculator.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/Calculator.cpp.obj"
-  "C:/Users/victo/CLionProjects/Septica/carte.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/carte.cpp.obj"
-  "C:/Users/victo/CLionProjects/Septica/jucator.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/jucator.cpp.obj"
+  "C:/Users/victo/CLionProjects/Septica/Carte.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/Carte.cpp.obj"
+  "C:/Users/victo/CLionProjects/Septica/Fereastra.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/Fereastra.cpp.obj"
+  "C:/Users/victo/CLionProjects/Septica/Jucator.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/Jucator.cpp.obj"
+  "C:/Users/victo/CLionProjects/Septica/Pachet.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/Pachet.cpp.obj"
   "C:/Users/victo/CLionProjects/Septica/main.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/main.cpp.obj"
-  "C:/Users/victo/CLionProjects/Septica/pachet.cpp" "C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir/pachet.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

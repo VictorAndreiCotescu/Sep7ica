@@ -1,5 +1,72 @@
-//
-// Created by victo on 04-Nov-20.
-//
+/*
+#include "Headers/Fereastra.h"
+#include <iostream>
+#include <GLFW/glfw3.h>
+#include <GL/glut.h>
 
-#include "Fereastra.h"
+int Fereastra::REZ_WID = 1024;
+int Fereastra::REZ_HGT = 768;
+
+GLFWwindow* Fereastra::fereastra = nullptr;
+
+Fereastra::Fereastra() {
+
+
+}
+
+bool Fereastra::initialize(char *titlu) {
+
+    if(!glfwInit()){
+        std::cerr << "Eroare initializare GLFW" << std::endl;
+        return false;
+    }
+
+    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
+
+    if(fereastra == nullptr){
+        std::cerr << "Eroare initializare fereastra" << std::endl;
+        return false;
+    }
+
+    glfwMakeContextCurrent(fereastra);
+    int wid, hgt;
+    glfwGetFramebufferSize(fereastra, &wid, &hgt);
+    glfwSwapInterval(1);
+
+    const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+
+    int xPos = (mode->width - REZ_WID) /2;
+    int yPos = (mode->height - REZ_HGT) /2;
+    glfwSetWindowPos(fereastra, xPos, yPos);
+
+    glViewport(0,0,wid,hgt);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    glOrtho(0, wid, 0, hgt, -10, 10);
+    glDepthRange(-10, 10);
+    glMatrixMode(GL_MODELVIEW);
+
+    glEnable(GL_ALPHA_TEST);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+    return true;
+
+}
+
+Fereastra::~Fereastra() = default;
+
+void Fereastra::update() {
+
+    glfwPollEvents();
+};
+
+void Fereastra::render() {
+
+    glClearColor(0,1,0,1);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glfwSwapBuffers(fereastra);
+
+}
+*/

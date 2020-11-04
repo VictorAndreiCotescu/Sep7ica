@@ -79,89 +79,104 @@ include CMakeFiles/Septica.dir/flags.make
 CMakeFiles/Septica.dir/main.cpp.obj: CMakeFiles/Septica.dir/flags.make
 CMakeFiles/Septica.dir/main.cpp.obj: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Septica.dir/main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\main.cpp.obj -c C:\Users\victo\CLionProjects\Septica\main.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\main.cpp.obj -c C:\Users\victo\CLionProjects\Septica\main.cpp
 
 CMakeFiles/Septica.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\main.cpp > CMakeFiles\Septica.dir\main.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\main.cpp > CMakeFiles\Septica.dir\main.cpp.i
 
 CMakeFiles/Septica.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\main.cpp -o CMakeFiles\Septica.dir\main.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\main.cpp -o CMakeFiles\Septica.dir\main.cpp.s
 
-CMakeFiles/Septica.dir/carte.cpp.obj: CMakeFiles/Septica.dir/flags.make
-CMakeFiles/Septica.dir/carte.cpp.obj: ../carte.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Septica.dir/carte.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\carte.cpp.obj -c C:\Users\victo\CLionProjects\Septica\carte.cpp
+CMakeFiles/Septica.dir/Carte.cpp.obj: CMakeFiles/Septica.dir/flags.make
+CMakeFiles/Septica.dir/Carte.cpp.obj: ../Carte.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Septica.dir/Carte.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Carte.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Carte.cpp
 
-CMakeFiles/Septica.dir/carte.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/carte.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\carte.cpp > CMakeFiles\Septica.dir\carte.cpp.i
+CMakeFiles/Septica.dir/Carte.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Carte.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Carte.cpp > CMakeFiles\Septica.dir\Carte.cpp.i
 
-CMakeFiles/Septica.dir/carte.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/carte.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\carte.cpp -o CMakeFiles\Septica.dir\carte.cpp.s
+CMakeFiles/Septica.dir/Carte.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Carte.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Carte.cpp -o CMakeFiles\Septica.dir\Carte.cpp.s
 
-CMakeFiles/Septica.dir/pachet.cpp.obj: CMakeFiles/Septica.dir/flags.make
-CMakeFiles/Septica.dir/pachet.cpp.obj: ../pachet.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Septica.dir/pachet.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\pachet.cpp.obj -c C:\Users\victo\CLionProjects\Septica\pachet.cpp
+CMakeFiles/Septica.dir/Pachet.cpp.obj: CMakeFiles/Septica.dir/flags.make
+CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Pachet.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Septica.dir/Pachet.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Pachet.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Pachet.cpp
 
-CMakeFiles/Septica.dir/pachet.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/pachet.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\pachet.cpp > CMakeFiles\Septica.dir\pachet.cpp.i
+CMakeFiles/Septica.dir/Pachet.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Pachet.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Pachet.cpp > CMakeFiles\Septica.dir\Pachet.cpp.i
 
-CMakeFiles/Septica.dir/pachet.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/pachet.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\pachet.cpp -o CMakeFiles\Septica.dir\pachet.cpp.s
+CMakeFiles/Septica.dir/Pachet.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Pachet.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Pachet.cpp -o CMakeFiles\Septica.dir\Pachet.cpp.s
 
-CMakeFiles/Septica.dir/jucator.cpp.obj: CMakeFiles/Septica.dir/flags.make
-CMakeFiles/Septica.dir/jucator.cpp.obj: ../jucator.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Septica.dir/jucator.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\jucator.cpp.obj -c C:\Users\victo\CLionProjects\Septica\jucator.cpp
+CMakeFiles/Septica.dir/Jucator.cpp.obj: CMakeFiles/Septica.dir/flags.make
+CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Jucator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Septica.dir/Jucator.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Jucator.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Jucator.cpp
 
-CMakeFiles/Septica.dir/jucator.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/jucator.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\jucator.cpp > CMakeFiles\Septica.dir\jucator.cpp.i
+CMakeFiles/Septica.dir/Jucator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Jucator.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Jucator.cpp > CMakeFiles\Septica.dir\Jucator.cpp.i
 
-CMakeFiles/Septica.dir/jucator.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/jucator.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\jucator.cpp -o CMakeFiles\Septica.dir\jucator.cpp.s
+CMakeFiles/Septica.dir/Jucator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Jucator.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Jucator.cpp -o CMakeFiles\Septica.dir\Jucator.cpp.s
 
 CMakeFiles/Septica.dir/Calculator.cpp.obj: CMakeFiles/Septica.dir/flags.make
 CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Calculator.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Septica.dir/Calculator.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Calculator.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Calculator.cpp
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Calculator.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Calculator.cpp
 
 CMakeFiles/Septica.dir/Calculator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Calculator.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Calculator.cpp > CMakeFiles\Septica.dir\Calculator.cpp.i
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Calculator.cpp > CMakeFiles\Septica.dir\Calculator.cpp.i
 
 CMakeFiles/Septica.dir/Calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Calculator.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Calculator.cpp -o CMakeFiles\Septica.dir\Calculator.cpp.s
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Calculator.cpp -o CMakeFiles\Septica.dir\Calculator.cpp.s
+
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: CMakeFiles/Septica.dir/flags.make
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../Fereastra.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Septica.dir/Fereastra.cpp.obj"
+	C:\MinGW\bin\g++.exe  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\Septica.dir\Fereastra.cpp.obj -c C:\Users\victo\CLionProjects\Septica\Fereastra.cpp
+
+CMakeFiles/Septica.dir/Fereastra.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Septica.dir/Fereastra.cpp.i"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\victo\CLionProjects\Septica\Fereastra.cpp > CMakeFiles\Septica.dir\Fereastra.cpp.i
+
+CMakeFiles/Septica.dir/Fereastra.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Septica.dir/Fereastra.cpp.s"
+	C:\MinGW\bin\g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\victo\CLionProjects\Septica\Fereastra.cpp -o CMakeFiles\Septica.dir\Fereastra.cpp.s
 
 # Object files for target Septica
 Septica_OBJECTS = \
 "CMakeFiles/Septica.dir/main.cpp.obj" \
-"CMakeFiles/Septica.dir/carte.cpp.obj" \
-"CMakeFiles/Septica.dir/pachet.cpp.obj" \
-"CMakeFiles/Septica.dir/jucator.cpp.obj" \
-"CMakeFiles/Septica.dir/Calculator.cpp.obj"
+"CMakeFiles/Septica.dir/Carte.cpp.obj" \
+"CMakeFiles/Septica.dir/Pachet.cpp.obj" \
+"CMakeFiles/Septica.dir/Jucator.cpp.obj" \
+"CMakeFiles/Septica.dir/Calculator.cpp.obj" \
+"CMakeFiles/Septica.dir/Fereastra.cpp.obj"
 
 # External object files for target Septica
 Septica_EXTERNAL_OBJECTS =
 
 Septica.exe: CMakeFiles/Septica.dir/main.cpp.obj
-Septica.exe: CMakeFiles/Septica.dir/carte.cpp.obj
-Septica.exe: CMakeFiles/Septica.dir/pachet.cpp.obj
-Septica.exe: CMakeFiles/Septica.dir/jucator.cpp.obj
+Septica.exe: CMakeFiles/Septica.dir/Carte.cpp.obj
+Septica.exe: CMakeFiles/Septica.dir/Pachet.cpp.obj
+Septica.exe: CMakeFiles/Septica.dir/Jucator.cpp.obj
 Septica.exe: CMakeFiles/Septica.dir/Calculator.cpp.obj
+Septica.exe: CMakeFiles/Septica.dir/Fereastra.cpp.obj
 Septica.exe: CMakeFiles/Septica.dir/build.make
 Septica.exe: CMakeFiles/Septica.dir/linklibs.rsp
 Septica.exe: CMakeFiles/Septica.dir/objects1.rsp
 Septica.exe: CMakeFiles/Septica.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable Septica.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\victo\CLionProjects\Septica\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable Septica.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\Septica.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
