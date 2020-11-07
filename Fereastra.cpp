@@ -1,29 +1,27 @@
-/*
 #include "Headers/Fereastra.h"
+#include "IO/MOUSE.h"
 #include <iostream>
-#include <GLFW/glfw3.h>
-#include <GL/glut.h>
 
 int Fereastra::REZ_WID = 1024;
 int Fereastra::REZ_HGT = 768;
 
-GLFWwindow* Fereastra::fereastra = nullptr;
+GLFWwindow *Fereastra::fereastra = NULL;
 
 Fereastra::Fereastra() {
 
 
 }
 
-bool Fereastra::initialize(char *titlu) {
+bool Fereastra::initialize(const char *titlu) {
 
-    if(!glfwInit()){
+    if (!glfwInit()) {
         std::cerr << "Eroare initializare GLFW" << std::endl;
         return false;
     }
 
-    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
+    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, NULL, NULL);
 
-    if(fereastra == nullptr){
+    if (fereastra == nullptr) {
         std::cerr << "Eroare initializare fereastra" << std::endl;
         return false;
     }
@@ -33,13 +31,15 @@ bool Fereastra::initialize(char *titlu) {
     glfwGetFramebufferSize(fereastra, &wid, &hgt);
     glfwSwapInterval(1);
 
-    const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    glfwSetCursorPosCallback(fereastra, MOUSE::mousePosCallback);
+    glfwSetMouseButtonCallback(fereastra, MOUSE::mouseButtonCallback);
 
-    int xPos = (mode->width - REZ_WID) /2;
-    int yPos = (mode->height - REZ_HGT) /2;
+    const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
+    int xPos = (mode->width - REZ_WID) / 2;
+    int yPos = (mode->height - REZ_HGT) / 2;
     glfwSetWindowPos(fereastra, xPos, yPos);
 
-    glViewport(0,0,wid,hgt);
+    glViewport(0, 0, wid, hgt);
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
     glOrtho(0, wid, 0, hgt, -10, 10);
@@ -61,12 +61,14 @@ void Fereastra::update() {
     glfwPollEvents();
 };
 
-void Fereastra::render() {
+void Fereastra::beginRender() {
 
-    glClearColor(0,1,0,1);
+    glClearColor(0, 1, 0, 1);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+}
 
+void Fereastra::endRender() {
     glfwSwapBuffers(fereastra);
 
 }
-*/
+

@@ -1,1 +1,1 @@
- -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
+  -LC:/Users/victo/CLionProjects/Septica/GLFW  -LC:/Users/victo/CLionProjects/Septica/SOIL/lib  -lsoil -lglu32 -lopengl32 -lglfw3 -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 

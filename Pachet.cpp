@@ -19,23 +19,30 @@ Pachet Pachet::operator=(const Pachet &p) {
         return *this;
 }
 
-void Pachet::initializarePachetvec(Pachet *Pachet) {
+void Pachet::initializarePachetVec(Pachet *Pachet) {
 
-    int j = 0;
-    for (int i = 0; i < 7; ++i) {
+    for (int i = 6; i < 14; ++i) {
+        Carte Carte1(i + 1, 1, " ");//trefla
+        Carte Carte2(i + 1, 2," ");//inima neagra
+        Carte Carte3(i + 1, 3, " ");//inima rosie
+        Carte Carte4(i + 1, 4, " ");//romb
 
-        Carte Carte1(i + 1, 1);//inima rosie
-        Carte Carte2(i + 1, 2);//inima neagra
-        Carte Carte3(i + 1, 3);//romb
-        Carte Carte4(i + 1, 4);//trefla
+        Carte1.setTexPath(Carte1.genTexPath(Carte1));
+        std::cout << Carte1.texPath << std::endl; // afiseaza corect
 
         Pachet->pachet.push_back(Carte1);
         Pachet->pachet.push_back(Carte2);
         Pachet->pachet.push_back(Carte3);
         Pachet->pachet.push_back(Carte4);
-
     }
+
+    std::cout << "Initailizare terminata " << std::endl;
+
+    Pachet::afisarePachetVec(*Pachet);
+
+
 }
+
 #pragma GCC diagnostic pop
 void Pachet::amestecareVec(Pachet *Pachet) {
 
@@ -49,10 +56,9 @@ void Pachet::amestecareVec(Pachet *Pachet) {
 
 void Pachet::afisarePachetVec(const Pachet &pachet) {
 
-    int j = 0;
     for (auto &i : pachet.pachet) {
 
-        std::cout << i.numar << " " << i.culoare << std::endl;
+        std::cout << i.numar << " " << i.culoare << " texPath: " << i.texPath << std::endl;
     }
 }
 
@@ -86,10 +92,10 @@ void Pachet::InitializarePachet(Carte pachet[]) {
     int j = 0;
     for (int i = 0; i < 7; ++i) {
 
-        Carte Carte1(i + 1, 1);//inima rosie
+        Carte Carte1(i + 1, 3);//inima rosie
         Carte Carte2(i + 1, 2);//inima neagra
-        Carte Carte3(i + 1, 3);//romb
-        Carte Carte4(i + 1, 4);//trefla
+        Carte Carte3(i + 1, 4);//romb
+        Carte Carte4(i + 1, 1);//trefla
 
         pachet[j++] = Carte1;
         pachet[j++] = Carte2;

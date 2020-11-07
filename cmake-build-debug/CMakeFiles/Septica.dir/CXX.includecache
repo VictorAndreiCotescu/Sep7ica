@@ -6,12 +6,6 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h
-Jucator.h
-C:/Users/victo/CLionProjects/Septica/Headers/Jucator.h
-Carte.h
-C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
-
 C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
 cstring
 -
@@ -20,41 +14,23 @@ string
 utility
 -
 
-C:/Users/victo/CLionProjects/Septica/Headers/Fereastra.h
-GLFW/glfw3.h
--
-GL/glut.h
--
-glut.h
--
-GLFW/glfw3native.h
--
-
-C:/Users/victo/CLionProjects/Septica/Headers/Jucator.h
-vector
--
-Carte.h
-C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
-Pachet.h
-C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h
-
 C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h
 Carte.h
 C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
 vector
 -
 
-C:/Users/victo/CLionProjects/Septica/main.cpp
+C:/Users/victo/CLionProjects/Septica/Pachet.cpp
 iostream
 -
-Headers/Carte.h
-C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
+random
+-
+algorithm
+-
+functional
+-
+chrono
+-
 Headers/Pachet.h
 C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h
-Headers/Jucator.h
-C:/Users/victo/CLionProjects/Septica/Headers/Jucator.h
-Headers/Calculator.h
-C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h
-Headers/Fereastra.h
-C:/Users/victo/CLionProjects/Septica/Headers/Fereastra.h
 

@@ -14,10 +14,19 @@ void Jucator::trageCarte(Pachet *Pachet, Jucator *Jucator) {
 
 void Jucator::afisareCarti(Jucator *Jucator) {
 
-    for (auto &i : Jucator->mana) {
+    /*for (auto &i : Jucator->mana) {
         std::cout << i.numar;
-        std::cout << " ";
-        std::cout << i.culoare << std::endl;
+        std::cout << " " <<  i.culoare;
+        std::cout << " texPath: ";
+        std::cout << i.getTexPath() << std::endl;
+    }*/
+
+    for(int i = 0; i < Jucator->mana.size(); ++i){
+
+        std::cout << "texPath: ";
+        std::cout << Jucator->mana[i].getTexPath() << std::endl;
+
+
     }
 
 }
@@ -94,6 +103,19 @@ bool Jucator::alegerePosibila(const Carte &c) const{
         return true;
     else
         return false;
+
+}
+
+std::string Jucator::getCarteTexPath(int i){
+
+    std::cout << this->mana[i].getTexPath();
+    return this->mana[i].getTexPath();
+
+}
+
+int Jucator::getManaSize() {
+
+    return this->mana.size();
 
 }
 

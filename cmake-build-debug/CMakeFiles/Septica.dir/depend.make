@@ -10,8 +10,38 @@ CMakeFiles/Septica.dir/Calculator.cpp.obj: ../Headers/Pachet.h
 CMakeFiles/Septica.dir/Carte.cpp.obj: ../Carte.cpp
 CMakeFiles/Septica.dir/Carte.cpp.obj: ../Headers/Carte.h
 
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../SOIL/src/SOIL.h
 CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../Fereastra.cpp
 CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../Headers/Fereastra.h
+CMakeFiles/Septica.dir/Fereastra.cpp.obj: ../IO/MOUSE.h
+
+CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj: ../SOIL/src/SOIL.h
+CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj: ../Grafica/Sprite.cpp
+CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj: ../Grafica/Sprite.h
+CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj: ../Grafica/Textura.h
+
+CMakeFiles/Septica.dir/Grafica/Textura.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/Grafica/Textura.cpp.obj: ../SOIL/src/SOIL.h
+CMakeFiles/Septica.dir/Grafica/Textura.cpp.obj: ../Grafica/Textura.cpp
+CMakeFiles/Septica.dir/Grafica/Textura.cpp.obj: ../Grafica/Textura.h
+
+CMakeFiles/Septica.dir/IO/MOUSE.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/IO/MOUSE.cpp.obj: ../IO/MOUSE.cpp
+CMakeFiles/Septica.dir/IO/MOUSE.cpp.obj: ../IO/MOUSE.h
+
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../SOIL/src/SOIL.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Grafica/Sprite.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Grafica/Textura.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Calculator.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Carte.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Fereastra.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Jucator.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Pachet.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Joc.cpp
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../Joc.h
 
 CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Headers/Carte.h
 CMakeFiles/Septica.dir/Jucator.cpp.obj: ../Headers/Jucator.h
@@ -22,10 +52,16 @@ CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Headers/Carte.h
 CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Headers/Pachet.h
 CMakeFiles/Septica.dir/Pachet.cpp.obj: ../Pachet.cpp
 
+CMakeFiles/Septica.dir/main.cpp.obj: ../GLFW/glfw3.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../SOIL/src/SOIL.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Grafica/Sprite.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Grafica/Textura.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Calculator.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Carte.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Fereastra.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Jucator.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../Headers/Pachet.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../IO/MOUSE.h
+CMakeFiles/Septica.dir/main.cpp.obj: ../Joc.h
 CMakeFiles/Septica.dir/main.cpp.obj: ../main.cpp
 

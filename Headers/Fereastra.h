@@ -1,12 +1,8 @@
-/*
 #ifndef SEPTICA_FEREASTRA_H
 #define SEPTICA_FEREASTRA_H
 
-#include <GLFW/glfw3.h>
-#include <GL/glut.h>
-#include <glut.h>
-#include <GLFW/glfw3native.h>
-
+#include <glfw3.h>
+#include <SOIL.h>
 class Fereastra {
 
 public:
@@ -16,10 +12,11 @@ public:
     Fereastra();
     ~Fereastra();
 
-    bool initialize(char *Titlu);
+    bool initialize(const char *Titlu);
 
     void update();
-    void render();
+    void beginRender();
+    void endRender();
 
 protected:
 
@@ -32,4 +29,3 @@ private:
 
 
 #endif //SEPTICA_FEREASTRA_H
-*/

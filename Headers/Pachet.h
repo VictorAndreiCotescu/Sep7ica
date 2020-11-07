@@ -15,7 +15,7 @@ public:
     Pachet operator=(const Pachet &p);
 
 
-    static void initializarePachetvec(Pachet *Pachet);
+    static void initializarePachetVec(Pachet *Pachet);
 
     static void afisarePachetVec(const Pachet &pachet);
 

@@ -11,20 +11,20 @@
 				<Option working_dir="C:/Users/victo/CLionProjects/Septica/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
 				<Option working_dir="C:/Users/victo/CLionProjects/Septica/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Septica">
@@ -34,18 +34,22 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+					<Add directory="C:/Users/victo/CLionProjects/Septica/GLFW"/>
+					<Add directory="C:/Users/victo/CLionProjects/Septica/SOIL/src"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 Septica"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 Septica"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="Septica/fast">
@@ -55,28 +59,32 @@
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/mingw32"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include/c++/backward"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/../../../../include"/>
-					<Add directory="c:\mingw\bin\../lib/gcc/mingw32/9.2.0/include-fixed"/>
+					<Add directory="C:/Users/victo/CLionProjects/Septica/GLFW"/>
+					<Add directory="C:/Users/victo/CLionProjects/Septica/SOIL/src"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/x86_64-w64-mingw32"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include/c++/10.2.0/backward"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/include"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../include"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/include-fixed"/>
+					<Add directory="c:\mingw64\bin\../lib/gcc/x86_64-w64-mingw32/10.2.0/../../../../x86_64-w64-mingw32/include"/>
+					<Add directory="/mingw/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 Septica/fast"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 Septica/fast"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
 				<Option working_dir="C:/Users/victo/CLionProjects/Septica/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="C:/MinGW/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="C:/mingw64/bin/mingw32-make.exe -f &quot;C:/Users/victo/CLionProjects/Septica/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
@@ -87,6 +95,18 @@
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/Fereastra.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Grafica/Sprite.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Grafica/Sprite.h">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Grafica/Textura.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Grafica/Textura.h">
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h">
@@ -102,6 +122,18 @@
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/IO/MOUSE.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/IO/MOUSE.h">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Joc.cpp">
+			<Option target="Septica"/>
+		</Unit>
+		<Unit filename="C:/Users/victo/CLionProjects/Septica/Joc.h">
 			<Option target="Septica"/>
 		</Unit>
 		<Unit filename="C:/Users/victo/CLionProjects/Septica/Jucator.cpp">

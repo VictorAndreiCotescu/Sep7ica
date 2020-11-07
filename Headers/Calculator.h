@@ -15,9 +15,9 @@ public:
     Carte alegereCarteCalculator(Carte &c);
 
     Carte alegereCarteCalculator();
-    //friend std::ostream& operator<<(std::ostream& os, const Carte& cl);
 
 };
+
 
 
 #endif //SEPTICA_CALCULATOR_H

@@ -25,6 +25,10 @@ public:
 
     void adaugarePuncte(int x);
 
+    int getManaSize();
+
+    std::string getCarteTexPath(int i);
+
 protected:
 
     std::vector<Carte> mana;
@@ -32,6 +36,8 @@ protected:
 
 private:
     Carte carteAleasa(char c);
+
+    friend class Carte;
 
 };
 

@@ -4,6 +4,9 @@
 #include "Headers/Jucator.h"
 #include "Headers/Calculator.h"
 #include "Headers/Fereastra.h"
+#include "Grafica/Sprite.h"
+#include "IO/MOUSE.h"
+#include "Joc.h"
 
 
 bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
@@ -15,6 +18,7 @@ bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
     Calculator::afisareCarti(Calculator);
     std::cout << std::endl;
     static std::vector<Carte> runda;
+    Carte septar(7, 0);
 
     while (true) {
 
@@ -24,20 +28,22 @@ bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
         Carte calc(Calculator->alegereCarteCalculator(runda[0]));
         runda.push_back(calc);
 
-        runda[0].afisare();
+        std::cout << std::endl;
 
-        if (calc != runda[0] || calc != Carte(7, 0)) {
+        if (calc != runda[0]) {
 
-            for (int i = 0; i < inx; ++i)
-                if (runda[i] == Carte(1, 0) || runda[i] == Carte(10, 0))
-                    ++puncte;
+            if (calc != septar) {
+                for (int i = 0; i < inx; ++i)
+                    if (runda[i] == Carte(1, 0) || runda[i] == Carte(10, 0))
+                        ++puncte;
+                Jucator1->adaugarePuncte(puncte);
+                return true;
 
-            Jucator1->adaugarePuncte(puncte);
-            return true;
+            } else return false;
 
         }
 
-        if(!Jucator1->alegerePosibila(runda[0]))
+        if (!Jucator1->alegerePosibila(runda[0]))
             return false;
 
         ++inx;
@@ -82,20 +88,20 @@ bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
 
         }
 
-        if(!Calculator->alegerePosibila(runda[0]))
+        if (!Calculator->alegerePosibila(runda[0]))
             return false;
 
         ++inx;
     }
 }
 
-void Joc() {
+/*void Joc() {
 
     Pachet Pachet;
     Jucator Jucator1;
     Calculator Calculator;
 
-    Pachet::initializarePachetvec(&Pachet);
+    Pachet::initializarePachetVec(&Pachet);
     Pachet::amestecareVec(&Pachet);
 
     Jucator::completareMana(&Pachet, &Jucator1);
@@ -109,80 +115,67 @@ void Joc() {
 
         std::cout << "---------------\n";
 
-        randulJucatorului(&Jucator1, &Calculator);
-
         Jucator::completareMana(&Pachet, &Jucator1);
         Calculator::completareMana(&Pachet, &Calculator);
 
         if (okj) {
             okj = randulJucatorului(&Jucator1, &Calculator);
-            okc = !okj;
+
             Jucator::completareMana(&Pachet, &Jucator1);
             Calculator::completareMana(&Pachet, &Calculator);
         } else if (okc) {
             okc = randulCalculatorului(&Jucator1, &Calculator);
-            okj = !okc;
             Jucator::completareMana(&Pachet, &Jucator1);
             Calculator::completareMana(&Pachet, &Calculator);
         }
+
+        okc = !okj;
+        okj = !okc;
+
     }
-
-
-    /* if (randulJucatorului(&Jucator1, &Calculator) && ok) {
-
-
-         Jucator::CompletareMana(&pachet, &Jucator1);
-         Calculator::CompletareMana(&pachet, &Calculator);
-         ok = randulJucatorului(&Jucator1, &Calculator);
-
-     } else if (randulCalculatorului(&Jucator1, &Calculator)) {
-
-         Jucator::CompletareMana(&pachet, &Jucator1);
-         Calculator::completareMana(&pachet, &Calculator);
-         ok = randulCalculatorului(&Jucator1, &Calculator);
-     }
- }*/
-
-
-}
+}*/
 
 int main() {
 
+    /* Fereastra fereastra;
 
-    Joc();
+     fereastra.initialize("SEPTICA");
 
-    /*pachet pachet;
-    Jucator Jucator1;
+     Sprite testSprite = Sprite("Tex/1.png", -100, -100);
+     testSprite.setScale(0.06f);
 
-    pachet.initializarePachetvec(&pachet);
-    pachet.amestecareVec(&pachet);
+     while(true){
 
-    Jucator1.CompletareMana(&pachet, &Jucator1);
-    Carte joc(Jucator1.AlegereCarte(&Jucator1));
+         fereastra.update();
+         testSprite.update();
 
-    joc.afisare();
+         testSprite.setPos((float) MOUSE::getMouseX(), -(float)MOUSE::getMouseY());
 
-    Jucator1.completareMana(&pachet, &Jucator1);
+         fereastra.beginRender();
+         testSprite.render();
+         fereastra.endRender();
 
-    Jucator1.afisareCarti(&Jucator1);
+     }*/
 
-    Carte juc(Jucator1.alegereCarte(&Jucator1));
+    /* Joc jocTest;
 
-    juc.afisare();*/ //initializare in main pentru teste
+     jocTest.initializareJoc();*/
+
+    Pachet pachet;
+    Pachet::initializarePachetVec(&pachet);
+    //Pachet::amestecareVec(&pachet);
+    Pachet::afisarePachetVec(pachet);
+    Jucator jucator;
+
+    Jucator::completareMana(&pachet, &jucator);
+    Jucator::afisareCarti(&jucator);
+    std::vector<Sprite> spriteCarteJucator;
+    std::vector<Sprite> spriteCarteCalculator;
 
 
-   /* Fereastra fereastra;
-
-    fereastra.initialize("SEPTICA");
-
-    while(true){
-
-        fereastra.update();
-        fereastra.render();
-
-    }
-*/
+    //Jucator::afisareCarti(&jucator);
 
 
 
 }
+

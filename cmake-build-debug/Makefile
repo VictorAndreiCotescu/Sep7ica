@@ -223,6 +223,114 @@ Fereastra.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Fereastra.cpp.s
 .PHONY : Fereastra.cpp.s
 
+Grafica/Sprite.obj: Grafica/Sprite.cpp.obj
+
+.PHONY : Grafica/Sprite.obj
+
+# target to build an object file
+Grafica/Sprite.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Sprite.cpp.obj
+.PHONY : Grafica/Sprite.cpp.obj
+
+Grafica/Sprite.i: Grafica/Sprite.cpp.i
+
+.PHONY : Grafica/Sprite.i
+
+# target to preprocess a source file
+Grafica/Sprite.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Sprite.cpp.i
+.PHONY : Grafica/Sprite.cpp.i
+
+Grafica/Sprite.s: Grafica/Sprite.cpp.s
+
+.PHONY : Grafica/Sprite.s
+
+# target to generate assembly for a file
+Grafica/Sprite.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Sprite.cpp.s
+.PHONY : Grafica/Sprite.cpp.s
+
+Grafica/Textura.obj: Grafica/Textura.cpp.obj
+
+.PHONY : Grafica/Textura.obj
+
+# target to build an object file
+Grafica/Textura.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Textura.cpp.obj
+.PHONY : Grafica/Textura.cpp.obj
+
+Grafica/Textura.i: Grafica/Textura.cpp.i
+
+.PHONY : Grafica/Textura.i
+
+# target to preprocess a source file
+Grafica/Textura.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Textura.cpp.i
+.PHONY : Grafica/Textura.cpp.i
+
+Grafica/Textura.s: Grafica/Textura.cpp.s
+
+.PHONY : Grafica/Textura.s
+
+# target to generate assembly for a file
+Grafica/Textura.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Grafica/Textura.cpp.s
+.PHONY : Grafica/Textura.cpp.s
+
+IO/MOUSE.obj: IO/MOUSE.cpp.obj
+
+.PHONY : IO/MOUSE.obj
+
+# target to build an object file
+IO/MOUSE.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/IO/MOUSE.cpp.obj
+.PHONY : IO/MOUSE.cpp.obj
+
+IO/MOUSE.i: IO/MOUSE.cpp.i
+
+.PHONY : IO/MOUSE.i
+
+# target to preprocess a source file
+IO/MOUSE.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/IO/MOUSE.cpp.i
+.PHONY : IO/MOUSE.cpp.i
+
+IO/MOUSE.s: IO/MOUSE.cpp.s
+
+.PHONY : IO/MOUSE.s
+
+# target to generate assembly for a file
+IO/MOUSE.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/IO/MOUSE.cpp.s
+.PHONY : IO/MOUSE.cpp.s
+
+Joc.obj: Joc.cpp.obj
+
+.PHONY : Joc.obj
+
+# target to build an object file
+Joc.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Joc.cpp.obj
+.PHONY : Joc.cpp.obj
+
+Joc.i: Joc.cpp.i
+
+.PHONY : Joc.i
+
+# target to preprocess a source file
+Joc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Joc.cpp.i
+.PHONY : Joc.cpp.i
+
+Joc.s: Joc.cpp.s
+
+.PHONY : Joc.s
+
+# target to generate assembly for a file
+Joc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Septica.dir\build.make CMakeFiles/Septica.dir/Joc.cpp.s
+.PHONY : Joc.cpp.s
+
 Jucator.obj: Jucator.cpp.obj
 
 .PHONY : Jucator.obj
@@ -322,6 +430,18 @@ help:
 	@echo ... Fereastra.obj
 	@echo ... Fereastra.i
 	@echo ... Fereastra.s
+	@echo ... Grafica/Sprite.obj
+	@echo ... Grafica/Sprite.i
+	@echo ... Grafica/Sprite.s
+	@echo ... Grafica/Textura.obj
+	@echo ... Grafica/Textura.i
+	@echo ... Grafica/Textura.s
+	@echo ... IO/MOUSE.obj
+	@echo ... IO/MOUSE.i
+	@echo ... IO/MOUSE.s
+	@echo ... Joc.obj
+	@echo ... Joc.i
+	@echo ... Joc.s
 	@echo ... Jucator.obj
 	@echo ... Jucator.i
 	@echo ... Jucator.s

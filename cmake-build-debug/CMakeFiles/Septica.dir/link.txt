@@ -1,3 +1,3 @@
 "D:\CLion 2020.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Septica.dir/objects.a
-C:\MinGW\bin\ar.exe cr CMakeFiles\Septica.dir/objects.a @CMakeFiles\Septica.dir\objects1.rsp
-C:\MinGW\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Septica.dir/objects.a -Wl,--no-whole-archive  -o Septica.exe -Wl,--out-implib,libSeptica.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Septica.dir\linklibs.rsp
+C:\mingw64\bin\ar.exe cr CMakeFiles\Septica.dir/objects.a @CMakeFiles\Septica.dir\objects1.rsp
+C:\mingw64\bin\g++.exe -g   -Wl,--whole-archive CMakeFiles\Septica.dir/objects.a -Wl,--no-whole-archive  -o Septica.exe -Wl,--out-implib,libSeptica.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Septica.dir\linklibs.rsp

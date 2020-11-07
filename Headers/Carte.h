@@ -10,11 +10,14 @@ class Carte {
 public:
     Carte();
 
-    explicit Carte(int numar_ = 1, int culoare_ = 1) : numar(numar_), culoare(culoare_) {}
+    explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "--") : numar(numar_),
+                                                                                       culoare(culoare_),
+                                                                                       texPath(std::move(_tex)){}
 
     Carte(const Carte &c);
 
     Carte operator=(const Carte &c);
+
 
     void afisare() const;
 
@@ -22,13 +25,24 @@ public:
 
     bool operator!=(const Carte &c) const;
 
+
     ~Carte();
 
+    void setTexPath(const std::string &texPath);
+
+    std::string genTexPath(Carte &c);
+
+    const std::string &getTexPath();
+
+    int getCuloare() const;
+
+    int getNumar() const;
 
 protected:
 
     int culoare;
     int numar;
+    std::string texPath;
 
 private:
 
