@@ -2,14 +2,12 @@
 #include "IO/MOUSE.h"
 #include <iostream>
 
-int Fereastra::REZ_WID = 1024;
-int Fereastra::REZ_HGT = 768;
+int Fereastra::REZ_WID = 1280;
+int Fereastra::REZ_HGT = 1024;
 
-GLFWwindow *Fereastra::fereastra = NULL;
+GLFWwindow *Fereastra::fereastra = nullptr;
 
 Fereastra::Fereastra() {
-
-
 }
 
 bool Fereastra::initialize(const char *titlu) {
@@ -19,7 +17,7 @@ bool Fereastra::initialize(const char *titlu) {
         return false;
     }
 
-    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, NULL, NULL);
+    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
 
     if (fereastra == nullptr) {
         std::cerr << "Eroare initializare fereastra" << std::endl;

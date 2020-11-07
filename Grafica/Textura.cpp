@@ -1,6 +1,6 @@
 #include "Textura.h"
 
-Textura::Textura(){
+Textura::Textura() {
 
     id = -1;
 
@@ -10,7 +10,7 @@ Textura::Textura(int _id) {
 
     id = _id;
 
-    if(!getTextureParams()){
+    if (!getTextureParams()) {
         std::cerr << "Error loading image ID: " << id << std::endl;
     }
 
@@ -19,10 +19,10 @@ Textura::Textura(int _id) {
 Textura::Textura(std::string path) {
 
     id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO,
-                                            SOIL_CREATE_NEW_ID,
-                                                    SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_INVERT_Y);
+                               SOIL_CREATE_NEW_ID,
+                               SOIL_FLAG_MULTIPLY_ALPHA | SOIL_FLAG_INVERT_Y);
 
-    if(!getTextureParams()){
+    if (!getTextureParams()) {
         std::cerr << "Error loading texture: " << path << std::endl;
     }
 
@@ -42,7 +42,7 @@ int Textura::getHeight() {
 
 bool Textura::getTextureParams() {
 
-    if (id > 0){
+    if (id > 0) {
 
         int mipLevel = 0;
         glBindTexture(GL_TEXTURE_2D, id);

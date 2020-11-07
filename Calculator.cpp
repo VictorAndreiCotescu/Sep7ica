@@ -3,11 +3,12 @@
 #include <iostream>
 
 
-Calculator::Calculator()  = default;
+Calculator::Calculator() = default;
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wreturn-type"
-Carte Calculator::alegereCarteCalculator(Carte & c) {
+
+Carte Calculator::alegereCarteCalculator(Carte &c) {
 
 
     for (int i = 0; i < this->mana.size(); ++i)
@@ -22,7 +23,8 @@ Carte Calculator::alegereCarteCalculator(Carte & c) {
         if (this->mana[i].numar != 1 || this->mana[i].numar != 10) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
-            std::cout << "\nRaspuns calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
+            std::cout << "\nRaspuns calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare
+                      << "\n";
             return raspunsCalculator;
         }
 }
@@ -30,16 +32,16 @@ Carte Calculator::alegereCarteCalculator(Carte & c) {
 
 Carte Calculator::alegereCarteCalculator() {
 
-    for(int i = 0; i < this->mana.size()/2+1; ++i)
-        if(std::find(this->mana.begin()+i+1, this->mana.end(), this->mana[i]) != this->mana.end()) {
+    for (int i = 0; i < this->mana.size() / 2 + 1; ++i)
+        if (std::find(this->mana.begin() + i + 1, this->mana.end(), this->mana[i]) != this->mana.end()) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
             std::cout << "\nCarte calculator1: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
             return raspunsCalculator;
         }
 
-    for(int i = 0; i < this->mana.size(); ++i)
-        if(this->mana[i] != Carte(1, 0) || this->mana[i] != Carte(10, 0)) {
+    for (int i = 0; i < this->mana.size(); ++i)
+        if (this->mana[i] != Carte(1, 0) || this->mana[i] != Carte(10, 0)) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
             std::cout << "\nCarte calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";

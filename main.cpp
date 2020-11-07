@@ -146,7 +146,7 @@ int main() {
     Calculator calculator;
 
     Jucator::completareMana(&pachet, &jucator);
-    Jucator::afisareCarti(&jucator);
+    //Jucator::afisareCarti(&jucator);
 
     //init fereastra
 
@@ -156,62 +156,68 @@ int main() {
 
     std::vector<Sprite> spritesJucator;
     std::vector<Sprite> spritesCalculator;
+
+    Sprite pachetAfis = Sprite("Tex/back.png", 0, 0);
+    pachetAfis.setPos(900, 230);
+    pachetAfis.setScale(0.06f);
+
     for (int i = 0; i < 4; ++i) {
         spritesJucator.emplace_back(jucator.getMana(i), -100, -100);
         spritesJucator[i].setScale(0.06f);
 
         spritesCalculator.emplace_back("Tex/back.png", 0, 0);
         spritesCalculator[i].setScale(0.06f);
+
+        spritesJucator[i].setPos((float) (i + i) * 100, 10);
+        spritesCalculator[i].setPos((float) (i + i) * 100, 760);
     }
+
 
 
     while (true) {
 
         fereastra.update();
 
-        for (int i = 0; i < 4; ++i) {
+        //std::cout << MOUSE::getMouseY();
+        for (int i = 0; i < jucator.getManaSize(); ++i) {
             spritesJucator[i].update();
             spritesCalculator[i].update();
+            pachetAfis.update();
 
-            spritesJucator[i].setPos((float) (i + i) * 100, 10);
-            spritesCalculator[i].setPos((float) (i + i) * 100, 505);
+
+            if (MOUSE::getMouseX() < 180 * (i + 1) && MOUSE::getMouseX() > 180 * i && MOUSE::getMouseY() > 740) {
+                spritesJucator[i].setScale(0.065f);
+
+                if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                    while(spritesJucator[i].getYPos() < 150){
+                        spritesJucator[i].setPos(900, 500);
+                        spritesJucator[i].update();
+                        spritesJucator[i].render();
+                    }
+
+                    //std::cout << spritesJucator[i].getXPos() << " " << spritesJucator[i].getYPos();
+                }
+
+
+            } else {
+                spritesJucator[i].setScale(0.06f);
+            }
+
+
+
         }
 
         fereastra.beginRender();
-        for (int i = 0; i < 4; ++i) {
+
+        for (int i = 0; i < jucator.getManaSize(); ++i) {
             spritesJucator[i].render();
             spritesCalculator[i].render();
         }
+        pachetAfis.render();
+
         fereastra.endRender();
 
+
     }
-
-    /* Joc jocTest;
-
-     jocTest.initializareJoc();*/
-
-    /* Pachet pachet;
-     Pachet::initializarePachetVec(&pachet);
-     //Pachet::amestecareVec(&pachet);
-     Pachet::afisarePachetVec(pachet);
-     Jucator jucator;
-
-     Jucator::completareMana(&pachet, &jucator);
-     Jucator::afisareCarti(&jucator);
-
-     std::vector<Sprite> spriteCarteJucator;
-     std::vector<Sprite> spriteCarteCalculator;
-
-     for(int i = 0; i < 4; ++i){
-
-        spriteCarteJucator[i] = Sprite("Tex/71.png", -100, -100);
-
-     }
- */
-
-    //Jucator::afisareCarti(&jucator);
-
-
-
 }
-

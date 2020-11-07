@@ -16,14 +16,6 @@ GL/gl.h
 
 ../SOIL/src/SOIL.h
 
-C:/Users/victo/CLionProjects/Septica/Fereastra.cpp
-Headers/Fereastra.h
-C:/Users/victo/CLionProjects/Septica/Headers/Fereastra.h
-IO/MOUSE.h
-C:/Users/victo/CLionProjects/Septica/IO/MOUSE.h
-iostream
--
-
 C:/Users/victo/CLionProjects/Septica/Grafica/Sprite.h
 Textura.h
 C:/Users/victo/CLionProjects/Septica/Grafica/Textura.h
@@ -81,10 +73,6 @@ vector
 C:/Users/victo/CLionProjects/Septica/IO/MOUSE.h
 glfw3.h
 -
-
-C:/Users/victo/CLionProjects/Septica/Joc.cpp
-Joc.h
-C:/Users/victo/CLionProjects/Septica/Joc.h
 
 C:/Users/victo/CLionProjects/Septica/Joc.h
 Headers/Fereastra.h

@@ -19,6 +19,9 @@ public:
     void setScale(float _xyScale);
     void setScale(float _xScale, float _yScale);
 
+    float getXPos() const;
+    float getYPos() const;
+
 
 private:
     Textura textura;

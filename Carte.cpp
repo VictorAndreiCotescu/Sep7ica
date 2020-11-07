@@ -11,13 +11,13 @@ Carte::Carte(const Carte &c) {
 
 }
 
-Carte Carte::operator=(const Carte &c){
+Carte Carte::operator=(const Carte &c) {
 
     numar = c.numar;
     culoare = c.culoare;
     texPath = c.texPath;
 
-        return *this;
+    return *this;
 }
 
 bool Carte::operator==(const Carte &c) const {
@@ -68,7 +68,6 @@ std::string Carte::genTexPath(Carte &c) {
 
     return tex;
 }
-
 
 
 Carte::~Carte() = default;

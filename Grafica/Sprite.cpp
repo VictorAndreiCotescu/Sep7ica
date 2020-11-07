@@ -70,4 +70,12 @@ void Sprite::setScale(float _xScale, float _yScale) {
     yScale = _yScale;
 }
 
+float Sprite::getXPos() const {
+    return xPos;
+}
+
+float Sprite::getYPos() const {
+    return yPos;
+}
+
 

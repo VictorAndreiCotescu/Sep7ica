@@ -28,7 +28,7 @@ void MOUSE::mouseButtonCallback(GLFWwindow *fereastra, int button, int action, i
         buttonsUp[button] = false;
     }
 
-    if(action != GLFW_RELEASE && !buttons[button]){
+    if(action == GLFW_RELEASE && !buttons[button]){
         buttonsDown[button] = false;
         buttonsUp[button] = true;
     }

@@ -11,8 +11,8 @@ public:
     Carte();
 
     explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "--") : numar(numar_),
-                                                                                       culoare(culoare_),
-                                                                                       texPath(std::move(_tex)){}
+                                                                                culoare(culoare_),
+                                                                                texPath(std::move(_tex)) {}
 
     Carte(const Carte &c);
 

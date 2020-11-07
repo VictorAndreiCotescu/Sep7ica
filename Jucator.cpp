@@ -21,7 +21,7 @@ void Jucator::afisareCarti(Jucator *Jucator) {
         std::cout << i.getTexPath() << std::endl;
     }*/
 
-    for(int i = 0; i < Jucator->mana.size(); ++i){
+    for (int i = 0; i < Jucator->mana.size(); ++i) {
 
         std::cout << "texPath: ";
         std::cout << Jucator->mana[i].getTexPath() << std::endl;
@@ -46,7 +46,7 @@ void Jucator::completareMana(Pachet *Pachet, Jucator *Jucator) {
 
 Carte Jucator::carteAleasa(char c) {
 
-    if(mana.size() > (c - '0') - 1) {
+    if (mana.size() > (c - '0') - 1) {
 
         Carte CarteAleasa(mana[(c - '0') - 1]);
         mana.erase(mana.begin() + (c - '0') - 1);
@@ -95,9 +95,9 @@ void Jucator::adaugarePuncte(int x) {
 
 }
 
-bool Jucator::alegerePosibila(const Carte &c) const{
+bool Jucator::alegerePosibila(const Carte &c) const {
 
-    if ( std::find(this->mana.begin(), this->mana.end(),c)!=this->mana.end())
+    if (std::find(this->mana.begin(), this->mana.end(), c) != this->mana.end())
         return true;
     else if (std::find(this->mana.begin(), this->mana.end(), Carte(7, 0)) != this->mana.end())
         return true;
@@ -106,7 +106,7 @@ bool Jucator::alegerePosibila(const Carte &c) const{
 
 }
 
-std::string Jucator::getCarteTexPath(int i){
+std::string Jucator::getCarteTexPath(int i) {
 
     std::cout << this->mana[i].getTexPath();
     return this->mana[i].getTexPath();

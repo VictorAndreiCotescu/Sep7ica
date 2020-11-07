@@ -18,9 +18,11 @@ public:
     static void beginRender();
     static void endRender();
 
+    static GLFWwindow *fereastra;
+
 protected:
 
-    static GLFWwindow *fereastra;
+
 
 private:
 

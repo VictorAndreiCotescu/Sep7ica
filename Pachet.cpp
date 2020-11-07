@@ -13,6 +13,7 @@ Pachet::Pachet(const Pachet &p) {
 
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wreturn-type"
+
 Pachet Pachet::operator=(const Pachet &p) {
     pachet = p.pachet;
     if (this != &p)
@@ -23,7 +24,7 @@ void Pachet::initializarePachetVec(Pachet *Pachet) {
 
     for (int i = 6; i < 14; ++i) {
         Carte Carte1(i + 1, 1, " ");//trefla
-        Carte Carte2(i + 1, 2," ");//inima neagra
+        Carte Carte2(i + 1, 2, " ");//inima neagra
         Carte Carte3(i + 1, 3, " ");//inima rosie
         Carte Carte4(i + 1, 4, " ");//romb
 
@@ -47,6 +48,7 @@ void Pachet::initializarePachetVec(Pachet *Pachet) {
 }
 
 #pragma GCC diagnostic pop
+
 void Pachet::amestecareVec(Pachet *Pachet) {
 
     /*auto rdz = std::random_device {};
@@ -67,7 +69,7 @@ void Pachet::afisarePachetVec(const Pachet &pachet) {
 
 bool Pachet::Gol() const {
 
-    if(this->pachet.empty())
+    if (this->pachet.empty())
         return true;
     else
         return false;
