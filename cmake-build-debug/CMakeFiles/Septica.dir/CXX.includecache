@@ -92,3 +92,23 @@ C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h
 Headers/Pachet.h
 C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h
 
+C:/Users/victo/CLionProjects/Septica/main.cpp
+iostream
+-
+Headers/Carte.h
+C:/Users/victo/CLionProjects/Septica/Headers/Carte.h
+Headers/Pachet.h
+C:/Users/victo/CLionProjects/Septica/Headers/Pachet.h
+Headers/Jucator.h
+C:/Users/victo/CLionProjects/Septica/Headers/Jucator.h
+Headers/Calculator.h
+C:/Users/victo/CLionProjects/Septica/Headers/Calculator.h
+Headers/Fereastra.h
+C:/Users/victo/CLionProjects/Septica/Headers/Fereastra.h
+Grafica/Sprite.h
+C:/Users/victo/CLionProjects/Septica/Grafica/Sprite.h
+IO/MOUSE.h
+C:/Users/victo/CLionProjects/Septica/IO/MOUSE.h
+Joc.h
+C:/Users/victo/CLionProjects/Septica/Joc.h
+
