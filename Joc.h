@@ -15,6 +15,7 @@ public:
     Joc();
 
     void initializareJoc();
+    void startJoc(Fereastra fereastra);
 
 
 private:
@@ -23,6 +24,9 @@ private:
     Calculator calculator;
     Pachet pachet;
     Fereastra fereastra;
+    std::vector<Sprite> spritesJucator;
+    std::vector<Sprite> spritesCalculator;
+    std::vector<Sprite> pachetAfis;
 
     friend class Jucator;
 

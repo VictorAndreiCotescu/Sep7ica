@@ -40,6 +40,7 @@ CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Carte.h
 CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Fereastra.h
 CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Jucator.h
 CMakeFiles/Septica.dir/Joc.cpp.obj: ../Headers/Pachet.h
+CMakeFiles/Septica.dir/Joc.cpp.obj: ../IO/MOUSE.h
 CMakeFiles/Septica.dir/Joc.cpp.obj: ../Joc.cpp
 CMakeFiles/Septica.dir/Joc.cpp.obj: ../Joc.h
 

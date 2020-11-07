@@ -19,8 +19,12 @@ public:
     void setScale(float _xyScale);
     void setScale(float _xScale, float _yScale);
 
+    bool isUsed() const;
+
     float getXPos() const;
     float getYPos() const;
+
+    void setUsed(bool used);
 
 
 private:
@@ -30,6 +34,7 @@ private:
     float rot;
     float xScale;
     float yScale;
+    bool used = false;
 };
 
 

@@ -78,4 +78,12 @@ float Sprite::getYPos() const {
     return yPos;
 }
 
+bool Sprite::isUsed() const {
+    return used;
+}
+
+void Sprite::setUsed(bool used) {
+    Sprite::used = used;
+}
+
 
