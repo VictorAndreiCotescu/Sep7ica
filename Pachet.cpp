@@ -27,8 +27,11 @@ void Pachet::initializarePachetVec(Pachet *Pachet) {
         Carte Carte3(i + 1, 3, " ");//inima rosie
         Carte Carte4(i + 1, 4, " ");//romb
 
-        Carte1.setTexPath(Carte1.genTexPath(Carte1));
-        std::cout << Carte1.texPath << std::endl; // afiseaza corect
+        Carte1.setTexPath(Carte::genTexPath(Carte1));
+        Carte2.setTexPath(Carte::genTexPath(Carte2));
+        Carte3.setTexPath(Carte::genTexPath(Carte3));
+        Carte4.setTexPath(Carte::genTexPath(Carte4));
+
 
         Pachet->pachet.push_back(Carte1);
         Pachet->pachet.push_back(Carte2);
@@ -38,7 +41,7 @@ void Pachet::initializarePachetVec(Pachet *Pachet) {
 
     std::cout << "Initailizare terminata " << std::endl;
 
-    Pachet::afisarePachetVec(*Pachet);
+    //Pachet::afisarePachetVec(*Pachet);
 
 
 }
@@ -103,5 +106,6 @@ void Pachet::InitializarePachet(Carte pachet[]) {
         pachet[j++] = Carte4;
     }
 }
+
 
 Pachet::~Pachet() = default;

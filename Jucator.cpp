@@ -119,5 +119,9 @@ int Jucator::getManaSize() {
 
 }
 
+const std::string &Jucator::getMana(int i) const {
+    return mana[i].texPath;
+}
+
 
 

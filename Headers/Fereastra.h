@@ -14,9 +14,9 @@ public:
 
     bool initialize(const char *Titlu);
 
-    void update();
-    void beginRender();
-    void endRender();
+    static void update();
+    static void beginRender();
+    static void endRender();
 
 protected:
 

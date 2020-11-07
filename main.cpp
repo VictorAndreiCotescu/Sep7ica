@@ -137,41 +137,77 @@ bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
 
 int main() {
 
-    /* Fereastra fereastra;
+    Pachet pachet;
+    Pachet::initializarePachetVec(&pachet);
+    Pachet::amestecareVec(&pachet);
+    //Pachet::afisarePachetVec(pachet);
 
-     fereastra.initialize("SEPTICA");
+    Jucator jucator;
+    Calculator calculator;
 
-     Sprite testSprite = Sprite("Tex/1.png", -100, -100);
-     testSprite.setScale(0.06f);
+    Jucator::completareMana(&pachet, &jucator);
+    Jucator::afisareCarti(&jucator);
 
-     while(true){
+    //init fereastra
 
-         fereastra.update();
-         testSprite.update();
+    Fereastra fereastra;
 
-         testSprite.setPos((float) MOUSE::getMouseX(), -(float)MOUSE::getMouseY());
+    fereastra.initialize("SEPTICA");
 
-         fereastra.beginRender();
-         testSprite.render();
-         fereastra.endRender();
+    std::vector<Sprite> spritesJucator;
+    std::vector<Sprite> spritesCalculator;
+    for (int i = 0; i < 4; ++i) {
+        spritesJucator.emplace_back(jucator.getMana(i), -100, -100);
+        spritesJucator[i].setScale(0.06f);
 
-     }*/
+        spritesCalculator.emplace_back("Tex/back.png", 0, 0);
+        spritesCalculator[i].setScale(0.06f);
+    }
+
+
+    while (true) {
+
+        fereastra.update();
+
+        for (int i = 0; i < 4; ++i) {
+            spritesJucator[i].update();
+            spritesCalculator[i].update();
+
+            spritesJucator[i].setPos((float) (i + i) * 100, 10);
+            spritesCalculator[i].setPos((float) (i + i) * 100, 505);
+        }
+
+        fereastra.beginRender();
+        for (int i = 0; i < 4; ++i) {
+            spritesJucator[i].render();
+            spritesCalculator[i].render();
+        }
+        fereastra.endRender();
+
+    }
 
     /* Joc jocTest;
 
      jocTest.initializareJoc();*/
 
-    Pachet pachet;
-    Pachet::initializarePachetVec(&pachet);
-    //Pachet::amestecareVec(&pachet);
-    Pachet::afisarePachetVec(pachet);
-    Jucator jucator;
+    /* Pachet pachet;
+     Pachet::initializarePachetVec(&pachet);
+     //Pachet::amestecareVec(&pachet);
+     Pachet::afisarePachetVec(pachet);
+     Jucator jucator;
 
-    Jucator::completareMana(&pachet, &jucator);
-    Jucator::afisareCarti(&jucator);
-    std::vector<Sprite> spriteCarteJucator;
-    std::vector<Sprite> spriteCarteCalculator;
+     Jucator::completareMana(&pachet, &jucator);
+     Jucator::afisareCarti(&jucator);
 
+     std::vector<Sprite> spriteCarteJucator;
+     std::vector<Sprite> spriteCarteCalculator;
+
+     for(int i = 0; i < 4; ++i){
+
+        spriteCarteJucator[i] = Sprite("Tex/71.png", -100, -100);
+
+     }
+ */
 
     //Jucator::afisareCarti(&jucator);
 

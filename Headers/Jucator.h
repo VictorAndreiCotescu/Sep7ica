@@ -25,6 +25,8 @@ public:
 
     void adaugarePuncte(int x);
 
+    const std::string & getMana(int i) const;
+
     int getManaSize();
 
     std::string getCarteTexPath(int i);

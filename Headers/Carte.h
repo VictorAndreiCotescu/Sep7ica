@@ -30,7 +30,7 @@ public:
 
     void setTexPath(const std::string &texPath);
 
-    std::string genTexPath(Carte &c);
+    static std::string genTexPath(Carte &c);
 
     const std::string &getTexPath();
 
