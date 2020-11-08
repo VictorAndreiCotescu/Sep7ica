@@ -7,6 +7,14 @@
 #include "Headers/Jucator.h"
 #include "Headers/Calculator.h"
 #include "Headers/Pachet.h"
+#include <chrono>
+#include <thread>
+
+#ifdef WIN32
+#include <Windows.h>
+#else
+#include <unistd.h>
+#endif
 
 class Joc : public Fereastra, public Sprite{
 
@@ -16,6 +24,10 @@ public:
 
     void initializareJoc();
     void startJoc(Fereastra fereastra);
+
+    bool alegereJucator();
+
+    bool alegereCalculator();
 
 
 private:
@@ -27,6 +39,8 @@ private:
     std::vector<Sprite> spritesJucator;
     std::vector<Sprite> spritesCalculator;
     std::vector<Sprite> pachetAfis;
+    std::vector<Sprite> spritesAleseJuc;
+    std::vector<Sprite> spritesAleseCalc;
 
     friend class Jucator;
 

@@ -19,13 +19,15 @@ public:
 
     static void completareMana(Pachet *Pachet, Jucator *Jucator);
 
-    Carte alegereCarte(Jucator *Jucator);
+    void alegereCarte(int i);
 
     bool alegerePosibila(const Carte &c) const;
 
     void adaugarePuncte(int x);
 
-    const std::string & getMana(int i) const;
+    const std::string & getManaTexPath(int i) const;
+
+    Carte getCarte(int i);
 
     int getManaSize();
 

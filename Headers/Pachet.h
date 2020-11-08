@@ -21,6 +21,8 @@ public:
 
     static void amestecareVec(Pachet *Pachet);
 
+    int getSize();
+
     bool Gol() const;
 
 

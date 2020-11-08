@@ -12,7 +12,7 @@ public:
 
     Calculator();
 
-    Carte alegereCarteCalculator(Carte &c);
+    int alegereCarteCalculator(Carte &c);
 
     Carte alegereCarteCalculator();
 

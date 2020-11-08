@@ -8,24 +8,24 @@ Calculator::Calculator() = default;
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wreturn-type"
 
-Carte Calculator::alegereCarteCalculator(Carte &c) {
+int Calculator::alegereCarteCalculator(Carte &c) {
 
 
     for (int i = 0; i < this->mana.size(); ++i)
         if (this->mana[i].numar == c.numar) {
             Carte raspunsCalculator(this->mana[i]);
-            this->mana.erase(this->mana.begin() + i);
+            //this->mana.erase(this->mana.begin() + i);
             std::cout << "Raspuns calculator1: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
-            return raspunsCalculator;
+            return i;
         }
 
     for (int i = 0; i < this->mana.size(); ++i)
-        if (this->mana[i].numar != 1 || this->mana[i].numar != 10) {
+        if (this->mana[i].numar != 14 || this->mana[i].numar != 10) {
             Carte raspunsCalculator(this->mana[i]);
-            this->mana.erase(this->mana.begin() + i);
+            //this->mana.erase(this->mana.begin() + i);
             std::cout << "\nRaspuns calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare
                       << "\n";
-            return raspunsCalculator;
+            return i;
         }
 }
 

@@ -55,39 +55,6 @@ Carte Jucator::carteAleasa(char c) {
     }
 }
 
-Carte Jucator::alegereCarte(Jucator *Jucator) {
-
-    std::cout << std::endl;
-    std::cout << "Alege o Carte: \n";
-    Jucator->afisareCarti(Jucator);
-    char c;
-    std::cin >> c;
-    Carte carteAleasaReturn(1, 1);
-
-    switch (c) {
-
-        case '1':
-            carteAleasaReturn = carteAleasa(c);
-            return carteAleasaReturn;
-
-        case '2':
-            carteAleasaReturn = carteAleasa(c);
-            return carteAleasaReturn;
-
-        case '3':
-            carteAleasaReturn = carteAleasa(c);
-            return carteAleasaReturn;
-
-        case '4':
-            carteAleasaReturn = carteAleasa(c);
-            return carteAleasaReturn;
-
-        default:
-            if (!Jucator->mana.empty())
-                alegereCarte(Jucator);
-            break;
-    }
-}
 
 void Jucator::adaugarePuncte(int x) {
 
@@ -119,8 +86,18 @@ int Jucator::getManaSize() {
 
 }
 
-const std::string &Jucator::getMana(int i) const {
+const std::string &Jucator::getManaTexPath(int i) const {
     return mana[i].texPath;
+}
+
+Carte Jucator::getCarte(int i) {
+    return mana[i];
+}
+
+void Jucator::alegereCarte(int i) {
+
+    this->mana.erase(mana.begin() + i);
+
 }
 
 

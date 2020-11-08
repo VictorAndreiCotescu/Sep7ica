@@ -9,7 +9,7 @@
 #include "Joc.h"
 
 
-bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
+/*bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
 
     static int inx = 0;
     int puncte = 0;
@@ -48,9 +48,9 @@ bool randulJucatorului(Jucator *Jucator1, Calculator *Calculator) {
 
         ++inx;
     }
-}
+}*/
 
-bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
+/*bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
 
     int inx = 0;
     int puncte = 0;
@@ -93,7 +93,7 @@ bool randulCalculatorului(Jucator *Jucator1, Calculator *Calculator) {
 
         ++inx;
     }
-}
+}*/
 
 /*void Joc() {
 

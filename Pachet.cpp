@@ -109,5 +109,9 @@ void Pachet::InitializarePachet(Carte pachet[]) {
     }
 }
 
+int Pachet::getSize() {
+    return pachet.size();
+}
+
 
 Pachet::~Pachet() = default;
