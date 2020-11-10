@@ -23,6 +23,7 @@ public:
     Joc();
 
     void initializareJoc();
+
     void startJoc(Fereastra fereastra);
 
     bool alegereJucator();
@@ -41,6 +42,8 @@ private:
     std::vector<Sprite> pachetAfis;
     std::vector<Sprite> spritesAleseJuc;
     std::vector<Sprite> spritesAleseCalc;
+
+    int puncte = 0;
 
     friend class Jucator;
 

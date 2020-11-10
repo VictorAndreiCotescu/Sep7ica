@@ -70,6 +70,6 @@ std::string Carte::genTexPath(Carte &c) {
 }
 
 
-Carte::~Carte() = default;
+//Carte::~Carte() = default;
 
 Carte::Carte() = default;

@@ -33,6 +33,8 @@ public:
 
     std::string getCarteTexPath(int i);
 
+    int getPuncte() const;
+
 protected:
 
     std::vector<Carte> mana;

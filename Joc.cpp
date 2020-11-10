@@ -52,7 +52,6 @@ void Joc::startJoc(Fereastra fereastra) {
     Calculator::completareMana(&pachet, &calculator);
 
 
-
     for (int i = 0; i < pachet.getSize() / 7; ++i) {
         pachetAfis.emplace_back("Tex/back.png", 0, 0);
         pachetAfis[i].setPos((float) (900 + 2 * i), (float) (230 + 2 * i));
@@ -73,10 +72,26 @@ void Joc::startJoc(Fereastra fereastra) {
     for (int i = 0; i < pachet.getSize() / 7; ++i)
         pachetAfis[i].update();
 
+
+    std::cout << "CARTI JUCATOR: \n";
+    jucator.afisareCarti(&jucator);
+
+    std::cout << "\nCARTI CALCULATOR: \n";
+    calculator.afisareCarti(&calculator);
+
+    std::cout << jucator.getManaSize() << "\n";
+    std::cout << calculator.getManaSize();
+
+
     while (true) {
         fereastra.update();
 
-            Joc::alegereJucator();
+        while(true) {
+            bool bk = Joc::alegereJucator();
+
+            if(!bk)
+                break;
+        }
 
 
 
@@ -91,26 +106,87 @@ void Joc::startJoc(Fereastra fereastra) {
             spritesJucator[i].render();
         }
 
-        for (int i = 0; i < spritesAleseCalc.size(); ++i) {
+        for (int i = 0; i < spritesAleseJuc.size(); ++i) {
 
             spritesAleseJuc[i].update();
             spritesAleseCalc[i].update();
+
             spritesAleseJuc[i].render();
             spritesAleseCalc[i].render();
         }
 
-
-        for (int i = 0; i < pachet.getSize() / 7; ++i)
-            pachetAfis[i].render();
+        if(!pachet.Gol())
+        for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();
 
         fereastra.endRender();
-
 
     }
 
 }
 
 bool Joc::alegereJucator() {
+    for (int i = 0; i < jucator.getManaSize(); ++i) {
+        //afisez cartile pentru debug
+
+        if (MOUSE::getMouseX() < 180 * (i + 1) && MOUSE::getMouseX() > 180 * i && MOUSE::getMouseY() > 790) {
+            spritesJucator[i].setScale(0.065f);
+
+            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                spritesAleseJuc.emplace_back(jucator.getManaTexPath(i), 900, 505);
+                Carte carteAleasaJuc = jucator.getCarte(i);
+                jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
+                spritesJucator.erase(spritesJucator.begin() + i);
+
+                int carteAlC = calculator.alegereCarteCalculator(carteAleasaJuc);
+                spritesAleseCalc.emplace_back(calculator.getManaTexPath(carteAlC), 990, 505);
+                Carte carteAleasaCalc = calculator.getCarte(carteAlC);
+                calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
+                spritesCalculator.erase(spritesCalculator.begin() + carteAlC);
+
+                if (carteAleasaJuc == Carte(10, 0))
+                    ++puncte;
+                if (carteAleasaCalc == Carte(10, 0))
+                    ++puncte;
+                if (carteAleasaJuc == Carte(14, 0))
+                    ++puncte;
+                if (carteAleasaCalc == Carte(14, 0))
+                    ++puncte;
+
+                if (!pachet.Gol()) {
+                    jucator.trageCarte(&pachet, &jucator);
+                    calculator.trageCarte(&pachet, &calculator);
+
+                    spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
+                    spritesCalculator.emplace_back(calculator.getManaTexPath(calculator.getManaSize() - 1), 0, 0);
+                }
+
+                jucator.afisareCarti(&jucator);
+
+                for (int j = 0; j < jucator.getManaSize(); ++j) {
+
+                    spritesJucator[j].setPos((float) (j + j) * 100, 10);
+                    spritesCalculator[j].setPos((float) (j + j) * 100, 760);
+
+                }
+                return true;
+
+            }
+        } else {
+            spritesJucator[i].setScale(0.06f);
+        }
+    }
+}
+
+
+bool Joc::alegereCalculator() {
+    replay:
+
+    int carteAlC = calculator.alegereCarteCalculator();
+    spritesAleseCalc.emplace_back(calculator.getManaTexPath(carteAlC), 990, 505);
+    Carte carteAleasaCalc = calculator.getCarte(carteAlC);
+    calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
+    spritesCalculator.erase(spritesCalculator.begin() + carteAlC);
 
     for (int i = 0; i < jucator.getManaSize(); ++i) {
         //afisez cartile pentru debug
@@ -125,21 +201,28 @@ bool Joc::alegereJucator() {
                 jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
                 spritesJucator.erase(spritesJucator.begin() + i);
 
-                spritesAleseCalc.emplace_back(calculator.getManaTexPath(i), 900, 505);
-                Carte carteAleasaCalc = calculator.getCarte(i);
-                calculator.alegereCarte(i); // elimina cartea din mana calculatorului;
-                spritesCalculator.erase(spritesCalculator.begin() + i);
 
-                for (int j = 0; j < jucator.getManaSize(); ++j) {
+                if (carteAleasaJuc == Carte(10, 0))
+                    ++puncte;
+                if (carteAleasaCalc == Carte(10, 0))
+                    ++puncte;
+                if (carteAleasaJuc == Carte(14, 0))
+                    ++puncte;
+                if (carteAleasaCalc == Carte(14, 0))
+                    ++puncte;
 
-                    spritesJucator.emplace_back(jucator.getManaTexPath(j), -100, -100);
-                    spritesJucator[j].setScale(0.06f);
-
-                    spritesCalculator.emplace_back(calculator.getManaTexPath(j), 0, 0);
-                    spritesCalculator[j].setScale(0.06f);
-
-                    spritesJucator[j].setPos((float) (j + j) * 100, 10);
-                    spritesCalculator[j].setPos((float) (j + j) * 100, 760);
+                if (carteAleasaJuc == carteAleasaCalc) {
+                    if (calculator.alegerePosibila(carteAleasaCalc))
+                        goto replay;
+                    else {
+                        jucator.adaugarePuncte(puncte);
+                        puncte = 0;
+                        return false;
+                    }
+                } else {
+                    calculator.adaugarePuncte(puncte);
+                    puncte = 0;
+                    return true;
                 }
             }
         } else {
@@ -147,6 +230,3 @@ bool Joc::alegereJucator() {
         }
     }
 }
-
-
-

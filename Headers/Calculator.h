@@ -14,7 +14,7 @@ public:
 
     int alegereCarteCalculator(Carte &c);
 
-    Carte alegereCarteCalculator();
+    int alegereCarteCalculator();
 
 };
 

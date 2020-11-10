@@ -10,7 +10,6 @@ Calculator::Calculator() = default;
 
 int Calculator::alegereCarteCalculator(Carte &c) {
 
-
     for (int i = 0; i < this->mana.size(); ++i)
         if (this->mana[i].numar == c.numar) {
             Carte raspunsCalculator(this->mana[i]);
@@ -30,14 +29,14 @@ int Calculator::alegereCarteCalculator(Carte &c) {
 }
 
 
-Carte Calculator::alegereCarteCalculator() {
+int Calculator::alegereCarteCalculator() {
 
     for (int i = 0; i < this->mana.size() / 2 + 1; ++i)
         if (std::find(this->mana.begin() + i + 1, this->mana.end(), this->mana[i]) != this->mana.end()) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
             std::cout << "\nCarte calculator1: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
-            return raspunsCalculator;
+            return i;
         }
 
     for (int i = 0; i < this->mana.size(); ++i)
@@ -45,7 +44,7 @@ Carte Calculator::alegereCarteCalculator() {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
             std::cout << "\nCarte calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
-            return raspunsCalculator;
+            return i;
         }
 }
 

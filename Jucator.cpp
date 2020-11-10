@@ -100,5 +100,9 @@ void Jucator::alegereCarte(int i) {
 
 }
 
+int Jucator::getPuncte() const {
+    return puncte;
+}
+
 
 

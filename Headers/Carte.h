@@ -26,7 +26,7 @@ public:
     bool operator!=(const Carte &c) const;
 
 
-    ~Carte();
+    //~Carte();
 
     void setTexPath(const std::string &texPath);
 
