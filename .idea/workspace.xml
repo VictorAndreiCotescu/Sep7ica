@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
+    <generated>
+      <config projectName="Septica" targetName="Septica" />
+    </generated>
+  </component>
+  <component name="CMakeSettings" AUTO_RELOAD="true">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11564118-5d5c-4059-8737-5402e44c734b" name="Default Changelist" comment="-parcurgere joc doar alegere jucator fara logica">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Joc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Joc.h" beforeDir="false" afterPath="$PROJECT_DIR$/Joc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Jucator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jucator.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/main.cpp.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/objects.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Septica.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Septica.exe" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1jO5kmZIWyH56rfUsmkBEKEdZd5" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="cf.first.check.clang-format" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/SOIL" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="CPPToolchains" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\victo\CLionProjects\Septica\SOIL" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\soiltest\lib" />
+      <recent name="C:\mingw64\x86_64-w64-mingw32\include" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\GLFW" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\victo\CLionProjects\Septica\Tex" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\SOIL\lib" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\SOIL" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\SOIL\original" />
+      <recent name="C:\Users\victo\CLionProjects\Septica\soiltest" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Septica" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Septica" TARGET_NAME="Septica" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Septica" RUN_TARGET_NAME="Septica">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GradleAppRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="com.jetbrains.cidr.cpp.gradle.execution.GradleNativeBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11564118-5d5c-4059-8737-5402e44c734b" name="Default Changelist" comment="" />
+      <created>1603662442459</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603662442459</updated>
+      <workItem from="1603662446501" duration="2903000" />
+      <workItem from="1603703152967" duration="3534000" />
+      <workItem from="1603874282186" duration="9782000" />
+      <workItem from="1603889323993" duration="7678000" />
+      <workItem from="1603970481227" duration="67000" />
+      <workItem from="1604060445128" duration="2878000" />
+      <workItem from="1604069811301" duration="3426000" />
+      <workItem from="1604150512477" duration="2417000" />
+      <workItem from="1604305011122" duration="5438000" />
+      <workItem from="1604322759120" duration="7562000" />
+      <workItem from="1604330808018" duration="9099000" />
+      <workItem from="1604398756261" duration="7362000" />
+      <workItem from="1604414259994" duration="7980000" />
+      <workItem from="1604482406013" duration="15316000" />
+      <workItem from="1604509654972" duration="8034000" />
+      <workItem from="1604521947549" duration="1886000" />
+      <workItem from="1604524065597" duration="465000" />
+      <workItem from="1604580294208" duration="12741000" />
+      <workItem from="1604658469193" duration="30311000" />
+      <workItem from="1604853134897" duration="11809000" />
+      <workItem from="1604926137701" duration="3232000" />
+      <workItem from="1604946624248" duration="4253000" />
+      <workItem from="1605007462502" duration="8180000" />
+      <workItem from="1605103493583" duration="3520000" />
+    </task>
+    <task id="LOCAL-00001" summary="-initializarea si amestecarea pachetului">
+      <created>1603883172932</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1603883172932</updated>
+    </task>
+    <task id="LOCAL-00002" summary="-initializarea si amestecarea pachetului + meniu">
+      <created>1603904292094</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603904292094</updated>
+    </task>
+    <task id="LOCAL-00003" summary="-schimbat pachet in vector">
+      <created>1604062922447</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1604062922447</updated>
+    </task>
+    <task id="LOCAL-00004" summary="-schimbat pachet in vector">
+      <created>1604063395697</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1604063395697</updated>
+    </task>
+    <task id="LOCAL-00005" summary="-schimbat pachet in vector + amestecare vector">
+      <created>1604063434314</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1604063434314</updated>
+    </task>
+    <task id="LOCAL-00006" summary="- clasa jucator, trage carte din pachet, dispare din pachet">
+      <created>1604073685681</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1604073685681</updated>
+    </task>
+    <task id="LOCAL-00007" summary="- clasa jucator, trage carte din pachet, dispare din pachet">
+      <created>1604073736993</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1604073736993</updated>
+    </task>
+    <task id="LOCAL-00008" summary="- Completare mana jucator">
+      <created>1604153986739</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1604153986739</updated>
+    </task>
+    <task id="LOCAL-00009" summary="- Joc">
+      <created>1604307725494</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1604307725494</updated>
+    </task>
+    <task id="LOCAL-00010" summary="- Probleme la Jucator::AlegereCarte">
+      <created>1604310478178</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1604310478178</updated>
+    </task>
+    <task id="LOCAL-00011" summary="-alegere automata carte calc">
+      <created>1604341377254</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1604341377254</updated>
+    </task>
+    <task id="LOCAL-00012" summary="-probleme la AlegereCarte">
+      <created>1604342860619</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1604342860619</updated>
+    </task>
+    <task id="LOCAL-00013" summary="-schimbat cul,nr in protected">
+      <created>1604342899405</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1604342899405</updated>
+    </task>
+    <task id="LOCAL-00014" summary="-teste diverse functii">
+      <created>1604342941443</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1604342941443</updated>
+    </task>
+    <task id="LOCAL-00015" summary="-functie joc faulty, problema de rationament, rezolvabil">
+      <created>1604405888062</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1604405888062</updated>
+    </task>
+    <task id="LOCAL-00016" summary="-rezolvat atribuire carti; problema rationament randuri">
+      <created>1604422277881</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1604422277881</updated>
+    </task>
+    <task id="LOCAL-00017" summary="-test workflow">
+      <created>1604483252893</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1604483252893</updated>
+    </task>
+    <task id="LOCAL-00018" summary="-made portable">
+      <created>1604483757710</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1604483757710</updated>
+    </task>
+    <task id="LOCAL-00019" summary="-baze grafica">
+      <created>1604759472562</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1604759472562</updated>
+    </task>
+    <task id="LOCAL-00020" summary="-fereastra carti asezate">
+      <created>1604761796602</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1604761796602</updated>
+    </task>
+    <task id="LOCAL-00021" summary="-plansa principala + selectie carti">
+      <created>1604768702816</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1604768702816</updated>
+    </task>
+    <task id="LOCAL-00022" summary="-moved main tests to Joc class + menu interface">
+      <created>1604785487154</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1604785487154</updated>
+    </task>
+    <task id="LOCAL-00023" summary="-moved main tests to Joc class + menu interface">
+      <created>1604789631502</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1604789631502</updated>
+    </task>
+    <task id="LOCAL-00024" summary="-updated joc interface //todo game logic">
+      <created>1604866326741</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1604866326741</updated>
+    </task>
+    <task id="LOCAL-00025" summary="-parcurgere joc doar alegere jucator fara logica">
+      <created>1605017523495</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1605017523495</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="-initializarea si amestecarea pachetului" />
+    <MESSAGE value="-initializarea si amestecarea pachetului + meniu" />
+    <MESSAGE value="-schimbat pachet in vector" />
+    <MESSAGE value="-schimbat pachet in vector + amestecare vector" />
+    <MESSAGE value="- clasa jucator, trage carte din pachet, dispare din pachet" />
+    <MESSAGE value="- Completare mana jucator" />
+    <MESSAGE value="- Joc" />
+    <MESSAGE value="- Probleme la Jucator::AlegereCarte" />
+    <MESSAGE value="-alegere automata carte calc" />
+    <MESSAGE value="-probleme la AlegereCarte" />
+    <MESSAGE value="-schimbat cul,nr in protected" />
+    <MESSAGE value="-teste diverse functii" />
+    <MESSAGE value="-functie joc faulty, problema de rationament, rezolvabil" />
+    <MESSAGE value="-rezolvat atribuire carti; problema rationament randuri" />
+    <MESSAGE value="-test workflow" />
+    <MESSAGE value="-made portable" />
+    <MESSAGE value="-baze grafica" />
+    <MESSAGE value="-fereastra carti asezate" />
+    <MESSAGE value="-plansa principala + selectie carti" />
+    <MESSAGE value="-moved main tests to Joc class + menu interface" />
+    <MESSAGE value="-updated joc interface //todo game logic" />
+    <MESSAGE value="-parcurgere joc doar alegere jucator fara logica" />
+    <option name="LAST_COMMIT_MESSAGE" value="-parcurgere joc doar alegere jucator fara logica" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="492" y="128" key="#SSH_Configurations" timestamp="1604332547521">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="492" y="128" key="#SSH_Configurations/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604332547521" />
+    <state x="410" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1604591042238">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="410" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604591042238" />
+    <state x="410" y="186" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604332653502" />
+    <state x="733" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604586705363">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="733" y="329" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604586705363" />
+    <state x="733" y="342" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1603883441008" />
+    <state x="686" y="167" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1604583000679">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="686" y="167" key="#com.intellij.ide.macro.MacrosDialog/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604583000679" />
+    <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser" timestamp="1604927710677">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604927710677" />
+    <state x="718" y="166" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1604782598539" />
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1603663212268">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="690" y="287" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1603663212268" />
+    <state x="284" y="155" key="DiffContextDialog" timestamp="1603904311844">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="284" y="155" key="DiffContextDialog/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1603904311844" />
+    <state x="204" y="155" key="FileChooserDialogImpl" timestamp="1604583003628">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="204" y="155" key="FileChooserDialogImpl/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604583003628" />
+    <state x="204" y="161" key="FileChooserDialogImpl/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604511458880" />
+    <state width="1687" height="264" key="GridCell.Tab.0.bottom" timestamp="1605106900756">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1687" height="264" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605106900756" />
+    <state width="1654" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234487" />
+    <state width="1687" height="264" key="GridCell.Tab.0.center" timestamp="1605106900756">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.0.center/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1687" height="264" key="GridCell.Tab.0.center/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605106900756" />
+    <state width="1654" height="258" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234486" />
+    <state width="1687" height="264" key="GridCell.Tab.0.left" timestamp="1605106900756">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.0.left/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1687" height="264" key="GridCell.Tab.0.left/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605106900756" />
+    <state width="1654" height="258" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234486" />
+    <state width="1687" height="264" key="GridCell.Tab.0.right" timestamp="1605106900756">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.0.right/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1687" height="264" key="GridCell.Tab.0.right/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605106900756" />
+    <state width="1654" height="258" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234487" />
+    <state width="1399" height="50" key="GridCell.Tab.1.bottom" timestamp="1605033754964">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667084" />
+    <state width="1399" height="50" key="GridCell.Tab.1.bottom/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605033754964" />
+    <state width="1399" height="50" key="GridCell.Tab.1.center" timestamp="1605033754964">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.1.center/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1399" height="50" key="GridCell.Tab.1.center/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605033754964" />
+    <state width="1399" height="50" key="GridCell.Tab.1.left" timestamp="1605033754964">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.1.left/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1399" height="50" key="GridCell.Tab.1.left/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605033754964" />
+    <state width="1399" height="50" key="GridCell.Tab.1.right" timestamp="1605033754964">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1865" height="503" key="GridCell.Tab.1.right/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
+    <state width="1865" height="331" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
+    <state width="1399" height="50" key="GridCell.Tab.1.right/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605033754964" />
+    <state x="283" y="36" key="SettingsEditor" timestamp="1604585428138">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="283" y="36" key="SettingsEditor/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604585428138" />
+    <state x="283" y="37" key="SettingsEditor/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604514211373" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605017535426">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604866347990" />
+    <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604789637243" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605017535426" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1604153989346" />
+    <state x="737" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604768680870">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="737" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604768680870" />
+    <state x="737" y="435" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604483500991" />
+    <state x="685" y="324" key="refactoring.ChangeSignatureDialog" timestamp="1603704125180">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="685" y="324" key="refactoring.ChangeSignatureDialog/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1603704125180" />
+    <state x="532" y="237" key="run.anything.popup" timestamp="1604857560417">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604857560417" />
+    <state x="532" y="237" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1604755753482" />
+    <state x="532" y="246" key="run.anything.popup/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604510454626" />
+    <state x="623" y="226" width="840" height="653" key="search.everywhere.popup" timestamp="1604860368955">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="226" width="840" height="653" key="search.everywhere.popup/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604860368955" />
+    <state x="623" y="235" width="840" height="678" key="search.everywhere.popup/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604486006556" />
+    <state x="623" y="235" width="840" height="678" key="search.everywhere.popup/0.0.1920.1080@0.0.1920.1080" timestamp="1604061453490" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="this" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>

@@ -37,11 +37,17 @@ private:
     Calculator calculator;
     Pachet pachet;
     Fereastra fereastra;
+    Carte carteJos = Carte(0,0);
     std::vector<Sprite> spritesJucator;
     std::vector<Sprite> spritesCalculator;
     std::vector<Sprite> pachetAfis;
-    std::vector<Sprite> spritesAleseJuc;
-    std::vector<Sprite> spritesAleseCalc;
+    Sprite spritesAleseJuc;
+    Sprite spritesAleseCalc;
+
+    bool complJ = false;
+    bool complC = true;
+
+
 
     int puncte = 0;
 

@@ -64,6 +64,17 @@ void Jucator::adaugarePuncte(int x) {
 
 bool Jucator::alegerePosibila(const Carte &c) const {
 
+
+    /*for(int i = 0; i < this->mana.size(); ++i)
+        if(this->mana[i].numar == c.numar || this->mana[i].numar == Carte(7,0).numar ) {
+            std::cout << "mana posibila: ";
+            mana[i].afisare();
+            std::cout << std::endl;
+            return true;
+        }
+        else
+            return false;*/
+
     if (std::find(this->mana.begin(), this->mana.end(), c) != this->mana.end())
         return true;
     else if (std::find(this->mana.begin(), this->mana.end(), Carte(7, 0)) != this->mana.end())
