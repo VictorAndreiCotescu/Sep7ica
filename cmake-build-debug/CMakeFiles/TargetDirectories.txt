@@ -1,3 +1,0 @@
-C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/Septica.dir
-C:/Users/victo/CLionProjects/Septica/cmake-build-debug/CMakeFiles/rebuild_cache.dir
