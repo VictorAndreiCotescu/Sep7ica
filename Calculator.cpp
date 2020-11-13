@@ -57,6 +57,8 @@ int Calculator::alegereCarteCalculator() {
             std::cout << "Carte calculator2: " << raspunsCalculator.numar << " " << raspunsCalculator.culoare << "\n";
             return i;
         }
+
+    return 0;
 }
 
 #pragma GCC diagnostic pop

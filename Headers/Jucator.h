@@ -13,11 +13,11 @@ public:
 
     Jucator();
 
-    static void trageCarte(Pachet *Pachet, Jucator *Jucator);
+    static void trageCarte(Pachet &Pachet, Jucator &Jucator);
 
-    static void afisareCarti(Jucator *Jucator);
+    static void afisareCarti(Jucator &Jucator);
 
-    static void completareMana(Pachet *Pachet, Jucator *Jucator);
+    static void completareMana(Pachet &Pachet, Jucator &Jucator);
 
     void alegereCarte(int i);
 

@@ -46,12 +46,12 @@ void Joc::initializareJoc() {
 void Joc::startJoc(Fereastra fereastra) {
 
 
-    Pachet::initializarePachetVec(&pachet);
-    Pachet::amestecareVec(&pachet);
+    Pachet::initializarePachetVec(pachet);
+    Pachet::amestecareVec(pachet);
 
 
-    Jucator::completareMana(&pachet, &jucator);
-    Calculator::completareMana(&pachet, &calculator);
+    Jucator::completareMana(pachet, jucator);
+    Calculator::completareMana(pachet, calculator);
 
 
     for (int i = 0; i < pachet.getSize() / 7; ++i) {
@@ -86,8 +86,8 @@ void Joc::startJoc(Fereastra fereastra) {
                 std::cout << "\n";
                 if(!pachet.Gol())
                 while(!pachet.Gol() && jucator.getManaSize() < 4) {
-                    jucator.trageCarte(&pachet, &jucator);
-                    calculator.trageCarte(&pachet, &calculator);
+                    jucator.trageCarte(pachet, jucator);
+                    calculator.trageCarte(pachet, calculator);
 
                     spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
                     spritesCalculator.emplace_back("Tex/back.png", 0, 0);

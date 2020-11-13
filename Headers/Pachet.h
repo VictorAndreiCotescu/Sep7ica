@@ -12,14 +12,14 @@ public:
 
     Pachet(const Pachet &p);
 
-    Pachet operator=(const Pachet &p);
+    Pachet& operator=(const Pachet &p);
 
 
-    static void initializarePachetVec(Pachet *Pachet);
+    static void initializarePachetVec(Pachet &Pachet);
 
     static void afisarePachetVec(const Pachet &pachet);
 
-    static void amestecareVec(Pachet *Pachet);
+    static void amestecareVec(Pachet &Pachet);
 
     int getSize();
 

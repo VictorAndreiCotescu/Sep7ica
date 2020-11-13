@@ -6,13 +6,13 @@ Jucator::Jucator() {
     puncte = 0;
 };
 
-void Jucator::trageCarte(Pachet *Pachet, Jucator *Jucator) {
+void Jucator::trageCarte(Pachet &Pachet, Jucator&Jucator) {
 
-    Jucator->mana.push_back(Pachet->pachet.back());
-    Pachet->pachet.pop_back();
+    Jucator.mana.push_back(Pachet.pachet.back());
+    Pachet.pachet.pop_back();
 }
 
-void Jucator::afisareCarti(Jucator *Jucator) {
+void Jucator::afisareCarti(Jucator &Jucator) {
 
     /*for (auto &i : Jucator->mana) {
         std::cout << i.numar;
@@ -21,27 +21,27 @@ void Jucator::afisareCarti(Jucator *Jucator) {
         std::cout << i.getTexPath() << std::endl;
     }*/
 
-    for (int i = 0; i < Jucator->mana.size(); ++i) {
+    for (int i = 0; i < Jucator.mana.size(); ++i) {
 
         std::cout << "texPath: ";
-        std::cout << Jucator->mana[i].getTexPath() << std::endl;
+        std::cout << Jucator.mana[i].getTexPath() << std::endl;
 
 
     }
 
 }
 
-void Jucator::completareMana(Pachet *Pachet, Jucator *Jucator) {
+void Jucator::completareMana(Pachet &Pachet, Jucator &Jucator) {
 
-    if (Pachet->pachet.size() < 8) {
-        for (int i = 0; i < Pachet->pachet.size() / 2; ++i)
-            if (Jucator->mana.size() == 4)
+    if (Pachet.pachet.size() < 8) {
+        for (int i = 0; i < Pachet.pachet.size() / 2; ++i)
+            if (Jucator.mana.size() == 4)
                 break;
             else
-                Jucator->trageCarte(Pachet, Jucator);
+                Jucator.trageCarte(Pachet, Jucator);
     } else
-        while (Jucator->mana.size() < 4)
-            Jucator->trageCarte(Pachet, Jucator);
+        while (Jucator.mana.size() < 4)
+            Jucator.trageCarte(Pachet, Jucator);
 }
 
 Carte Jucator::carteAleasa(char c) {
@@ -63,17 +63,6 @@ void Jucator::adaugarePuncte(int x) {
 }
 
 bool Jucator::alegerePosibila(const Carte &c) const {
-
-
-    /*for(int i = 0; i < this->mana.size(); ++i)
-        if(this->mana[i].numar == c.numar || this->mana[i].numar == Carte(7,0).numar ) {
-            std::cout << "mana posibila: ";
-            mana[i].afisare();
-            std::cout << std::endl;
-            return true;
-        }
-        else
-            return false;*/
 
     if (std::find(this->mana.begin(), this->mana.end(), c) != this->mana.end())
         return true;
