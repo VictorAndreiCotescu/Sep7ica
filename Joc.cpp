@@ -1,5 +1,7 @@
 #include "Joc.h"
 #include "IO/MOUSE.h"
+#include <chrono> // std::chrono::microseconds
+#include <thread> // std::this_thread::sleep_for
 
 Joc::Joc() {
 
@@ -62,7 +64,7 @@ void Joc::startJoc(Fereastra fereastra) {
         spritesJucator.emplace_back(jucator.getManaTexPath(i), -100, -100);
         spritesJucator[i].setScale(0.06f);
 
-        spritesCalculator.emplace_back(calculator.getManaTexPath(i), 0, 0);
+        spritesCalculator.emplace_back("Tex/back.png", 0, 0);
         spritesCalculator[i].setScale(0.06f);
 
         spritesJucator[i].setPos((float) (i + i) * 100, 10);
@@ -88,7 +90,7 @@ void Joc::startJoc(Fereastra fereastra) {
                     calculator.trageCarte(&pachet, &calculator);
 
                     spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
-                    spritesCalculator.emplace_back(calculator.getManaTexPath(calculator.getManaSize() - 1), 0, 0);
+                    spritesCalculator.emplace_back("Tex/back.png", 0, 0);
                 }
 
                 for (int j = 0; j < jucator.getManaSize(); ++j) {
@@ -158,11 +160,11 @@ void Joc::startJoc(Fereastra fereastra) {
             }
         }
 
-
+        std::this_thread::sleep_for(std::chrono::microseconds{5000});
 
         fereastra.beginRender();
 
-        for (int i = 0; i < jucator.getManaSize(); ++i) {//in functie de cine incepe trebuie schimbata ordinea de render
+        for (int i = 0; i < jucator.getManaSize(); ++i) {
 
             spritesCalculator[i].update();
             spritesJucator[i].update();
