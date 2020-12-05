@@ -5,12 +5,10 @@
 
 Calculator::Calculator() = default;
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wreturn-type"
 
 int Calculator::alegereCarteCalculator(Carte &c) {
 
-    for (int i = 0; i < this->mana.size(); ++i)
+    for (int i = 0; i < (int)this->mana.size(); ++i)
         if (this->mana[i].numar == c.numar) {
             Carte raspunsCalculator(this->mana[i]);
             //this->mana.erase(this->mana.begin() + i);
@@ -18,7 +16,7 @@ int Calculator::alegereCarteCalculator(Carte &c) {
             return i;
         }
 
-    for (int i = 0; i < this->mana.size(); ++i)
+    for (int i = 0; i < (int)this->mana.size(); ++i)
         if (this->mana[i].numar == Carte(7,0).numar) {
             Carte raspunsCalculator(this->mana[i]);
             //this->mana.erase(this->mana.begin() + i);
@@ -26,7 +24,7 @@ int Calculator::alegereCarteCalculator(Carte &c) {
             return i;
         }
 
-    for (int i = 0; i < this->mana.size(); ++i)
+    for (int i = 0; i < (int)this->mana.size(); ++i)
         if (this->mana[i].numar != 14 || this->mana[i].numar != 10) {
             Carte raspunsCalculator(this->mana[i]);
             //this->mana.erase(this->mana.begin() + i);
@@ -42,7 +40,7 @@ int Calculator::alegereCarteCalculator(Carte &c) {
 
 int Calculator::alegereCarteCalculator() {
 
-    for (int i = 0; i < this->mana.size() / 2 + 1; ++i)
+    for (int i = 0; i < (int)this->mana.size() / 2 + 1; ++i)
         if (std::find(this->mana.begin() + i + 1, this->mana.end(), this->mana[i]) != this->mana.end()) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
@@ -50,7 +48,7 @@ int Calculator::alegereCarteCalculator() {
             return i;
         }
 
-    for (int i = 0; i < this->mana.size(); ++i)
+    for (int i = 0; i < (int)this->mana.size(); ++i)
         if (this->mana[i] != Carte(1, 0) || this->mana[i] != Carte(10, 0)) {
             Carte raspunsCalculator(this->mana[i]);
             this->mana.erase(this->mana.begin() + i);
@@ -61,7 +59,6 @@ int Calculator::alegereCarteCalculator() {
     return 0;
 }
 
-#pragma GCC diagnostic pop
 
 
 

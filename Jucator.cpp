@@ -44,7 +44,7 @@ void Jucator::completareMana(Pachet &Pachet, Jucator &Jucator) {
             Jucator.trageCarte(Pachet, Jucator);
 }
 
-Carte Jucator::carteAleasa(char c) {
+/*Carte Jucator::carteAleasa(char c) {
 
     if (mana.size() > (c - '0') - 1) {
 
@@ -53,7 +53,7 @@ Carte Jucator::carteAleasa(char c) {
         std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
         return CarteAleasa;
     }
-}
+}*/
 
 
 void Jucator::adaugarePuncte(int x) {

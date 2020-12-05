@@ -3,13 +3,7 @@
 
 //Carte::Carte() = default;
 
-Carte::Carte(const Carte &c) {
 
-    numar = c.numar;
-    culoare = c.culoare;
-    texPath = c.texPath;
-
-}
 
 Carte Carte::operator=(const Carte &c) {
 

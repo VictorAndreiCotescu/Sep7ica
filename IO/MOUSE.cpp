@@ -18,7 +18,7 @@ void MOUSE::mousePosCallback(GLFWwindow *fereastra, double _x, double _y) {
 
 }
 
-void MOUSE::mouseButtonCallback(GLFWwindow *fereastra, int button, int action, int mods) {
+void MOUSE::mouseButtonCallback(int button, int action) {
 
     if(button < 0)
         return;

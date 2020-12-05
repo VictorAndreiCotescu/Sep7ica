@@ -12,15 +12,22 @@ Fereastra::Fereastra() {
 
 bool Fereastra::initialize(const char *titlu) {
 
-    if (!glfwInit()) {
-        std::cerr << "Eroare initializare GLFW" << std::endl;
+    try {
+        if(!glfwInit())
+            throw "glfwInit esuat";
+    } catch (const char &ex){
+        std::cerr << "[GLFW ERROR]: " << ex << std::endl;
         return false;
     }
 
+    try{
     fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
 
     if (fereastra == nullptr) {
-        std::cerr << "Eroare initializare fereastra" << std::endl;
+        throw "Initializare fereastra esuata";
+    }
+    } catch (const char &ex){
+        std::cerr << "[GLFW ERROR]: " << ex << std::endl;
         return false;
     }
 
@@ -30,7 +37,7 @@ bool Fereastra::initialize(const char *titlu) {
     glfwSwapInterval(1);
 
     glfwSetCursorPosCallback(fereastra, MOUSE::mousePosCallback);
-    glfwSetMouseButtonCallback(fereastra, MOUSE::mouseButtonCallback);
+    glfwSetMouseButtonCallback(fereastra, reinterpret_cast<GLFWmousebuttonfun>(MOUSE::mouseButtonCallback));
 
     const GLFWvidmode *mode = glfwGetVideoMode(glfwGetPrimaryMonitor());
     int xPos = (mode->width - REZ_WID) / 2;
@@ -67,6 +74,5 @@ void Fereastra::beginRender() {
 
 void Fereastra::endRender() {
     glfwSwapBuffers(fereastra);
-
 }
 

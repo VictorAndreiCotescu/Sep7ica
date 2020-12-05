@@ -9,7 +9,9 @@ Joc::Joc() {
 
 void Joc::initializareJoc() {
 
+
     fereastra.initialize("Sep7ica");
+
     Sprite fundal = Sprite("Tex/bg.jpg", 0, 0);
     fundal.setScale(1.0f);
     fundal.setPos(0, 0);
@@ -271,6 +273,7 @@ bool Joc::alegereJucator() {
 }
 
 
+/*
 bool Joc::alegereCalculator() {
 
     int carteAlC = calculator.alegereCarteCalculator();
@@ -331,4 +334,4 @@ bool Joc::alegereCalculator() {
             }
         }
     }
-}
+}*/

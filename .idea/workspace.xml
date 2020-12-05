@@ -32,18 +32,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="11564118-5d5c-4059-8737-5402e44c734b" name="Default Changelist" comment="-parcurgere joc doar alegere jucator functionala">
+    <list default="true" id="11564118-5d5c-4059-8737-5402e44c734b" name="Default Changelist" comment="-rezolvare comms">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Calculator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Calculator.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Headers/Jucator.h" beforeDir="false" afterPath="$PROJECT_DIR$/Headers/Jucator.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Headers/Pachet.h" beforeDir="false" afterPath="$PROJECT_DIR$/Headers/Pachet.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fereastra.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Fereastra.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Grafica/Textura.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Grafica/Textura.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Headers/Carte.h" beforeDir="false" afterPath="$PROJECT_DIR$/Headers/Carte.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/MOUSE.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/IO/MOUSE.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IO/MOUSE.h" beforeDir="false" afterPath="$PROJECT_DIR$/IO/MOUSE.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Joc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Joc.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Jucator.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Jucator.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Pachet.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Pachet.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/Calculator.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/Calculator.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/main.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/main.cpp.obj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/objects.a" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Septica.dir/objects.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Septica.exe" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Septica.exe" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="cf.first.check.clang-format" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/SOIL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../probltedmasini" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="CPPToolchains" />
@@ -94,6 +95,11 @@
   </component>
   <component name="RunManager">
     <configuration name="Septica" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Septica" TARGET_NAME="Septica" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Septica" RUN_TARGET_NAME="Septica">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -139,7 +145,14 @@
       <workItem from="1605171343218" duration="7555000" />
       <workItem from="1605223303597" duration="2451000" />
       <workItem from="1605266446978" duration="2066000" />
-      <workItem from="1605281210892" duration="2497000" />
+      <workItem from="1605281210892" duration="4105000" />
+      <workItem from="1605875594235" duration="876000" />
+      <workItem from="1605879618600" duration="1507000" />
+      <workItem from="1606142063209" duration="2055000" />
+      <workItem from="1606225606681" duration="3809000" />
+      <workItem from="1606234431808" duration="800000" />
+      <workItem from="1606241892620" duration="2066000" />
+      <workItem from="1607179574936" duration="2336000" />
     </task>
     <task id="LOCAL-00001" summary="-initializarea si amestecarea pachetului">
       <created>1603883172932</created>
@@ -330,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1605225750145</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="-rezolvare comms">
+      <created>1605285944829</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1605285944829</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -373,7 +393,8 @@
     <MESSAGE value="-updated joc interface //todo game logic" />
     <MESSAGE value="-parcurgere joc doar alegere jucator fara logica" />
     <MESSAGE value="-parcurgere joc doar alegere jucator functionala" />
-    <option name="LAST_COMMIT_MESSAGE" value="-parcurgere joc doar alegere jucator functionala" />
+    <MESSAGE value="-rezolvare comms" />
+    <option name="LAST_COMMIT_MESSAGE" value="-rezolvare comms" />
   </component>
   <component name="WindowStateProjectService">
     <state x="492" y="128" key="#SSH_Configurations" timestamp="1604332547521">
@@ -407,39 +428,43 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="284" y="155" key="DiffContextDialog/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605180982144" />
-    <state x="204" y="155" key="FileChooserDialogImpl" timestamp="1604583003628">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="204" y="161" key="FileChooserDialogImpl" timestamp="1605875681208">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="204" y="155" key="FileChooserDialogImpl/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604583003628" />
-    <state x="204" y="161" key="FileChooserDialogImpl/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604511458880" />
-    <state width="1677" height="476" key="GridCell.Tab.0.bottom" timestamp="1605285621354">
+    <state x="204" y="161" key="FileChooserDialogImpl/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605875681208" />
+    <state width="1638" height="476" key="GridCell.Tab.0.bottom" timestamp="1607180880075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1865" height="503" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
     <state width="1865" height="331" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
-    <state width="1677" height="476" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605285621354" />
-    <state width="1654" height="258" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234487" />
-    <state width="1677" height="476" key="GridCell.Tab.0.center" timestamp="1605285621354">
+    <state width="1677" height="476" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605286559207" />
+    <state width="1638" height="476" key="GridCell.Tab.0.bottom/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1607180880075" />
+    <state width="1677" height="476" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1605465084938" />
+    <state width="1638" height="476" key="GridCell.Tab.0.center" timestamp="1607180880074">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1865" height="503" key="GridCell.Tab.0.center/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
     <state width="1865" height="331" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
-    <state width="1677" height="476" key="GridCell.Tab.0.center/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605285621354" />
-    <state width="1654" height="258" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234486" />
-    <state width="1677" height="476" key="GridCell.Tab.0.left" timestamp="1605285621354">
+    <state width="1677" height="476" key="GridCell.Tab.0.center/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605286559207" />
+    <state width="1638" height="476" key="GridCell.Tab.0.center/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1607180880074" />
+    <state width="1677" height="476" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1605465084937" />
+    <state width="1638" height="476" key="GridCell.Tab.0.left" timestamp="1607180880074">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1865" height="503" key="GridCell.Tab.0.left/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
     <state width="1865" height="331" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
-    <state width="1677" height="476" key="GridCell.Tab.0.left/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605285621354" />
-    <state width="1654" height="258" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234486" />
-    <state width="1677" height="476" key="GridCell.Tab.0.right" timestamp="1605285621354">
+    <state width="1677" height="476" key="GridCell.Tab.0.left/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605286559207" />
+    <state width="1638" height="476" key="GridCell.Tab.0.left/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1607180880074" />
+    <state width="1677" height="476" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1605465084937" />
+    <state width="1638" height="476" key="GridCell.Tab.0.right" timestamp="1607180880075">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state width="1865" height="503" key="GridCell.Tab.0.right/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604929420758" />
     <state width="1865" height="331" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1604789667083" />
-    <state width="1677" height="476" key="GridCell.Tab.0.right/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605285621354" />
-    <state width="1654" height="258" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1604400234487" />
+    <state width="1677" height="476" key="GridCell.Tab.0.right/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605286559207" />
+    <state width="1638" height="476" key="GridCell.Tab.0.right/0.0.1920.1080/-1920.0.1920.1080@0.0.1920.1080" timestamp="1607180880075" />
+    <state width="1677" height="476" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1605465084937" />
     <state width="1682" height="98" key="GridCell.Tab.1.bottom" timestamp="1605182123960">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
@@ -469,12 +494,12 @@
     </state>
     <state x="283" y="36" key="SettingsEditor/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604585428138" />
     <state x="283" y="37" key="SettingsEditor/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1604514211373" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605225755593">
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2" timestamp="1605285982283">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1280.0.1280.984@0.0.1920.1040" timestamp="1604866347990" />
     <state x="552" y="263" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1604789637243" />
-    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605225755593" />
+    <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080/-1280.0.1280.1024@0.0.1920.1080" timestamp="1605285982283" />
     <state x="552" y="273" key="Vcs.Push.Dialog.v2/0.0.1920.1080@0.0.1920.1080" timestamp="1604153989346" />
     <state x="737" y="419" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1604768680870">
       <screen x="0" y="0" width="1920" height="1040" />

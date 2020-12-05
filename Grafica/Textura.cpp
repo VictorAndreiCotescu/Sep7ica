@@ -4,7 +4,7 @@ Textura::Textura() {
 
     id = -1;
 
-};
+}
 
 Textura::Textura(int _id) {
 

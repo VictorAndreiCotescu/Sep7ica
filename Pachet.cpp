@@ -11,9 +11,6 @@ Pachet::Pachet(const Pachet &p) {
     pachet = p.pachet;
 }
 
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wreturn-type"
-
 Pachet& Pachet::operator=(const Pachet &p) {
         return *this;
 }
@@ -45,7 +42,6 @@ void Pachet::initializarePachetVec(Pachet &Pachet) {
 
 }
 
-#pragma GCC diagnostic pop
 
 void Pachet::amestecareVec(Pachet &Pachet) {
 

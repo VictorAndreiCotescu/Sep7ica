@@ -10,11 +10,13 @@ class Carte {
 public:
     Carte();
 
-    explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "--") : numar(numar_),
+    explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "?") : numar(numar_),
                                                                                 culoare(culoare_),
                                                                                 texPath(std::move(_tex)) {}
 
-    Carte(const Carte &c);
+    Carte(const Carte &c = Carte(0,0)): numar(c.numar),
+                                                        culoare(c.culoare),
+                                                        texPath(c.texPath) {}
 
     Carte operator=(const Carte &c);
 
@@ -40,11 +42,15 @@ public:
 
 protected:
 
-    int culoare;
+
     int numar;
+
+    int culoare{};
+
     std::string texPath;
 
 private:
+
 
     friend class Pachet;
 
