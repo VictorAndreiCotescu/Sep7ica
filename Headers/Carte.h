@@ -8,7 +8,7 @@
 class Carte {
 
 public:
-    Carte();
+    Carte():numar(0), culoare(0), texPath("?"){}
 
     explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "?") : numar(numar_),
                                                                                 culoare(culoare_),
@@ -18,7 +18,7 @@ public:
                                                         culoare(c.culoare),
                                                         texPath(c.texPath) {}
 
-    Carte operator=(const Carte &c);
+    Carte& operator=(const Carte &c);
 
 
     void afisare() const;

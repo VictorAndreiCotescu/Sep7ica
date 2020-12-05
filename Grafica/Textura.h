@@ -10,8 +10,15 @@ class Textura {
 
 public:
 
-    Textura();
-    explicit Textura(int _id);
+    Textura(): id(-1),wid(0),hgt(0){};
+
+    explicit Textura(int _id):id(_id),wid(0),hgt(0){
+
+        if (!getTextureParams()) {
+            std::cerr << "Error loading image ID: " << id << std::endl;
+        }
+
+    }
     explicit Textura(std::string path);
     ~Textura();
 

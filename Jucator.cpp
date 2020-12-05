@@ -2,9 +2,9 @@
 #include <algorithm>
 #include "Headers/Jucator.h"
 
-Jucator::Jucator() {
+Jucator::Jucator(): mana(), puncte(0) {
     puncte = 0;
-};
+}
 
 void Jucator::trageCarte(Pachet &Pachet, Jucator&Jucator) {
 
@@ -21,7 +21,7 @@ void Jucator::afisareCarti(Jucator &Jucator) {
         std::cout << i.getTexPath() << std::endl;
     }*/
 
-    for (int i = 0; i < Jucator.mana.size(); ++i) {
+    for (int i = 0; i < (int)Jucator.mana.size(); ++i) {
 
         std::cout << "texPath: ";
         std::cout << Jucator.mana[i].getTexPath() << std::endl;
@@ -34,7 +34,7 @@ void Jucator::afisareCarti(Jucator &Jucator) {
 void Jucator::completareMana(Pachet &Pachet, Jucator &Jucator) {
 
     if (Pachet.pachet.size() < 8) {
-        for (int i = 0; i < Pachet.pachet.size() / 2; ++i)
+        for (int i = 0; i < (int) Pachet.pachet.size() / 2; ++i)
             if (Jucator.mana.size() == 4)
                 break;
             else

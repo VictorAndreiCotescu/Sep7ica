@@ -8,7 +8,7 @@ class MOUSE {
 public:
 
     static void mousePosCallback(GLFWwindow *fereastra, double _x, double _y);
-    static void mouseButtonCallback(int button, int action);
+    static void mouseButtonCallback(GLFWwindow *fereastra, int button, int action, int mods);
 
     static double getMouseX();
     static double getMouseY();

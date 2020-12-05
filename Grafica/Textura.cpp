@@ -1,22 +1,7 @@
 #include "Textura.h"
 
-Textura::Textura() {
 
-    id = -1;
-
-}
-
-Textura::Textura(int _id) {
-
-    id = _id;
-
-    if (!getTextureParams()) {
-        std::cerr << "Error loading image ID: " << id << std::endl;
-    }
-
-}
-
-Textura::Textura(std::string path) {
+Textura::Textura(std::string path):id(0),wid(0),hgt(0) {
 
     id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO,
                                SOIL_CREATE_NEW_ID,

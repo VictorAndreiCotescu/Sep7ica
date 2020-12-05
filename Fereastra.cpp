@@ -62,9 +62,8 @@ bool Fereastra::initialize(const char *titlu) {
 Fereastra::~Fereastra() = default;
 
 void Fereastra::update() {
-
     glfwPollEvents();
-};
+}
 
 void Fereastra::beginRender() {
 

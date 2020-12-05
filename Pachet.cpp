@@ -5,13 +5,10 @@
 #include <chrono>
 #include "Headers/Pachet.h"
 
-Pachet::Pachet() = default;
-
-Pachet::Pachet(const Pachet &p) {
-    pachet = p.pachet;
-}
 
 Pachet& Pachet::operator=(const Pachet &p) {
+        if(!(this->pachet == p.pachet))
+            return *this;
         return *this;
 }
 

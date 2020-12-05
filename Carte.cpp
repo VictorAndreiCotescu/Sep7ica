@@ -5,7 +5,7 @@
 
 
 
-Carte Carte::operator=(const Carte &c) {
+Carte& Carte::operator=(const Carte &c) {
 
     numar = c.numar;
     culoare = c.culoare;
@@ -65,5 +65,3 @@ std::string Carte::genTexPath(Carte &c) {
 
 
 //Carte::~Carte() = default;
-
-Carte::Carte() = default;

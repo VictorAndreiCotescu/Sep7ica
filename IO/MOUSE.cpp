@@ -18,22 +18,27 @@ void MOUSE::mousePosCallback(GLFWwindow *fereastra, double _x, double _y) {
 
 }
 
-void MOUSE::mouseButtonCallback(int button, int action) {
+void MOUSE::mouseButtonCallback(GLFWwindow *fereastra, int button, int action, int mods) {
+    mods = 1;
+    if(mods) {
+        if (fereastra != nullptr) {
 
-    if(button < 0)
-        return;
+            if (button < 0)
+                return;
 
-    if(action != GLFW_RELEASE && !buttons[button]){
-        buttonsDown[button] = true;
-        buttonsUp[button] = false;
+            if (action != GLFW_RELEASE && !buttons[button]) {
+                buttonsDown[button] = true;
+                buttonsUp[button] = false;
+            }
+
+            if (action == GLFW_RELEASE && !buttons[button]) {
+                buttonsDown[button] = false;
+                buttonsUp[button] = true;
+            }
+
+            buttons[button] = action != GLFW_RELEASE;
+        }
     }
-
-    if(action == GLFW_RELEASE && !buttons[button]){
-        buttonsDown[button] = false;
-        buttonsUp[button] = true;
-    }
-
-    buttons[button] = action != GLFW_RELEASE;
 
 }
 

@@ -8,9 +8,9 @@ class Pachet {
 
 
 public:
-    Pachet();
+    Pachet(): pachet() {}
 
-    Pachet(const Pachet &p);
+    Pachet(const Pachet &p): pachet(p.pachet) {}
 
     Pachet& operator=(const Pachet &p);
 

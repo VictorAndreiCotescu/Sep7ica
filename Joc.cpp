@@ -3,9 +3,15 @@
 #include <chrono> // std::chrono::microseconds
 #include <thread> // std::this_thread::sleep_for
 
-Joc::Joc() {
-
-}
+Joc::Joc():     jucator(),
+                calculator(),
+                pachet(),
+                fereastra(),
+                spritesJucator(),
+                spritesCalculator(),
+                pachetAfis(),
+                spritesAleseJuc(),
+                spritesAleseCalc()  {}
 
 void Joc::initializareJoc() {
 
@@ -29,7 +35,7 @@ void Joc::initializareJoc() {
             start.setScale(0.55f);
 
             if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
-                Joc::startJoc(fereastra);
+                Joc::startJoc();
                 return;
             }
         } else start.setScale(0.5f);
@@ -45,7 +51,7 @@ void Joc::initializareJoc() {
     }
 }
 
-void Joc::startJoc(Fereastra fereastra) {
+void Joc::startJoc() {
 
 
     Pachet::initializarePachetVec(pachet);
@@ -88,11 +94,12 @@ void Joc::startJoc(Fereastra fereastra) {
                 std::cout << "\n";
                 if(!pachet.Gol())
                 while(!pachet.Gol() && jucator.getManaSize() < 4) {
-                    jucator.trageCarte(pachet, jucator);
-                    calculator.trageCarte(pachet, calculator);
+                    Jucator::trageCarte(pachet, jucator);
+                    Calculator::trageCarte(pachet, calculator);
 
                     spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
                     spritesCalculator.emplace_back("Tex/back.png", 0, 0);
+                    spritesCalculator.back().setScale(0.06f);
                 }
 
                 for (int j = 0; j < jucator.getManaSize(); ++j) {
@@ -164,7 +171,7 @@ void Joc::startJoc(Fereastra fereastra) {
 
         std::this_thread::sleep_for(std::chrono::microseconds{5000});
 
-        fereastra.beginRender();
+        Fereastra::beginRender();
 
         for (int i = 0; i < jucator.getManaSize(); ++i) {
 
@@ -186,7 +193,7 @@ void Joc::startJoc(Fereastra fereastra) {
         if(!pachet.Gol())
         for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();
 
-        fereastra.endRender();
+        Fereastra::endRender();
 
     }
 }

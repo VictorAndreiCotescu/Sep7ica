@@ -1,29 +1,27 @@
 #include "Sprite.h"
 
-Sprite::Sprite() {
-    xPos = 0;
-    yPos = 0;
-    rot = 0;
-    textura = Textura();
-}
+#include <utility>
 
-Sprite::Sprite(std::string imagePath) {
+Sprite::Sprite():   textura(Textura()),
+                    xPos(0),
+                    yPos(0),
+                    rot(0),
+                    xScale(0),
+                    yScale(0){}
 
-    textura = Textura(imagePath);
-    rot = 0;
-    xPos = 0;
-    yPos = 0;
+Sprite::Sprite(std::string imagePath):  textura(Textura(std::move(imagePath))),
+                                        xPos(0),
+                                        yPos(0),
+                                        rot(0),
+                                        xScale(0),
+                                        yScale(0) {}
 
-}
-
-Sprite::Sprite(std::string imagePath, float _xPos, float _yPos) {
-
-    textura = Textura(imagePath);
-    xPos = _xPos;
-    yPos = _yPos;
-    rot = 0;
-
-}
+Sprite::Sprite(std::string imagePath, float _xPos, float _yPos):  textura(Textura(std::move(imagePath))),
+                                                                  xPos(_xPos),
+                                                                  yPos(_yPos),
+                                                                  rot(0),
+                                                                  xScale(0),
+                                                                  yScale(0)  {}
 
 void Sprite::update() {
 

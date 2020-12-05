@@ -24,7 +24,7 @@ public:
 
     void initializareJoc();
 
-    void startJoc(Fereastra fereastra);
+    void startJoc();
 
     bool alegereJucator();
 
