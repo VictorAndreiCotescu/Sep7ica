@@ -7,7 +7,7 @@ set(GLFW_DIR C:/Users/victo/CLionProjects/Septica/GLFW)
 set(SOIL_DIR C:/Users/victo/CLionProjects/Septica/SOIL)
 
 set (GCC_COMPILE_FLAGS "-Wall -Wextra -pedantic -Weffc++ -Werror")
-set (CMAKE_CXX_FLAGS_INIT "-Werror -Wall -Wextra -Wpedantic")
+
 add_compile_options(-Wall -Wextra -pedantic -Werror -Weffc++)
 
 add_executable (Septica main.cpp Carte.cpp Headers/Carte.h Pachet.cpp Headers/Pachet.h Jucator.cpp Headers/Jucator.h Calculator.cpp Headers/Calculator.h Fereastra.cpp Headers/Fereastra.h Grafica/Textura.cpp Grafica/Textura.h Grafica/Sprite.cpp Grafica/Sprite.h IO/MOUSE.cpp IO/MOUSE.h Joc.cpp Joc.h)
