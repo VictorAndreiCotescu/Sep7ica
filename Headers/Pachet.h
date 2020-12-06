@@ -8,11 +8,11 @@ class Pachet {
 
 
 public:
-    Pachet(): pachet() {}
+    Pachet() : pachet() {}
 
-    Pachet(const Pachet &p): pachet(p.pachet) {}
+    Pachet(const Pachet &p) : pachet(p.pachet) {}
 
-    Pachet& operator=(const Pachet &p);
+    Pachet &operator=(const Pachet &p);
 
 
     static void initializarePachetVec(Pachet &Pachet);

@@ -3,6 +3,7 @@
 
 #include <glfw3.h>
 #include <SOIL.h>
+
 class Fereastra {
 
 public:
@@ -10,18 +11,20 @@ public:
     static int REZ_HGT;
 
     Fereastra();
+
     ~Fereastra();
 
     bool initialize(const char *Titlu);
 
     static void update();
+
     static void beginRender();
+
     static void endRender();
 
     static GLFWwindow *fereastra;
 
 protected:
-
 
 
 private:

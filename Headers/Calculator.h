@@ -13,11 +13,13 @@ public:
     Calculator();
 
     int alegereCarteCalculator(Carte &c);
-
     int alegereCarteCalculator();
 
-};
 
+    int alegereCarte(int nrCarte) override;
+
+
+};
 
 
 #endif //SEPTICA_CALCULATOR_H

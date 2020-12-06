@@ -13,19 +13,19 @@ public:
 
     Jucator();
 
-    static void trageCarte(Pachet &Pachet, Jucator &Jucator);
+    static void trageCarte(Pachet &pachet, Jucator &jucator);
 
-    static void afisareCarti(Jucator &Jucator);
+    static void afisareCarti(Jucator &jucator);
 
-    static void completareMana(Pachet &Pachet, Jucator &Jucator);
+    static void completareMana(Pachet &pachet, Jucator &jucator);
 
-    void alegereCarte(int i);
+    virtual int alegereCarte(int i);
 
     bool alegerePosibila(const Carte &c) const;
-
+    void eliminareCarte(int i);
     void adaugarePuncte(int x);
 
-    const std::string & getManaTexPath(int i) const;
+    const std::string &getManaTexPath(int i) const;
 
     Carte getCarte(int i);
 
@@ -35,13 +35,15 @@ public:
 
     int getPuncte() const;
 
+    virtual ~Jucator() = default;
+
 protected:
 
-    std::vector<Carte> mana;
+    std::vector <Carte> mana;
     int puncte;
 
 private:
-    Carte carteAleasa(char c);
+    //Carte carteAleasa(char c);
 
     friend class Carte;
 

@@ -94,14 +94,17 @@ Carte Jucator::getCarte(int i) {
     return mana[i];
 }
 
-void Jucator::alegereCarte(int i) {
-
+int Jucator::alegereCarte(int i) {
     this->mana.erase(mana.begin() + i);
-
+    return 0;
 }
 
 int Jucator::getPuncte() const {
     return puncte;
+}
+
+void Jucator::eliminareCarte(int i) {
+    this->mana.erase(this->mana.begin() + i);
 }
 
 

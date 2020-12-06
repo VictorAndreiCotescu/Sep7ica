@@ -28,7 +28,7 @@ public:
 
     bool alegereJucator();
 
-    bool alegereCalculator();
+    //bool alegereCalculator();
 
 
 private:

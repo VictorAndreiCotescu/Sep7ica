@@ -3,15 +3,15 @@
 #include <chrono> // std::chrono::microseconds
 #include <thread> // std::this_thread::sleep_for
 
-Joc::Joc():     jucator(),
-                calculator(),
-                pachet(),
-                fereastra(),
-                spritesJucator(),
-                spritesCalculator(),
-                pachetAfis(),
-                spritesAleseJuc(),
-                spritesAleseCalc()  {}
+Joc::Joc() : jucator(),
+             calculator(),
+             pachet(),
+             fereastra(),
+             spritesJucator(),
+             spritesCalculator(),
+             pachetAfis(),
+             spritesAleseJuc(),
+             spritesAleseCalc() {}
 
 void Joc::initializareJoc() {
 
@@ -83,7 +83,6 @@ void Joc::startJoc() {
         pachetAfis[i].update();
 
 
-
     bool bk = true;
 
     while (true) {
@@ -92,15 +91,15 @@ void Joc::startJoc() {
         if (bk) {
             if (complJ) {
                 std::cout << "\n";
-                if(!pachet.Gol())
-                while(!pachet.Gol() && jucator.getManaSize() < 4) {
-                    Jucator::trageCarte(pachet, jucator);
-                    Calculator::trageCarte(pachet, calculator);
+                if (!pachet.Gol())
+                    while (!pachet.Gol() && jucator.getManaSize() < 4) {
+                        Jucator::trageCarte(pachet, jucator);
+                        Calculator::trageCarte(pachet, calculator);
 
-                    spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
-                    spritesCalculator.emplace_back("Tex/back.png", 0, 0);
-                    spritesCalculator.back().setScale(0.06f);
-                }
+                        spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
+                        spritesCalculator.emplace_back("Tex/back.png", 0, 0);
+                        spritesCalculator.back().setScale(0.06f);
+                    }
 
                 for (int j = 0; j < jucator.getManaSize(); ++j) {
 
@@ -110,9 +109,9 @@ void Joc::startJoc() {
                 }
 
                 spritesAleseJuc.setPos(-1000, -1000);
-                spritesAleseCalc.setPos(-1000,-1000);
+                spritesAleseCalc.setPos(-1000, -1000);
 
-                carteJos = Carte(0,0);
+                carteJos = Carte(0, 0);
                 complC = true;
                 complJ = false;
             }
@@ -149,9 +148,9 @@ void Joc::startJoc() {
 
         }*/
 
-        if(pachet.Gol() && jucator.getManaSize() == 0 && calculator.getManaSize() == 0){
+        if (pachet.Gol() && jucator.getManaSize() == 0 && calculator.getManaSize() == 0) {
 
-            if(jucator.getPuncte() > calculator.getPuncte()){
+            if (jucator.getPuncte() > calculator.getPuncte()) {
 
                 std::cout << "\nAi castigat! Puncte jucator: ";
                 std::cout << jucator.getPuncte();
@@ -183,15 +182,15 @@ void Joc::startJoc() {
         }
 
 
-            spritesAleseJuc.update();
-            spritesAleseCalc.update();
+        spritesAleseJuc.update();
+        spritesAleseCalc.update();
 
-            spritesAleseJuc.render();
-            spritesAleseCalc.render();
+        spritesAleseJuc.render();
+        spritesAleseCalc.render();
 
 
-        if(!pachet.Gol())
-        for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();
+        if (!pachet.Gol())
+            for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();
 
         Fereastra::endRender();
 
@@ -209,19 +208,18 @@ bool Joc::alegereJucator() {
                 spritesAleseJuc = Sprite(jucator.getManaTexPath(i), 900, 505);
                 spritesAleseJuc.setScale(0.06f);
                 Carte carteAleasaJuc = jucator.getCarte(i);
-                if(carteJos == Carte(0,0))
+                if (carteJos == Carte(0, 0))
                     carteJos = carteAleasaJuc;
-                std::cout << "carteJos: ";
-                carteJos.afisare();
-                std::cout << std::endl;
-                jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
                 spritesJucator.erase(spritesJucator.begin() + i);
-
-                int carteAlC = calculator.alegereCarteCalculator(carteAleasaJuc);
+                jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
+                jucator.afisareCarti(jucator);
+                int carteAlC = calculator.alegereCarte(carteAleasaJuc.getNumar());
+                //calculator.afisareCarti(calculator);
                 spritesAleseCalc = Sprite(calculator.getManaTexPath(carteAlC), 990, 505);
                 spritesAleseCalc.setScale(0.06f);
                 Carte carteAleasaCalc = calculator.getCarte(carteAlC);
-                calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
+                calculator.eliminareCarte(carteAlC);
+                //calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
                 spritesCalculator.erase(spritesCalculator.begin() + carteAlC);
 
                 if (carteAleasaJuc == Carte(10, 0))
@@ -233,15 +231,6 @@ bool Joc::alegereJucator() {
                 if (carteAleasaCalc == Carte(14, 0))
                     ++puncte;
 
-               /* while(!pachet.Gol() && jucator.getManaSize() < 4) {
-                    jucator.trageCarte(&pachet, &jucator);
-                    calculator.trageCarte(&pachet, &calculator);
-
-                    spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
-                    spritesCalculator.emplace_back(calculator.getManaTexPath(calculator.getManaSize() - 1), 0, 0);
-                }*/
-
-                //jucator.afisareCarti(&jucator);
 
                 for (int j = 0; j < jucator.getManaSize(); ++j) {
 
@@ -251,7 +240,7 @@ bool Joc::alegereJucator() {
                 }
 
 
-                if(carteAleasaCalc == carteJos) {
+                if (carteAleasaCalc == carteJos) {
                     if (jucator.alegerePosibila(carteJos)) {
                         complJ = false;
                         return true;
@@ -261,7 +250,7 @@ bool Joc::alegereJucator() {
                         complJ = true;
                         return false;
                     }
-                } else{
+                } else {
                     jucator.adaugarePuncte(puncte);
                     puncte = 0;
                     complJ = true;
@@ -278,67 +267,3 @@ bool Joc::alegereJucator() {
     }
     return true;
 }
-
-
-/*
-bool Joc::alegereCalculator() {
-
-    int carteAlC = calculator.alegereCarteCalculator();
-    spritesAleseCalc = Sprite(calculator.getManaTexPath(carteAlC), 990, 505);
-    Carte carteAleasaCalc = calculator.getCarte(carteAlC);
-    if(carteJos == Carte(0,0))
-        carteJos = carteAleasaCalc;
-    carteJos.afisare();
-
-    std::cout << std::endl;
-    calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
-    spritesCalculator.erase(spritesCalculator.begin() + carteAlC);
-
-    for (int i = 0; i < jucator.getManaSize(); ++i) {
-        //afisez cartile pentru debug
-
-        if (MOUSE::getMouseX() < 180 * (i + 1) && MOUSE::getMouseX() > 180 * i && MOUSE::getMouseY() > 790) {
-            spritesJucator[i].setScale(0.065f);
-            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
-
-                spritesAleseJuc = Sprite(jucator.getManaTexPath(i), 900, 505);
-                Carte carteAleasaJuc = jucator.getCarte(i);
-                jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
-                spritesJucator.erase(spritesJucator.begin() + i);
-
-
-                if (carteAleasaJuc == Carte(10, 0))
-                    ++puncte;
-                if (carteAleasaCalc == Carte(10, 0))
-                    ++puncte;
-                if (carteAleasaJuc == Carte(14, 0))
-                    ++puncte;
-                if (carteAleasaCalc == Carte(14, 0))
-                    ++puncte;
-
-
-                for (int j = 0; j < jucator.getManaSize(); ++j) {
-
-                    spritesJucator[j].setPos((float) (j + j) * 100, 10);
-                    spritesCalculator[j].setPos((float) (j + j) * 100, 760);
-
-                }
-
-
-                if(carteAleasaJuc == carteJos) {
-                    if (calculator.alegerePosibila(carteJos))
-                        return true;
-                    else
-                        return false;
-                } {
-                    complJ = false;
-                    complC = true;
-                    return true;
-                }
-            } else {
-                spritesJucator[i].setScale(0.06f);
-                //return true;
-            }
-        }
-    }
-}*/

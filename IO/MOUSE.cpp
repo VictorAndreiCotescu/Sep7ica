@@ -3,9 +3,9 @@
 double MOUSE::xMouse = 0;
 double MOUSE::yMouse = 0;
 
-bool MOUSE::buttons[GLFW_MOUSE_BUTTON_LAST] = { 0 };
-bool MOUSE::buttonsDown[GLFW_MOUSE_BUTTON_LAST] = { 0 };
-bool MOUSE::buttonsUp[GLFW_MOUSE_BUTTON_LAST] = { 0 };
+bool MOUSE::buttons[GLFW_MOUSE_BUTTON_LAST] = {0};
+bool MOUSE::buttonsDown[GLFW_MOUSE_BUTTON_LAST] = {0};
+bool MOUSE::buttonsUp[GLFW_MOUSE_BUTTON_LAST] = {0};
 
 void MOUSE::mousePosCallback(GLFWwindow *fereastra, double _x, double _y) {
 
@@ -20,7 +20,7 @@ void MOUSE::mousePosCallback(GLFWwindow *fereastra, double _x, double _y) {
 
 void MOUSE::mouseButtonCallback(GLFWwindow *fereastra, int button, int action, int mods) {
     mods = 1;
-    if(mods) {
+    if (mods) {
         if (fereastra != nullptr) {
 
             if (button < 0)

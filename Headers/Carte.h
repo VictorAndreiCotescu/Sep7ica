@@ -8,17 +8,19 @@
 class Carte {
 
 public:
-    Carte():numar(0), culoare(0), texPath("?"){}
+    Carte() : numar(0),
+              culoare(0),
+              texPath("?") {}
 
     explicit Carte(int numar_ = 1, int culoare_ = 1, std::string _tex = "?") : numar(numar_),
-                                                                                culoare(culoare_),
-                                                                                texPath(std::move(_tex)) {}
+                                                                               culoare(culoare_),
+                                                                               texPath(std::move(_tex)) {}
 
-    Carte(const Carte &c = Carte(0,0)): numar(c.numar),
+    Carte(const Carte &c = Carte(0, 0)) : numar(c.numar),
                                                         culoare(c.culoare),
                                                         texPath(c.texPath) {}
 
-    Carte& operator=(const Carte &c);
+    Carte &operator=(const Carte &c);
 
 
     void afisare() const;

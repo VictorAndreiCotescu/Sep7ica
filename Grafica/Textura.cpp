@@ -1,7 +1,9 @@
 #include "Textura.h"
 
 
-Textura::Textura(std::string path):id(0),wid(0),hgt(0) {
+Textura::Textura(std::string path) : id(0),
+                                     wid(0),
+                                     hgt(0) {
 
     id = SOIL_load_OGL_texture(path.c_str(), SOIL_LOAD_AUTO,
                                SOIL_CREATE_NEW_ID,
