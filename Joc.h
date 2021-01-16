@@ -20,7 +20,7 @@ class Joc : public Fereastra, public Sprite{
 
 public:
 
-    Joc();
+    //Joc();
 
     void initializareJoc();
 
@@ -30,8 +30,26 @@ public:
 
     //bool alegereCalculator();
 
+    static Joc *getInstance() {
+        if (!instance)
+            instance = new Joc;
+        return instance;
+    }
+
+
 
 private:
+
+    static Joc *instance;
+    Joc() : jucator(),
+            calculator(),
+            pachet(),
+            fereastra(),
+            spritesJucator(),
+            spritesCalculator(),
+            pachetAfis(),
+            spritesAleseJuc(),
+            spritesAleseCalc() {};
 
     Jucator jucator;
     Calculator calculator;
@@ -45,7 +63,6 @@ private:
     Sprite spritesAleseCalc;
 
     bool complJ = false;
-    bool complC = true;
 
 
 

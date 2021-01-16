@@ -135,8 +135,10 @@
     }
 }*/
 
-int main() {
+Joc *Joc::instance = nullptr;
 
-    Joc().initializareJoc();
+int main() {
+    Joc *joc = Joc::getInstance();
+    joc->initializareJoc();
 
 }

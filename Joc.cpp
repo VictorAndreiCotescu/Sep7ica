@@ -3,7 +3,7 @@
 #include <chrono> // std::chrono::microseconds
 #include <thread> // std::this_thread::sleep_for
 
-Joc::Joc() : jucator(),
+/*Joc::Joc() : jucator(),
              calculator(),
              pachet(),
              fereastra(),
@@ -11,7 +11,7 @@ Joc::Joc() : jucator(),
              spritesCalculator(),
              pachetAfis(),
              spritesAleseJuc(),
-             spritesAleseCalc() {}
+             spritesAleseCalc() {}*/
 
 void Joc::initializareJoc() {
 
@@ -27,7 +27,7 @@ void Joc::initializareJoc() {
 
     while (true) {
 
-        fereastra.update();
+        Fereastra::update();
         fundal.update();
 
         if (MOUSE::getMouseX() > 320 && MOUSE::getMouseX() < 960 &&
@@ -41,12 +41,12 @@ void Joc::initializareJoc() {
         } else start.setScale(0.5f);
 
         start.update();
-        fereastra.beginRender();
+        Fereastra::beginRender();
 
         fundal.render();
         start.render();
 
-        fereastra.endRender();
+        Fereastra::endRender();
 
     }
 }
@@ -83,40 +83,36 @@ void Joc::startJoc() {
         pachetAfis[i].update();
 
 
-    bool bk = true;
-
     while (true) {
-        fereastra.update();
+        Fereastra::update();
 
-        if (bk) {
-            if (complJ) {
-                std::cout << "\n";
-                if (!pachet.Gol())
-                    while (!pachet.Gol() && jucator.getManaSize() < 4) {
-                        Jucator::trageCarte(pachet, jucator);
-                        Calculator::trageCarte(pachet, calculator);
+        if (complJ) {
+            std::cout << "\n";
+            if (!pachet.Gol())
+                while (!pachet.Gol() && jucator.getManaSize() < 4) {
+                    Jucator::trageCarte(pachet, jucator);
+                    Calculator::trageCarte(pachet, calculator);
 
-                        spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
-                        spritesCalculator.emplace_back("Tex/back.png", 0, 0);
-                        spritesCalculator.back().setScale(0.06f);
-                    }
-
-                for (int j = 0; j < jucator.getManaSize(); ++j) {
-
-                    spritesJucator[j].setPos((float) (j + j) * 100, 10);
-                    spritesCalculator[j].setPos((float) (j + j) * 100, 760);
-
+                    spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
+                    spritesCalculator.emplace_back("Tex/back.png", 0, 0);
+                    spritesCalculator.back().setScale(0.06f);
                 }
 
-                spritesAleseJuc.setPos(-1000, -1000);
-                spritesAleseCalc.setPos(-1000, -1000);
+            for (int j = 0; j < jucator.getManaSize(); ++j) {
 
-                carteJos = Carte(0, 0);
-                complC = true;
-                complJ = false;
+                spritesJucator[j].setPos((float) (j + j) * 100, 10);
+                spritesCalculator[j].setPos((float) (j + j) * 100, 760);
+
             }
-            Joc::alegereJucator();
+
+            spritesAleseJuc.setPos(-1000, -1000);
+            spritesAleseCalc.setPos(-1000, -1000);
+
+            carteJos = Carte(0, 0);
+            //complC = true;
+            complJ = false;
         }
+        Joc::alegereJucator();
 /*
         if(!bk) {
             if (complC) {
@@ -212,7 +208,7 @@ bool Joc::alegereJucator() {
                     carteJos = carteAleasaJuc;
                 spritesJucator.erase(spritesJucator.begin() + i);
                 jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
-                jucator.afisareCarti(jucator);
+                Jucator::afisareCarti(jucator);
                 int carteAlC = calculator.alegereCarte(carteAleasaJuc.getNumar());
                 //calculator.afisareCarti(calculator);
                 spritesAleseCalc = Sprite(calculator.getManaTexPath(carteAlC), 990, 505);

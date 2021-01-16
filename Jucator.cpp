@@ -21,10 +21,10 @@ void Jucator::afisareCarti(Jucator &Jucator) {
         std::cout << i.getTexPath() << std::endl;
     }*/
 
-    for (int i = 0; i < (int)Jucator.mana.size(); ++i) {
+    for (auto & i : Jucator.mana) {
 
         std::cout << "texPath: ";
-        std::cout << Jucator.mana[i].getTexPath() << std::endl;
+        std::cout << i.getTexPath() << std::endl;
 
 
     }
