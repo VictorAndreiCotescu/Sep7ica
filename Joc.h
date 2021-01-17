@@ -28,6 +28,9 @@ public:
 
     bool alegereJucator();
 
+    Joc(const Joc&) = delete;
+    Joc& operator=(const Joc&) = delete;
+
     //bool alegereCalculator();
 
     static Joc *getInstance() {
@@ -36,11 +39,12 @@ public:
         return instance;
     }
 
-
+    void replay();
 
 private:
 
     static Joc *instance;
+
     Joc() : jucator(),
             calculator(),
             pachet(),
@@ -69,6 +73,7 @@ private:
     int puncte = 0;
 
     friend class Jucator;
+
 
 };
 

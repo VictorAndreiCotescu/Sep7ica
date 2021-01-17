@@ -67,6 +67,10 @@ void Sprite::setScale(float _xyScale) {
     yScale = _xyScale;
 }
 
+float Sprite::getScale(){
+    return xScale;
+}
+
 void Sprite::setScale(float _xScale, float _yScale) {
     xScale = _xScale;
     yScale = _yScale;

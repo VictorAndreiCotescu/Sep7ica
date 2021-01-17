@@ -13,13 +13,88 @@
              spritesAleseJuc(),
              spritesAleseCalc() {}*/
 
+void pierdut(){
+
+    Sprite fundal = Sprite("Tex/gameLost.jpg", 0, 0);
+    fundal.setScale(1.5f);
+    fundal.setPos(-310, 0);
+
+    while(fundal.getScale() < 1.8) {
+
+        fundal.setScale((float)(fundal.getScale() + 0.001));
+        fundal.setPos((float)(fundal.getXPos() - 0.6), (float)(fundal.getYPos() - 0.35));
+
+        Fereastra::beginRender();
+
+        fundal.render();
+
+
+        Fereastra::endRender();
+    }
+
+
+
+    while(true){
+
+
+    }
+
+}
+
+void Joc::replay() {
+
+    /*Sprite fundal = Sprite("Tex/blk.jpg", 0, 0);
+    fundal.setScale(5.0f);
+    fundal.setPos(0, 0);*/
+
+    Sprite replay = Sprite("Tex/replay.png", 0, 0);
+
+    while (true) {
+
+        Fereastra::update();
+        //fundal.update();
+
+        if (MOUSE::getMouseX() > 320 && MOUSE::getMouseX() < 960 &&
+            MOUSE::getMouseY() > 300 && MOUSE::getMouseY() < 512) {
+            replay.setScale(0.55f);
+            replay.setPos(300, 480);
+
+            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+                Joc::startJoc();
+                return;
+            }
+        } else {
+            replay.setScale(0.5f);
+            replay.setPos(320, 512);
+        }
+
+        replay.update();
+        Fereastra::beginRender();
+
+        replay.render();
+
+        //fundal.render();
+        replay.render();
+
+        Fereastra::endRender();
+
+    }
+
+}
+
+
+
+
 void Joc::initializareJoc() {
+
 
 
     fereastra.initialize("Sep7ica");
 
-    Sprite fundal = Sprite("Tex/bg.jpg", 0, 0);
-    fundal.setScale(1.0f);
+    //Joc::replay();
+
+    Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);
+    fundal.setScale(0.9f);
     fundal.setPos(0, 0);
     Sprite start = Sprite("Tex/start.png", 0, 0);
     start.setScale(0.5f);
@@ -33,12 +108,16 @@ void Joc::initializareJoc() {
         if (MOUSE::getMouseX() > 320 && MOUSE::getMouseX() < 960 &&
             MOUSE::getMouseY() > 300 && MOUSE::getMouseY() < 512) {
             start.setScale(0.55f);
+            start.setPos(300, 480);
 
             if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
                 Joc::startJoc();
-                return;
+                //return;
             }
-        } else start.setScale(0.5f);
+        } else {
+            start.setScale(0.5f);
+            start.setPos(320, 512);
+        }
 
         start.update();
         Fereastra::beginRender();
@@ -51,8 +130,13 @@ void Joc::initializareJoc() {
     }
 }
 
+
+
 void Joc::startJoc() {
 
+    Sprite fundal = Sprite("Tex/bgame2.jpg", 0, 0);
+    fundal.setScale(1.0f);
+    fundal.setPos(-200, 0);
 
     Pachet::initializarePachetVec(pachet);
     Pachet::amestecareVec(pachet);
@@ -112,6 +196,8 @@ void Joc::startJoc() {
             //complC = true;
             complJ = false;
         }
+
+
         Joc::alegereJucator();
 /*
         if(!bk) {
@@ -147,14 +233,14 @@ void Joc::startJoc() {
         if (pachet.Gol() && jucator.getManaSize() == 0 && calculator.getManaSize() == 0) {
 
             if (jucator.getPuncte() > calculator.getPuncte()) {
-
+                pierdut();
                 std::cout << "\nAi castigat! Puncte jucator: ";
                 std::cout << jucator.getPuncte();
                 std::cout << " Puncte calculator ";
                 std::cout << calculator.getPuncte();
                 return;
             } else {
-
+                pierdut();
                 std::cout << "\nAi pierdut! Puncte jucator: ";
                 std::cout << jucator.getPuncte();
                 std::cout << " Puncte calculator ";
@@ -167,6 +253,8 @@ void Joc::startJoc() {
         std::this_thread::sleep_for(std::chrono::microseconds{5000});
 
         Fereastra::beginRender();
+
+        fundal.render();
 
         for (int i = 0; i < jucator.getManaSize(); ++i) {
 
@@ -185,6 +273,8 @@ void Joc::startJoc() {
         spritesAleseCalc.render();
 
 
+
+
         if (!pachet.Gol())
             for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();
 
@@ -192,6 +282,8 @@ void Joc::startJoc() {
 
     }
 }
+
+
 
 bool Joc::alegereJucator() {
     for (int i = 0; i < jucator.getManaSize(); ++i) {

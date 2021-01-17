@@ -32,6 +32,8 @@ public:
 
     float getYPos() const;
 
+    float getScale();
+
     void setUsed(bool _used);
 
 
@@ -43,6 +45,8 @@ private:
     float xScale;
     float yScale;
     bool used = false;
+
+
 };
 
 
