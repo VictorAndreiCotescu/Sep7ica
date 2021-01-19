@@ -1,7 +1,7 @@
 # Proiect_POO
-Classic card game with graphics with GLFW and SOIL libraries.
+Classic card game with GLFW and SOIL libraries.
 
-Librarii:
+Libraries:
 
   SOIL: https://github.com/Friduric/simple-opengl-image-library
   
