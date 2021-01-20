@@ -3,17 +3,97 @@
 #include <chrono> // std::chrono::microseconds
 #include <thread> // std::this_thread::sleep_for
 
-/*Joc::Joc() : jucator(),
-             calculator(),
-             pachet(),
-             fereastra(),
-             spritesJucator(),
-             spritesCalculator(),
-             pachetAfis(),
-             spritesAleseJuc(),
-             spritesAleseCalc() {}*/
 
-void pierdut(){
+
+
+int Joc::replay() {
+
+
+    Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);
+    fundal.setScale(0.9f);
+    fundal.setPos(0, 0);
+    Sprite start = Sprite("Tex/replayBttn.png", 0, 0);
+    start.setScale(2.0f);
+    start.setPos(480, 512);
+    Sprite exit = Sprite("Tex/exitBttn.png", 0, 0);
+    exit.setScale(2.0f);
+    exit.setPos(480, 412);
+
+    while (true) {
+
+        Fereastra::update();
+
+        //start.update();
+        fundal.update();
+
+        if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
+            MOUSE::getMouseY() > 450 && MOUSE::getMouseY() < 512) {
+
+            start.setScale(2.2f);
+            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                start = Sprite("Tex/replayBttnClicked.png", 480, 512);
+                start.setScale(2.2f);
+
+
+                Fereastra::beginRender();
+
+                fundal.render();
+                start.render();
+
+                Fereastra::endRender();
+
+                startJoc();
+
+            }
+        } else {
+            start = Sprite("Tex/replayBttn.png", 0, 0);
+            start.setScale(2.0f);
+            start.setPos(480, 512);
+        }
+
+        if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
+            MOUSE::getMouseY() > 550 && MOUSE::getMouseY() < 612) {
+
+            exit.setScale(2.2f);
+            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                exit = Sprite("Tex/exitBttnClicked.png", 480, 412);
+                exit.setScale(2.2f);
+
+
+                Fereastra::beginRender();
+
+                fundal.render();
+                start.render();
+                exit.render();
+
+                Fereastra::endRender();
+
+                return 0;
+
+            }
+        } else {
+            exit = Sprite("Tex/exitBttn.png", 0, 0);
+            exit.setScale(2.0f);
+            exit.setPos(480, 412);
+        }
+
+        exit.update();
+        start.update();
+        Fereastra::beginRender();
+
+        fundal.render();
+        start.render();
+        exit.render();
+
+        Fereastra::endRender();
+
+    }
+}
+
+
+void Joc::pierdut(){
 
     Sprite fundal = Sprite("Tex/gameLost.jpg", 0, 0);
     fundal.setScale(1.5f);
@@ -28,64 +108,18 @@ void pierdut(){
 
         fundal.render();
 
-
         Fereastra::endRender();
     }
 
-
-
-    while(true){
-
-
-    }
-
-}
-
-void Joc::replay() {
-
-    /*Sprite fundal = Sprite("Tex/blk.jpg", 0, 0);
-    fundal.setScale(5.0f);
-    fundal.setPos(0, 0);*/
-
-    Sprite replay = Sprite("Tex/replay.png", 0, 0);
-
-    while (true) {
-
-        Fereastra::update();
-        //fundal.update();
-
-        if (MOUSE::getMouseX() > 320 && MOUSE::getMouseX() < 960 &&
-            MOUSE::getMouseY() > 300 && MOUSE::getMouseY() < 512) {
-            replay.setScale(0.55f);
-            replay.setPos(300, 480);
-
-            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
-                Joc::startJoc();
-                return;
-            }
-        } else {
-            replay.setScale(0.5f);
-            replay.setPos(320, 512);
-        }
-
-        replay.update();
-        Fereastra::beginRender();
-
-        replay.render();
-
-        //fundal.render();
-        replay.render();
-
-        Fereastra::endRender();
-
-    }
+    replay();
 
 }
 
 
 
 
-void Joc::initializareJoc() {
+
+int Joc::initializareJoc() {
 
 
 
@@ -96,38 +130,86 @@ void Joc::initializareJoc() {
     Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);
     fundal.setScale(0.9f);
     fundal.setPos(0, 0);
-    Sprite start = Sprite("Tex/start.png", 0, 0);
-    start.setScale(0.5f);
-    start.setPos(320, 512);
+    Sprite start = Sprite("Tex/playBttn.png", 0, 0);
+    start.setScale(2.0f);
+    start.setPos(480, 512);
+    Sprite exit = Sprite("Tex/exitBttn.png", 0, 0);
+    exit.setScale(2.0f);
+    exit.setPos(480, 412);
 
     while (true) {
 
         Fereastra::update();
+
+        //start.update();
         fundal.update();
 
-        if (MOUSE::getMouseX() > 320 && MOUSE::getMouseX() < 960 &&
-            MOUSE::getMouseY() > 300 && MOUSE::getMouseY() < 512) {
-            start.setScale(0.55f);
-            start.setPos(300, 480);
+        if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
+            MOUSE::getMouseY() > 450 && MOUSE::getMouseY() < 512) {
 
+            start.setScale(2.2f);
             if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                start = Sprite("Tex/playBttnClicked.png", 480, 512);
+                start.setScale(2.2f);
+
+
+                    Fereastra::beginRender();
+
+                    fundal.render();
+                    start.render();
+
+                    Fereastra::endRender();
+
+
                 Joc::startJoc();
-                //return;
+
             }
         } else {
-            start.setScale(0.5f);
-            start.setPos(320, 512);
+            start = Sprite("Tex/playBttn.png", 0, 0);
+            start.setScale(2.0f);
+            start.setPos(480, 512);
         }
 
+        if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
+            MOUSE::getMouseY() > 550 && MOUSE::getMouseY() < 612) {
+
+            exit.setScale(2.2f);
+            if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
+
+                exit = Sprite("Tex/exitBttnClicked.png", 480, 412);
+                exit.setScale(2.2f);
+
+
+                Fereastra::beginRender();
+
+                fundal.render();
+                start.render();
+                exit.render();
+
+                Fereastra::endRender();
+
+                return 0;
+
+            }
+        } else {
+            exit = Sprite("Tex/exitBttn.png", 0, 0);
+            exit.setScale(2.0f);
+            exit.setPos(480, 412);
+        }
+
+        exit.update();
         start.update();
         Fereastra::beginRender();
 
         fundal.render();
         start.render();
+        exit.render();
 
         Fereastra::endRender();
 
     }
+
 }
 
 
@@ -199,58 +281,16 @@ void Joc::startJoc() {
 
 
         Joc::alegereJucator();
-/*
-        if(!bk) {
-            if (complC) {
-                std::cout << "\n";
-                if(!pachet.Gol())
-                while(!pachet.Gol() && jucator.getManaSize() < 4) {
-                    jucator.trageCarte(&pachet, &jucator);
-                    calculator.trageCarte(&pachet, &calculator);
-
-                    spritesJucator.emplace_back(jucator.getManaTexPath(jucator.getManaSize() - 1), 0, 0);
-                    spritesCalculator.emplace_back(calculator.getManaTexPath(calculator.getManaSize() - 1), 0, 0);
-                }
-
-                for (int j = 0; j < jucator.getManaSize(); ++j) {
-
-                    spritesJucator[j].setPos((float) (j + j) * 100, 10);
-                    spritesCalculator[j].setPos((float) (j + j) * 100, 760);
-
-                }
-
-                carteJos = Carte(0,0);
-                complJ = true;
-                complC = false;
-            }
-
-
-                bk = Joc::alegereCalculator();
-
-
-        }*/
 
         if (pachet.Gol() && jucator.getManaSize() == 0 && calculator.getManaSize() == 0) {
 
-            if (jucator.getPuncte() > calculator.getPuncte()) {
+            if (jucator.getPuncte() > calculator.getPuncte())
                 pierdut();
-                std::cout << "\nAi castigat! Puncte jucator: ";
-                std::cout << jucator.getPuncte();
-                std::cout << " Puncte calculator ";
-                std::cout << calculator.getPuncte();
-                return;
-            } else {
-                pierdut();
-                std::cout << "\nAi pierdut! Puncte jucator: ";
-                std::cout << jucator.getPuncte();
-                std::cout << " Puncte calculator ";
-                std::cout << calculator.getPuncte();
-                return;
-
-            }
+            else
+                replay();
         }
 
-        std::this_thread::sleep_for(std::chrono::microseconds{5000});
+        //std::this_thread::sleep_for(std::chrono::microseconds{5000});
 
         Fereastra::beginRender();
 
@@ -271,9 +311,6 @@ void Joc::startJoc() {
 
         spritesAleseJuc.render();
         spritesAleseCalc.render();
-
-
-
 
         if (!pachet.Gol())
             for (int i = 0; i < pachet.getSize() / 7 + 1; ++i) pachetAfis[i].render();

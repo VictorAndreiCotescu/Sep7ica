@@ -10,7 +10,7 @@
 #include <chrono>
 #include <thread>
 
-#ifdef WIN32
+#ifdef _WIN32
 #include <Windows.h>
 #else
 #include <unistd.h>
@@ -22,7 +22,7 @@ public:
 
     //Joc();
 
-    void initializareJoc();
+    int initializareJoc();
 
     void startJoc();
 
@@ -39,7 +39,9 @@ public:
         return instance;
     }
 
-    void replay();
+    void pierdut();
+
+    int replay();
 
 private:
 
