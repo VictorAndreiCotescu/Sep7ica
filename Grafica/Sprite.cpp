@@ -1,7 +1,5 @@
 #include "Sprite.h"
 
-#include <utility>
-
 Sprite::Sprite() : textura(Textura()),
                    xPos(0),
                    yPos(0),
@@ -28,6 +26,7 @@ void Sprite::update() {
 }
 
 void Sprite::render() {
+
     glEnable(GL_TEXTURE_2D);
     glBindTexture(GL_TEXTURE_2D, textura.getId());
     glLoadIdentity();
@@ -58,22 +57,13 @@ void Sprite::setPos(float _xSprite, float _ySprite) {
     yPos = _ySprite;
 }
 
-void Sprite::setRot(float _xRot) {
-    rot = _xRot;
-}
-
 void Sprite::setScale(float _xyScale) {
     xScale = _xyScale;
     yScale = _xyScale;
 }
 
-float Sprite::getScale(){
+float Sprite::getScale() const {
     return xScale;
-}
-
-void Sprite::setScale(float _xScale, float _yScale) {
-    xScale = _xScale;
-    yScale = _yScale;
 }
 
 float Sprite::getXPos() const {
@@ -82,14 +72,6 @@ float Sprite::getXPos() const {
 
 float Sprite::getYPos() const {
     return yPos;
-}
-
-bool Sprite::isUsed() const {
-    return used;
-}
-
-void Sprite::setUsed(bool _used) {
-    Sprite::used = _used;
 }
 
 

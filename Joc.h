@@ -11,16 +11,16 @@
 #include <thread>
 
 #ifdef _WIN32
+
 #include <Windows.h>
+
 #else
 #include <unistd.h>
 #endif
 
-class Joc : public Fereastra, public Sprite{
+class Joc : public Fereastra, public Sprite {
 
 public:
-
-    //Joc();
 
     int initializareJoc();
 
@@ -28,10 +28,9 @@ public:
 
     bool alegereJucator();
 
-    Joc(const Joc&) = delete;
-    Joc& operator=(const Joc&) = delete;
+    Joc(const Joc &) = delete;
 
-    //bool alegereCalculator();
+    Joc &operator=(const Joc &) = delete;
 
     static Joc *getInstance() {
         if (!instance)
@@ -61,7 +60,7 @@ private:
     Calculator calculator;
     Pachet pachet;
     Fereastra fereastra;
-    Carte carteJos = Carte(0,0);
+    Carte carteJos = Carte(0, 0);
     std::vector<Sprite> spritesJucator;
     std::vector<Sprite> spritesCalculator;
     std::vector<Sprite> pachetAfis;
@@ -69,8 +68,6 @@ private:
     Sprite spritesAleseCalc;
 
     bool complJ = false;
-
-
 
     int puncte = 0;
 

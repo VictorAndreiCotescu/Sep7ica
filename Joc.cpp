@@ -1,13 +1,7 @@
 #include "Joc.h"
 #include "IO/MOUSE.h"
-#include <chrono> // std::chrono::microseconds
-#include <thread> // std::this_thread::sleep_for
-
-
-
 
 int Joc::replay() {
-
 
     Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);
     fundal.setScale(0.9f);
@@ -23,7 +17,6 @@ int Joc::replay() {
 
         Fereastra::update();
 
-        //start.update();
         fundal.update();
 
         if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
@@ -92,17 +85,16 @@ int Joc::replay() {
     }
 }
 
-
-void Joc::pierdut(){
+void Joc::pierdut() {
 
     Sprite fundal = Sprite("Tex/gameLost.jpg", 0, 0);
     fundal.setScale(1.5f);
     fundal.setPos(-310, 0);
 
-    while(fundal.getScale() < 1.8) {
+    while (fundal.getScale() < 1.8) {
 
-        fundal.setScale((float)(fundal.getScale() + 0.001));
-        fundal.setPos((float)(fundal.getXPos() - 0.6), (float)(fundal.getYPos() - 0.35));
+        fundal.setScale((float) (fundal.getScale() + 0.001));
+        fundal.setPos((float) (fundal.getXPos() - 0.6), (float) (fundal.getYPos() - 0.35));
 
         Fereastra::beginRender();
 
@@ -112,22 +104,11 @@ void Joc::pierdut(){
     }
 
     replay();
-
 }
-
-
-
-
 
 int Joc::initializareJoc() {
 
-
-
-    fereastra.initialize("Sep7ica");
-
-
-
-    //Joc::replay();
+    Fereastra::initialize("Sep7ica");
 
     Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);
     fundal.setScale(0.9f);
@@ -143,7 +124,6 @@ int Joc::initializareJoc() {
 
         Fereastra::update();
 
-        //start.update();
         fundal.update();
 
         if (MOUSE::getMouseX() > 480 && MOUSE::getMouseX() < 740 &&
@@ -155,17 +135,14 @@ int Joc::initializareJoc() {
                 start = Sprite("Tex/playBttnClicked.png", 480, 512);
                 start.setScale(2.2f);
 
+                Fereastra::beginRender();
 
-                    Fereastra::beginRender();
+                fundal.render();
+                start.render();
 
-                    fundal.render();
-                    start.render();
-
-                    Fereastra::endRender();
-
+                Fereastra::endRender();
 
                 Joc::startJoc();
-
             }
         } else {
             start = Sprite("Tex/playBttn.png", 0, 0);
@@ -182,7 +159,6 @@ int Joc::initializareJoc() {
                 exit = Sprite("Tex/exitBttnClicked.png", 480, 412);
                 exit.setScale(2.2f);
 
-
                 Fereastra::beginRender();
 
                 fundal.render();
@@ -192,7 +168,6 @@ int Joc::initializareJoc() {
                 Fereastra::endRender();
 
                 return 0;
-
             }
         } else {
             exit = Sprite("Tex/exitBttn.png", 0, 0);
@@ -209,12 +184,8 @@ int Joc::initializareJoc() {
         exit.render();
 
         Fereastra::endRender();
-
     }
-
 }
-
-
 
 void Joc::startJoc() {
 
@@ -224,7 +195,6 @@ void Joc::startJoc() {
 
     Pachet::initializarePachetVec(pachet);
     Pachet::amestecareVec(pachet);
-
 
     Jucator::completareMana(pachet, jucator);
     Calculator::completareMana(pachet, calculator);
@@ -277,10 +247,9 @@ void Joc::startJoc() {
             spritesAleseCalc.setPos(-1000, -1000);
 
             carteJos = Carte(0, 0);
-            //complC = true;
+
             complJ = false;
         }
-
 
         Joc::alegereJucator();
 
@@ -291,8 +260,6 @@ void Joc::startJoc() {
             else
                 replay();
         }
-
-        //std::this_thread::sleep_for(std::chrono::microseconds{5000});
 
         Fereastra::beginRender();
 
@@ -306,7 +273,6 @@ void Joc::startJoc() {
             spritesCalculator[i].render();
             spritesJucator[i].render();
         }
-
 
         spritesAleseJuc.update();
         spritesAleseCalc.update();
@@ -323,30 +289,32 @@ void Joc::startJoc() {
 }
 
 
-
 bool Joc::alegereJucator() {
     for (int i = 0; i < jucator.getManaSize(); ++i) {
-        //afisez cartile pentru debug
 
-        if (MOUSE::getMouseX() < 180 * (i + 1) && MOUSE::getMouseX() > 180 * i && MOUSE::getMouseY() > 790) {
+        if (MOUSE::getMouseX() < 200 * (i + 1) && MOUSE::getMouseX() > 200 * i && MOUSE::getMouseY() > 790) {
+
             spritesJucator[i].setScale(0.065f);
+
             if (MOUSE::buttonDown(GLFW_MOUSE_BUTTON_LEFT)) {
 
                 spritesAleseJuc = Sprite(jucator.getManaTexPath(i), 900, 505);
                 spritesAleseJuc.setScale(0.06f);
                 Carte carteAleasaJuc = jucator.getCarte(i);
+
                 if (carteJos == Carte(0, 0))
                     carteJos = carteAleasaJuc;
+
                 spritesJucator.erase(spritesJucator.begin() + i);
-                jucator.alegereCarte(i); // elimina cartea din mana jucatorului;
-                Jucator::afisareCarti(jucator);
+
+                jucator.alegereCarte(i);
+
                 int carteAlC = calculator.alegereCarte(carteAleasaJuc.getNumar());
-                //calculator.afisareCarti(calculator);
                 spritesAleseCalc = Sprite(calculator.getManaTexPath(carteAlC), 990, 505);
                 spritesAleseCalc.setScale(0.06f);
+
                 Carte carteAleasaCalc = calculator.getCarte(carteAlC);
                 calculator.eliminareCarte(carteAlC);
-                //calculator.alegereCarte(carteAlC); // elimina cartea din mana calculatorului;
                 spritesCalculator.erase(spritesCalculator.begin() + carteAlC);
 
                 if (carteAleasaJuc == Carte(10, 0))
@@ -360,12 +328,9 @@ bool Joc::alegereJucator() {
 
 
                 for (int j = 0; j < jucator.getManaSize(); ++j) {
-
                     spritesJucator[j].setPos((float) (j + j) * 100, 10);
                     spritesCalculator[j].setPos((float) (j + j) * 100, 760);
-
                 }
-
 
                 if (carteAleasaCalc == carteJos) {
                     if (jucator.alegerePosibila(carteJos)) {
@@ -381,16 +346,11 @@ bool Joc::alegereJucator() {
                     jucator.adaugarePuncte(puncte);
                     puncte = 0;
                     complJ = true;
-
                     return true;
                 }
-
-
             }
-        } else {
+        } else
             spritesJucator[i].setScale(0.06f);
-            //return true;
-        }
     }
     return true;
 }

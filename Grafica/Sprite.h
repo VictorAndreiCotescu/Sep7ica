@@ -20,22 +20,15 @@ public:
 
     void setPos(float _xSprite, float _ySprite);
 
-    void setRot(float _xRot);
-
     void setScale(float _xyScale);
-
-    void setScale(float _xScale, float _yScale);
-
-    bool isUsed() const;
 
     float getXPos() const;
 
     float getYPos() const;
 
-    float getScale();
+    float getScale() const;
 
     void setUsed(bool _used);
-
 
 private:
     Textura textura;
@@ -48,6 +41,5 @@ private:
 
 
 };
-
 
 #endif //SEPTICA_SPRITE_H

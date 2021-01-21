@@ -2,11 +2,11 @@
 #include <algorithm>
 #include "Headers/Jucator.h"
 
-Jucator::Jucator(): mana(), puncte(0) {
+Jucator::Jucator() : mana(), puncte(0) {
     puncte = 0;
 }
 
-void Jucator::trageCarte(Pachet &Pachet, Jucator&Jucator) {
+void Jucator::trageCarte(Pachet &Pachet, Jucator &Jucator) {
 
     Jucator.mana.push_back(Pachet.pachet.back());
     Pachet.pachet.pop_back();
@@ -14,21 +14,11 @@ void Jucator::trageCarte(Pachet &Pachet, Jucator&Jucator) {
 
 void Jucator::afisareCarti(Jucator &Jucator) {
 
-    /*for (auto &i : Jucator->mana) {
-        std::cout << i.numar;
-        std::cout << " " <<  i.culoare;
-        std::cout << " texPath: ";
-        std::cout << i.getTexPath() << std::endl;
-    }*/
-
-    for (auto & i : Jucator.mana) {
+    for (auto &i : Jucator.mana) {
 
         std::cout << "texPath: ";
         std::cout << i.getTexPath() << std::endl;
-
-
     }
-
 }
 
 void Jucator::completareMana(Pachet &Pachet, Jucator &Jucator) {
@@ -44,22 +34,9 @@ void Jucator::completareMana(Pachet &Pachet, Jucator &Jucator) {
             Jucator.trageCarte(Pachet, Jucator);
 }
 
-/*Carte Jucator::carteAleasa(char c) {
-
-    if (mana.size() > (c - '0') - 1) {
-
-        Carte CarteAleasa(mana[(c - '0') - 1]);
-        mana.erase(mana.begin() + (c - '0') - 1);
-        std::cout << "Carte Jucator: " << CarteAleasa.numar << " " << CarteAleasa.culoare << "\n";
-        return CarteAleasa;
-    }
-}*/
-
-
 void Jucator::adaugarePuncte(int x) {
 
     Jucator::puncte += x;
-
 }
 
 bool Jucator::alegerePosibila(const Carte &c) const {
@@ -70,13 +47,6 @@ bool Jucator::alegerePosibila(const Carte &c) const {
         return true;
     else
         return false;
-
-}
-
-std::string Jucator::getCarteTexPath(int i) {
-
-    std::cout << this->mana[i].getTexPath();
-    return this->mana[i].getTexPath();
 
 }
 

@@ -7,8 +7,7 @@ int Fereastra::REZ_HGT = 1024;
 
 GLFWwindow *Fereastra::fereastra = nullptr;
 
-Fereastra::Fereastra() {
-}
+Fereastra::Fereastra() = default;
 
 bool Fereastra::initialize(const char *titlu) {
 
@@ -58,7 +57,6 @@ bool Fereastra::initialize(const char *titlu) {
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
     return true;
-
 }
 
 Fereastra::~Fereastra() = default;

@@ -14,7 +14,7 @@ public:
 
     ~Fereastra();
 
-    bool initialize(const char *Titlu);
+    static bool initialize(const char *Titlu);
 
     static void update();
 
@@ -23,13 +23,6 @@ public:
     static void endRender();
 
     static GLFWwindow *fereastra;
-
-protected:
-
-
-private:
-
-
 };
 
 

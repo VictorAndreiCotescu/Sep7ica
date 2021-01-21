@@ -22,7 +22,9 @@ public:
     virtual int alegereCarte(int i);
 
     bool alegerePosibila(const Carte &c) const;
+
     void eliminareCarte(int i);
+
     void adaugarePuncte(int x);
 
     const std::string &getManaTexPath(int i) const;
@@ -31,19 +33,16 @@ public:
 
     int getManaSize();
 
-    std::string getCarteTexPath(int i);
-
     int getPuncte() const;
 
     virtual ~Jucator() = default;
 
 protected:
 
-    std::vector <Carte> mana;
+    std::vector<Carte> mana;
     int puncte;
 
 private:
-    //Carte carteAleasa(char c);
 
     friend class Carte;
 

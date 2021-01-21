@@ -1,11 +1,7 @@
 #include <iostream>
 #include "Headers/Carte.h"
 
-//Carte::Carte() = default;
-
-
-
-Carte& Carte::operator=(const Carte &c) {
+Carte &Carte::operator=(const Carte &c) {
 
     numar = c.numar;
     culoare = c.culoare;
@@ -30,26 +26,23 @@ bool Carte::operator!=(const Carte &c) const {
         return true;
 }
 
-void Carte::afisare() const {
-
-    std::cout << this->numar << " " << this->culoare << " " << texPath;
-}
-
 void Carte::setTexPath(const std::string &_texPath) {
 
     texPath = _texPath;
-
 }
 
 const std::string &Carte::getTexPath() {
+
     return texPath;
 }
 
 int Carte::getCuloare() const {
+
     return culoare;
 }
 
 int Carte::getNumar() const {
+
     return numar;
 }
 
@@ -63,5 +56,3 @@ std::string Carte::genTexPath(Carte &c) {
     return tex;
 }
 
-
-//Carte::~Carte() = default;

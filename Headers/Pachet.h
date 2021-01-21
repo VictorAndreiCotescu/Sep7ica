@@ -10,14 +10,12 @@ class Pachet {
 public:
     Pachet() : pachet() {}
 
-    Pachet(const Pachet &p) : pachet(p.pachet) {}
+    Pachet(const Pachet &p) = default;
 
     Pachet &operator=(const Pachet &p);
 
 
     static void initializarePachetVec(Pachet &Pachet);
-
-    static void afisarePachetVec(const Pachet &pachet);
 
     static void amestecareVec(Pachet &Pachet);
 
@@ -36,14 +34,6 @@ protected:
 private:
 
     friend class Jucator;
-
-    // fara std::vector
-    static void InitializarePachet(Carte pachet[]);
-
-    static void Amestecare(Carte *pachet);
-
-    static void AfisarePachet(Carte pachet[]);
-
 };
 
 

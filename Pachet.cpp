@@ -1,15 +1,13 @@
 #include <iostream>
 #include <random>
 #include <algorithm>
-#include <functional>
-#include <chrono>
 #include "Headers/Pachet.h"
 
 
-Pachet& Pachet::operator=(const Pachet &p) {
-        if(!(this->pachet == p.pachet))
-            return *this;
+Pachet &Pachet::operator=(const Pachet &p) {
+    if (!(this->pachet == p.pachet))
         return *this;
+    return *this;
 }
 
 void Pachet::initializarePachetVec(Pachet &Pachet) {
@@ -34,28 +32,13 @@ void Pachet::initializarePachetVec(Pachet &Pachet) {
 
     std::cout << "Initailizare terminata " << std::endl;
 
-    //Pachet::afisarePachetVec(*Pachet);
-
-
 }
 
 
 void Pachet::amestecareVec(Pachet &Pachet) {
 
-    /*auto rdz = std::random_device {};
-    auto rng = std::default_random_engine { rdz() };
-    std::shuffle(std::begin(pachet->pachet), std::end(pachet->pachet), rng);*/
-
     std::shuffle(Pachet.pachet.begin(), Pachet.pachet.end(), std::mt19937(std::random_device()()));
 
-}
-
-void Pachet::afisarePachetVec(const Pachet &pachet) {
-
-    for (auto &i : pachet.pachet) {
-
-        std::cout << i.numar << " " << i.culoare << " texPath: " << i.texPath << std::endl;
-    }
 }
 
 bool Pachet::Gol() const {
@@ -67,8 +50,8 @@ bool Pachet::Gol() const {
 }
 
 int Pachet::getSize() {
+
     return pachet.size();
 }
-
 
 Pachet::~Pachet() = default;

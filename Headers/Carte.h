@@ -22,15 +22,9 @@ public:
 
     Carte &operator=(const Carte &c);
 
-
-    void afisare() const;
-
     bool operator==(const Carte &c) const;
 
     bool operator!=(const Carte &c) const;
-
-
-    //~Carte();
 
     void setTexPath(const std::string &texPath);
 
@@ -43,7 +37,6 @@ public:
     int getNumar() const;
 
 protected:
-
 
     int numar;
 
