@@ -125,6 +125,8 @@ int Joc::initializareJoc() {
 
     fereastra.initialize("Sep7ica");
 
+
+
     //Joc::replay();
 
     Sprite fundal = Sprite("Tex/bg3.jpg", 0, 0);

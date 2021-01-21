@@ -13,20 +13,22 @@ Fereastra::Fereastra() {
 bool Fereastra::initialize(const char *titlu) {
 
     try {
-        if(!glfwInit())
+        if (!glfwInit())
             throw "glfwInit esuat";
-    } catch (const char &ex){
+    } catch (const char &ex) {
         std::cerr << "[GLFW ERROR]: " << ex << std::endl;
         return false;
     }
 
-    try{
-    fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
+    try {
 
-    if (fereastra == nullptr) {
-        throw "Initializare fereastra esuata";
-    }
-    } catch (const char &ex){
+        glfwWindowHint(GLFW_RESIZABLE, GLFW_FALSE);
+        fereastra = glfwCreateWindow(REZ_WID, REZ_HGT, titlu, nullptr, nullptr);
+
+        if (fereastra == nullptr) {
+            throw "Initializare fereastra esuata";
+        }
+    } catch (const char &ex) {
         std::cerr << "[GLFW ERROR]: " << ex << std::endl;
         return false;
     }
