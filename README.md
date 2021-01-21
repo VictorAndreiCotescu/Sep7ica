@@ -1,5 +1,10 @@
-# Proiect_POO
+# Sep7ica
+
 Classic card game with GLFW and SOIL libraries.
+
+Story: You are forced to play a game of cards for your life. 
+
+
 
 Libraries:
 
